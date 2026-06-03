@@ -1,0 +1,132 @@
+/* ============================================================
+   KEVIN CHINELLI — À propos page app
+   Loaded after kc-shared.jsx.
+   ============================================================ */
+const VALUES = [
+  { n: "01", t: "La vérité avant la pose", p: "Je cherche l'instant non rejoué — un regard, un rire, un silence. Mon travail est d'être présent sans jamais peser, pour que l'émotion reste entière." },
+  { n: "02", t: "La lumière, toujours", p: "Naturelle ou maîtrisée en studio, la lumière est mon premier sujet. Elle sculpte, révèle et donne à chaque image sa profondeur et son intemporalité." },
+  { n: "03", t: "Un accompagnement entier", p: "De la première rencontre à la livraison de vos tirages, je vous accompagne avec soin. Chaque projet est unique et mérite une attention sur mesure." },
+];
+
+const AP_FACTS = [
+  { k: "Basé à", v: "Suisse romande" },
+  { k: "Depuis", v: "Près de 10 ans" },
+  { k: "Spécialités", v: "Mariage · Studio · Famille" },
+];
+
+function ApHero() {
+  return (
+    <section className="ap-hero s-light">
+      <div className="portrait reveal">
+        <Slot id="ap-portrait" ph="Portrait — Kevin Chinelli, vertical" style={{ width: "100%", height: "100%" }} />
+      </div>
+      <div className="intro">
+        <Overline className="reveal">À propos</Overline>
+        <h1 className="reveal d1">Kevin Chinelli</h1>
+        <p className="reveal d2">
+          Je photographie depuis bientôt dix ans celles et ceux qui traversent les grands moments
+          de la vie — mariages, naissances, portraits. Mon travail cherche la vérité d'un regard,
+          la lumière juste, l'émotion qui ne se rejoue pas.
+        </p>
+        <p className="reveal d2">
+          Basé en Suisse romande, je me déplace partout où une histoire mérite d'être racontée,
+          avec discrétion, patience et un souci constant du détail. Mon ambition : vous offrir des
+          images qui respirent encore, des années plus tard.
+        </p>
+        <div className="reveal d3" style={{ display: "flex", flexWrap: "wrap", gap: "32px", marginTop: "8px" }}>
+          {AP_FACTS.map((f, i) => (
+            <div key={i}>
+              <div style={{ fontSize: "10.5px", letterSpacing: ".18em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "6px" }}>{f.k}</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: "17px", color: "var(--fg)" }}>{f.v}</div>
+            </div>
+          ))}
+        </div>
+        <div className="signature reveal d4">Kevin</div>
+      </div>
+    </section>
+  );
+}
+
+function Values() {
+  return (
+    <section className="sec s-dark pad-y">
+      <div className="wrap">
+        <div style={{ textAlign: "center", marginBottom: "clamp(44px,5vw,72px)" }}>
+          <Overline className="reveal" style={{ justifyContent: "center" }}>Ma démarche</Overline>
+          <h2 className="display reveal d1" style={{ fontSize: "clamp(30px,4vw,56px)", marginTop: "20px" }}>Trois convictions.</h2>
+        </div>
+        <div className="values">
+          {VALUES.map((v, i) => (
+            <div key={i} className={"value reveal d" + (i + 1)}>
+              <span className="vn">{v.n}</span>
+              <h4>{v.t}</h4>
+              <p>{v.p}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function QuoteBand() {
+  return (
+    <section className="sec s-light pad-y">
+      <div className="wrap">
+        <blockquote className="ap-quote reveal">
+          « Une photographie réussie, c'est un souvenir qui respire encore, des années plus tard. »
+        </blockquote>
+      </div>
+    </section>
+  );
+}
+
+function StudioStrip() {
+  return (
+    <section className="sec s-dark pad-y">
+      <div className="wrap">
+        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: "clamp(30px,4vw,52px)", flexWrap: "wrap", gap: "18px" }}>
+          <div>
+            <Overline className="reveal">L'atelier</Overline>
+            <h2 className="display reveal d1" style={{ fontSize: "clamp(26px,3vw,44px)", marginTop: "16px" }}>Là où naissent les images.</h2>
+          </div>
+        </div>
+        <div className="gal reveal d1" data-lb-group="atelier">
+          <div className="cell"><Slot id="ap-studio-1" ph="Studio — vue d'ensemble" style={{ width: "100%", height: "100%" }} /></div>
+          <div className="stack">
+            <div className="cell"><Slot id="ap-studio-2" ph="Matériel / détail" style={{ width: "100%", height: "100%" }} /></div>
+            <div className="cell"><Slot id="ap-studio-3" ph="Tirages fine art" style={{ width: "100%", height: "100%" }} /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ApApp() {
+  const [t, setTweak] = useTweaks({
+    palette: KC.PALETTES["Noir chaud"],
+    heading: "Cinzel",
+    body: "Jost",
+  });
+  useApplyTweaks(t);
+  useReveal([]);
+
+  return (
+    <>
+      <div className="grain"></div>
+      <Nav active="apropos" />
+      <main>
+        <ApHero />
+        <Values />
+        <QuoteBand />
+        <StudioStrip />
+        <CtaContact overline="Travaillons ensemble" title="Racontons votre histoire." />
+      </main>
+      <Footer />
+      <TweaksBase t={t} setTweak={setTweak} />
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<ApApp />);

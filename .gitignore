@@ -1,0 +1,28 @@
+# === Fichiers de développement (non publiés sur le VPS) ===
+
+# Screenshots & brouillons design
+screenshots/
+scraps/
+uploads/
+
+# Wireframes (dev uniquement)
+Wireframe - *.html
+
+# État interne de l'éditeur (déployé sur le VPS pour afficher les images)
+# .image-slots.state.json  ← décommenté : doit être commité pour les images
+.thumbnail
+
+# Docs de handoff dev
+HANDOFF-DEV.md
+
+# Journal CSV généré par contact.php (données privées)
+contact-log.csv
+
+# === Système ===
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# === Node (si jamais utilisé) ===
+node_modules/
