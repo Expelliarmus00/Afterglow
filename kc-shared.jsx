@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    KEVIN CHINELLI — shared chrome & helpers (all sub-pages)
    Loaded after React + tweaks-panel.jsx, before each page app.
    ============================================================ */
@@ -28,7 +28,7 @@ const KC = {
   },
   HEAD_FONTS: { Cinzel: '"Cinzel", Georgia, serif', Cormorant: '"Cormorant Garamond", Georgia, serif' },
   BODY_FONTS: { Jost: '"Jost", system-ui, sans-serif', Mulish: '"Mulish", system-ui, sans-serif' },
-  HOME: "Kevin Chinelli.html",
+  HOME: "index.html",
 };
 const PALETTE_OPTS = Object.values(KC.PALETTES);
 
