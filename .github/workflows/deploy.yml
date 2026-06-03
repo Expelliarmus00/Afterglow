@@ -7,25 +7,17 @@ on:
 
 jobs:
   deploy:
-    name: Deploy via SSH
-    runs-on: ubuntu-latest
+    name: Deploy on VPS
+    runs-on: self-hosted
 
     steps:
-      - name: Deploy on VPS (git pull)
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_SSH_KEY }}
-          port: 22
-          script: |
-            set -e
-            echo "▶ Mise à jour du site Afterglow by Kevin..."
-            cd /var/www/afterglow
-            git fetch origin
-            git reset --hard origin/main
-            # Permissions correctes pour les fichiers PHP
-            find . -type f -name "*.php" -exec chmod 644 {} \;
-            find . -type d -exec chmod 755 {} \;
-            # Caddy charge automatiquement les changements de fichiers statiques
-            echo "✅ Déploiement terminé ! Site à jour sur afterglowbykevin.ch"
+      - name: Update site
+        run: |
+          set -e
+          echo "▶ Mise à jour du site Afterglow by Kevin..."
+          cd /var/www/afterglow
+          git fetch origin
+          git reset --hard origin/main
+          find . -type f -name "*.php" -exec chmod 644 {} \;
+          find . -type d -exec chmod 755 {} \;
+          echo "✅ Déploiement terminé !"
