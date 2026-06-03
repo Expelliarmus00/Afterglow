@@ -356,8 +356,10 @@ function Testimonials() {
 function Contact() {
   const [sent, setSent] = useState(false);
   const [err, setErr] = useState({});
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState("");
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     const f = e.target;
     const data = {
@@ -372,13 +374,27 @@ function Contact() {
     if (!data.message) errs.message = "Écrivez quelques mots sur votre projet.";
     setErr(errs);
     if (Object.keys(errs).length) return;
-    const subject = encodeURIComponent("Demande — " + (data.type || "Projet photo"));
-    const body = encodeURIComponent(
-      "Nom : " + data.nom + "\nEmail : " + data.email +
-      "\nType : " + (data.type || "—") + "\n\n" + data.message
-    );
-    window.location.href = "mailto:info@snapshotmedia.ch?subject=" + subject + "&body=" + body;
-    setSent(true);
+    setSending(true);
+    setSendError("");
+    try {
+      const res = await fetch("contact.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const j = await res.json().catch(() => ({}));
+      if (res.ok && j && j.ok) {
+        setSent(true);
+      } else if (res.status === 429) {
+        setSendError("Trop d'envois en peu de temps. Patientez quelques minutes, puis réessayez.");
+      } else {
+        setSendError("Une erreur est survenue à l'envoi. Réessayez, ou écrivez-moi directement à info@snapshotmedia.ch.");
+      }
+    } catch (e) {
+      setSendError("Connexion impossible. Vérifiez votre réseau, ou écrivez-moi à info@snapshotmedia.ch.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -392,8 +408,8 @@ function Contact() {
           {sent ? (
             <div className="form-sent reveal d2">
               <div className="fs-mark">✓</div>
-              <h3>Merci, votre message est prêt.</h3>
-              <p>Votre logiciel de messagerie s'est ouvert avec votre demande. Si rien ne s'est passé, écrivez-moi directement à l'adresse ci-dessous — je réponds sous 48&nbsp;h.</p>
+              <h3>Merci, votre demande est bien partie.</h3>
+              <p>Je l'ai bien reçue et je vous réponds personnellement sous 48&nbsp;h ouvrées. À très vite&nbsp;!</p>
               <a href="mailto:info@snapshotmedia.ch" className="link-arrow">info@snapshotmedia.ch <span className="ar">→</span></a>
             </div>
           ) : (
@@ -423,7 +439,8 @@ function Contact() {
                 <textarea className="control" name="message" rows="4" placeholder="Parlez-moi de votre projet, de la date envisagée…"></textarea>
                 {err.message && <span className="field-err">{err.message}</span>}
               </div>
-              <button className="btn-submit" type="submit">Envoyer <span className="ar">→</span></button>
+              {sendError && <span className="field-err" style={{ display: "block", marginBottom: "12px" }}>{sendError}</span>}
+              <button className="btn-submit" type="submit" disabled={sending}>{sending ? "Envoi…" : "Envoyer"} <span className="ar">→</span></button>
             </form>
           )}
           <div className="contact-direct reveal d3">

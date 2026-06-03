@@ -154,9 +154,11 @@ if (!$ok) {
 
 if ($ok) {
   echo json_encode(["ok" => true]);
+} else if ($DEBUG) {
+  // En debug : statut 200 + détail, pour que la réponse ne soit pas
+  // interceptée par un handle_errors Caddy. À retirer une fois le mail OK.
+  echo json_encode(["ok" => false, "error" => "mail", "detail" => $errInfo]);
 } else {
   http_response_code(502);
-  $resp = ["ok" => false, "error" => "mail"];
-  if ($DEBUG) { $resp["detail"] = $errInfo; }
-  echo json_encode($resp);
+  echo json_encode(["ok" => false, "error" => "mail"]);
 }
