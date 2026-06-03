@@ -28,6 +28,12 @@ afterglowbykevin.ch {
 		X-Frame-Options           "SAMEORIGIN"
 		Permissions-Policy        "camera=(), microphone=(), geolocation=()"
 		-Server
+
+		# CSP en mode RAPPORT (ne bloque rien, signale les violations dans la
+		# console). React est auto-hébergé ; 'unsafe-inline' reste nécessaire
+		# pour le splash inline et les styles React. Une fois vérifié sans
+		# violation, renommer l'en-tête en "Content-Security-Policy" (enforce).
+		Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
 	}
 
 	# --- Blocage des fichiers sensibles (404, jamais téléchargeables) ---
@@ -52,13 +58,10 @@ afterglowbykevin.ch {
 	# --- URLs propres (/mariages → mariages.html), sinon vrai 404 ---
 	try_files {path} {path}.html {path}/
 	file_server
-}
 
-# ============================================================
-# CSP (à activer quand les scripts externes seront auto-hébergés) :
-#   header Content-Security-Policy "default-src 'self'; img-src 'self' data:;
-#     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-#     font-src https://fonts.gstatic.com; script-src 'self'"
-# Bloquée pour l'instant car le splash inline + React/CDN exigeraient des
-# nonces. À faire après auto-hébergement de React.
-# ============================================================
+	# --- Page 404 personnalisée ---
+	handle_errors {
+		rewrite * /404.html
+		file_server
+	}
+}

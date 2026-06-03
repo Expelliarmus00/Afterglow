@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    KEVIN CHINELLI — Contact / tunnel de devis guidé (contact.html)
    Multi-step: prestation → formule → date & lieu → coordonnées → récap.
    Builds a structured mailto. Reads ?type= and ?date= to pre-seed.
@@ -72,7 +72,7 @@ function ContactApp() {
   const [step, setStep] = useState(0);
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
-  const [sendError, setSendError] = useState(false);
+  const [sendError, setSendError] = useState("");
   const [err, setErr] = useState({});
   const [a, setA] = useState({
     type: normType(Q.get("type") || ""),
@@ -103,7 +103,7 @@ function ContactApp() {
 
   const submit = async () => {
     setSending(true);
-    setSendError(false);
+    setSendError("");
     try {
       const res = await fetch("contact.php", {
         method: "POST",
@@ -113,11 +113,13 @@ function ContactApp() {
       const j = await res.json().catch(() => ({}));
       if (res.ok && j && j.ok) {
         setSent(true);
+      } else if (res.status === 429) {
+        setSendError("Trop d'envois en peu de temps. Patientez quelques minutes, puis réessayez.");
       } else {
-        setSendError(true);
+        setSendError("Une erreur est survenue à l'envoi. Réessayez, ou écrivez-moi directement à info@snapshotmedia.ch.");
       }
     } catch (e) {
-      setSendError(true);
+      setSendError("Connexion impossible. Vérifiez votre réseau, ou écrivez-moi à info@snapshotmedia.ch.");
     } finally {
       setSending(false);
     }
@@ -233,9 +235,7 @@ function ContactApp() {
                 )}
 
                 {sendError && (
-                  <p className="field-err" style={{ textAlign: "center", marginBottom: "12px" }}>
-                    Une erreur est survenue. Réessayez ou écrivez-moi directement à <a href="mailto:info@snapshotmedia.ch">info@snapshotmedia.ch</a>.
-                  </p>
+                  <p className="field-err" style={{ textAlign: "center", marginBottom: "12px" }}>{sendError}</p>
                 )}
                 <div className="fn-actions">
                   {step > 0 ? <button type="button" className="fn-back" onClick={back}>← Retour</button> : <span></span>}
@@ -252,7 +252,7 @@ function ContactApp() {
               <span className="jl-dot">·</span>
               <a href="tel:+41764247603">+41 76 424 76 03</a>
               <span className="jl-dot">·</span>
-              <a href="https://www.instagram.com/_watchkevin/" target="_blank" rel="noopener">@_watchkevin</a>
+              <a href="https://www.instagram.com/afterglowbykevin/" target="_blank" rel="noopener">@afterglowbykevin</a>
               <span className="jl-dot">·</span>
               <span>Réponse sous 48 h</span>
             </div>

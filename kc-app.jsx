@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    KEVIN CHINELLI — high-fidelity app
    ============================================================ */
 const { useState, useEffect, useRef } = React;
@@ -442,7 +442,7 @@ function Footer() {
       <div className="footer">
         <div className="wordmark"><span className="wm-main">Afterglow</span><span className="wm-by">by Kevin Chinelli</span></div>
         <div className="copy">© 2026 — Tous droits réservés</div>
-        <div className="social"><a href="apropos.html">À propos</a><a href="avis.html">Avis</a><a href="https://www.instagram.com/_watchkevin/" target="_blank" rel="noopener">Instagram</a><a href="tel:+41764247603">+41 76 424 76 03</a><a href="mailto:info@snapshotmedia.ch">info@snapshotmedia.ch</a></div>
+        <div className="social"><a href="apropos.html">À propos</a><a href="avis.html">Avis</a><a href="https://www.instagram.com/afterglowbykevin/" target="_blank" rel="noopener">Instagram</a><a href="tel:+41764247603">+41 76 424 76 03</a><a href="mailto:info@snapshotmedia.ch">info@snapshotmedia.ch</a></div>
       </div>
     </footer>
   );

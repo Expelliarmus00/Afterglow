@@ -114,27 +114,49 @@ if ($LOG_FILE) {
   if ($fh) { @fputcsv($fh, $row); @fclose($fh); }
 }
 
-$mail = new PHPMailer(true);
-try {
-  $mail->isSMTP();
-  $mail->Host       = SMTP_HOST;
-  $mail->SMTPAuth   = true;
-  $mail->Username   = SMTP_USER;
-  $mail->Password   = SMTP_PASS;
-  $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-  $mail->Port       = SMTP_PORT;
-  $mail->CharSet    = 'UTF-8';
+/* Mode debug : ajouter ?debug=afterglow2026 à l'URL de POST pour récupérer
+   l'erreur SMTP réelle dans la réponse JSON (à retirer une fois le mail OK). */
+$DEBUG = isset($_GET["debug"]) && $_GET["debug"] === "afterglow2026";
 
-  $mail->setFrom($FROM, $SITE_NAME);
-  $mail->addAddress($TO);
-  $mail->addReplyTo($email, $nom);
+/* Tente l'envoi avec un (chiffrement, port) donné. Renvoie [ok, erreur]. */
+function kc_try_send($secure, $port, $TO, $FROM, $SITE_NAME, $email, $nom, $subject, $body) {
+  $mail = new PHPMailer(true);
+  try {
+    $mail->isSMTP();
+    $mail->Host       = SMTP_HOST;
+    $mail->SMTPAuth   = true;
+    $mail->Username   = SMTP_USER;
+    $mail->Password   = SMTP_PASS;
+    $mail->SMTPSecure = $secure;
+    $mail->Port       = $port;
+    $mail->Timeout    = 12;          // évite qu'un SMTP injoignable bloque php-fpm
+    $mail->CharSet    = 'UTF-8';
+    $mail->setFrom($FROM, $SITE_NAME);
+    $mail->addAddress($TO);
+    $mail->addReplyTo($email, $nom);
+    $mail->Subject = $subject;
+    $mail->Body    = $body;
+    $mail->send();
+    return [true, null];
+  } catch (Exception $e) {
+    return [false, $mail->ErrorInfo ?: $e->getMessage()];
+  }
+}
 
-  $mail->Subject = $subject;
-  $mail->Body    = $body;
+/* 1) STARTTLS sur le port configuré (587 par défaut).
+   2) Repli SMTPS sur 465 si le 1er échoue (587 souvent filtré sur certains VPS). */
+list($ok, $errInfo) = kc_try_send(PHPMailer::ENCRYPTION_STARTTLS, SMTP_PORT, $TO, $FROM, $SITE_NAME, $email, $nom, $subject, $body);
+if (!$ok) {
+  list($ok2, $errInfo2) = kc_try_send(PHPMailer::ENCRYPTION_SMTPS, 465, $TO, $FROM, $SITE_NAME, $email, $nom, $subject, $body);
+  if ($ok2) { $ok = true; }
+  else { $errInfo = "587: " . $errInfo . " | 465: " . $errInfo2; }
+}
 
-  $mail->send();
+if ($ok) {
   echo json_encode(["ok" => true]);
-} catch (Exception $e) {
+} else {
   http_response_code(502);
-  echo json_encode(["ok" => false, "error" => "mail"]);
+  $resp = ["ok" => false, "error" => "mail"];
+  if ($DEBUG) { $resp["detail"] = $errInfo; }
+  echo json_encode($resp);
 }

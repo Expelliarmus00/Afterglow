@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "extract-images": "node scripts/extract-images.mjs"
+    "extract-images": "node scripts/extract-images.mjs",
+    "sitemap": "node scripts/gen-sitemap.mjs"
   },
   "devDependencies": {
     "esbuild": "^0.24.0"

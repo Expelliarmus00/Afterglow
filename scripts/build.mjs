@@ -6,11 +6,22 @@
      window (Object.assign dans kc-shared.jsx / tweaks-panel.jsx).
    - minifyIdentifiers DÉSACTIVÉ : aucun symbole global ne doit être renommé.
    Usage : npm run build */
-import { build } from "esbuild";
+import { build, transform } from "esbuild";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { readFileSync, writeFileSync } from "node:fs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+
+// --- CSS : minifie chaque feuille en .min.css (référencée par les pages) ---
+const CSS = ["kc.css", "kc-pages.css"];
+for (const file of CSS) {
+  const css = readFileSync(resolve(root, file), "utf8");
+  const out = await transform(css, { loader: "css", minify: true });
+  const min = file.replace(/\.css$/, ".min.css");
+  writeFileSync(resolve(root, min), out.code);
+  console.log(`  ${file} → ${min} (${(out.code.length / 1024).toFixed(1)} Ko)`);
+}
 
 const ENTRIES = [
   "tweaks-panel.jsx",

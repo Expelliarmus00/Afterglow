@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page introuvable — Afterglow by Kevin Chinelli</title>
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+<meta name="theme-color" content="#141210">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#141210; --accent:#b9926b; --cream:#f2ede6; --muted:#cdbfa8; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; height:100%; }
+  body{ background:radial-gradient(120% 120% at 50% 0%, #221d18 0%, #141210 55%, #0c0a08 100%);
+    color:var(--cream); font-family:"Jost",system-ui,sans-serif; display:flex; align-items:center; justify-content:center;
+    min-height:100svh; text-align:center; padding:40px 22px; }
+  .wrap{ max-width:560px; }
+  .code{ font-family:"Cinzel",Georgia,serif; font-size:clamp(64px,16vw,128px); line-height:1; color:var(--accent); letter-spacing:.04em; }
+  h1{ font-family:"Cinzel",Georgia,serif; font-weight:400; font-size:clamp(22px,4.5vw,32px); margin:18px 0 10px; color:var(--cream); }
+  p{ color:var(--muted); line-height:1.7; font-size:16px; margin:0 0 32px; }
+  .btn{ display:inline-flex; align-items:center; gap:10px; text-decoration:none; background:var(--accent); color:#141210;
+    padding:15px 30px; border-radius:2px; font-size:12px; letter-spacing:.16em; text-transform:uppercase; font-weight:500;
+    transition:filter .3s, transform .3s; }
+  .btn:hover{ filter:brightness(1.07); transform:translateY(-2px); }
+  .links{ margin-top:28px; display:flex; flex-wrap:wrap; gap:8px 22px; justify-content:center; }
+  .links a{ color:var(--muted); text-decoration:none; font-size:13px; letter-spacing:.04em; transition:color .3s; }
+  .links a:hover{ color:var(--accent); }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="code">404</div>
+    <h1>Cette page s'est éclipsée</h1>
+    <p>Le lien que vous avez suivi n'existe pas (ou plus). Revenons à la lumière.</p>
+    <a class="btn" href="/">Retour à l'accueil</a>
+    <nav class="links" aria-label="Liens utiles">
+      <a href="/portfolio.html">Portfolio</a>
+      <a href="/mariages.html">Mariages</a>
+      <a href="/tarifs.html">Tarifs</a>
+      <a href="/journal.html">Journal</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </main>
+</body>
+</html>

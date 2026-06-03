@@ -106,5 +106,83 @@
     "s": 1,
     "x": 0,
     "y": 0
+  },
+  "phero-portrait": {
+    "u": "images/hero-portrait.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "phero-maternite": {
+    "u": "images/presta-maternite.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "phero-studio": {
+    "u": "images/hero-studio.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "phero-couple": {
+    "u": "images/presta-couple.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "phero-famille": {
+    "u": "images/hero-main.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "art-hero-lieux-mariage-lavaux": {
+    "u": "images/hero-mariage.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "art-hero-tenue-seance-grossesse": {
+    "u": "images/presta-maternite.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "art-hero-spots-photo-couple-leman": {
+    "u": "images/presta-couple.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "ville-hero-lausanne": {
+    "u": "images/hero-mariage.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "ville-hero-geneve": {
+    "u": "images/presta-mariage.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "ville-hero-montreux": {
+    "u": "images/phero-mariage.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "ville-hero-famille-lausanne": {
+    "u": "images/hero-main.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "ville-hero-famille-geneve": {
+    "u": "images/home-hero-full.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
   }
 }
