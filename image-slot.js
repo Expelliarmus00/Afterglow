@@ -598,11 +598,19 @@
       this._sub.style.display = editable ? '' : 'none';
 
       // Content. The sidecar is also writable by the agent's write_file
-      // tool, so its value isn't guaranteed canvas-originated — only accept
-      // data:image/ URLs from it. The `src` attribute is author-controlled
-      // (Claude wrote it into the HTML) so it passes through unchanged.
+      // tool, so its value isn't guaranteed canvas-originated — accept only
+      // (a) data:image/ URLs or (b) safe same-origin relative paths to an
+      // image file (no scheme, no protocol-relative //). This lets the build
+      // serve images as cached files instead of inlined base64, while still
+      // rejecting arbitrary http(s)/javascript URLs. The `src` attribute is
+      // author-controlled (Claude wrote it into the HTML) so it passes through.
       let stored = this.id ? getSlot(this.id) : this._local;
-      if (stored && stored.u && !/^data:image\//i.test(stored.u)) stored = null;
+      if (stored && stored.u) {
+        const u = stored.u;
+        const okData = /^data:image\//i.test(u);
+        const okPath = /^(?!\/\/)(?![a-z]+:)[\w./-]+\.(webp|avif|jpe?g|png|gif|svg)$/i.test(u);
+        if (!okData && !okPath) stored = null;
+      }
       const srcAttr = this.getAttribute('src') || '';
       this._userUrl = (stored && stored.u) || null;
       const url = this._userUrl || srcAttr;

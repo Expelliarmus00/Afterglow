@@ -6,7 +6,11 @@
    ============================================================ */
 
 require_once __DIR__ . '/vendor/autoload.php';
-require_once __DIR__ . '/smtp-config.php';
+/* smtp-config.php contient les identifiants SMTP (hors git).
+   On le cherche d'abord HORS de la racine web (plus sûr), puis dans le
+   dossier courant en repli pour ne pas casser une install existante. */
+if (is_file(__DIR__ . '/../smtp-config.php'))      require_once __DIR__ . '/../smtp-config.php';
+else                                               require_once __DIR__ . '/smtp-config.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -15,7 +19,9 @@ $TO        = "info@snapshotmedia.ch";
 $FROM      = SMTP_USER;
 $SUBJECT_P = "[Afterglow] Demande de devis — ";
 $SITE_NAME = "Afterglow by Kevin";
-$LOG_FILE  = __DIR__ . "/contact-log.csv";
+/* Journal des demandes : écrit HORS de la racine web pour ne jamais être
+   téléchargeable (contient nom/email/téléphone = données personnelles). */
+$LOG_FILE  = __DIR__ . "/../contact-log.csv";
 
 header("Content-Type: application/json; charset=utf-8");
 
@@ -24,6 +30,31 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
   echo json_encode(["ok" => false, "error" => "method"]);
   exit;
 }
+
+/* --- Limitation de débit : max 3 envois / IP / 10 min ---------------------
+   Empêche l'abus du relais SMTP (mailbombing, blacklist du domaine).
+   Stockage léger dans le dossier temp système (pas de base de données). */
+$ip       = $_SERVER["REMOTE_ADDR"] ?? "0.0.0.0";
+$rlDir    = sys_get_temp_dir() . "/kc-ratelimit";
+@mkdir($rlDir, 0700, true);
+$rlFile   = $rlDir . "/" . hash("sha256", $ip);
+$now      = time();
+$window   = 600;   // 10 minutes
+$maxHits  = 3;
+$hits     = [];
+if (is_file($rlFile)) {
+  $hits = array_filter(
+    array_map("intval", explode(",", (string)@file_get_contents($rlFile))),
+    function ($t) use ($now, $window) { return $t > $now - $window; }
+  );
+}
+if (count($hits) >= $maxHits) {
+  http_response_code(429);
+  echo json_encode(["ok" => false, "error" => "rate"]);
+  exit;
+}
+$hits[] = $now;
+@file_put_contents($rlFile, implode(",", $hits), LOCK_EX);
 
 $raw  = file_get_contents("php://input");
 $data = json_decode($raw, true);

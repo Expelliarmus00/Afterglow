@@ -72,39 +72,45 @@ function Nav() {
     document.body.style.overflow = open ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [open]);
+  const menu = ReactDOM.createPortal(
+    <div className={"mobile-menu" + (open ? " is-open" : "")} onClick={() => setOpen(false)}>
+      <div className="mm-inner" onClick={(e) => e.stopPropagation()}>
+        <div className="mm-group">
+          <span className="mm-label">Prestations</span>
+          {PRESTATIONS.map((p) => <a key={p.id} href={p.href} onClick={() => setOpen(false)}>{p.title}</a>)}
+        </div>
+        <a className="mm-top" href="portfolio.html" onClick={() => setOpen(false)}>Portfolio</a>
+        <a className="mm-top" href="tarifs.html" onClick={() => setOpen(false)}>Tarifs</a>
+        <a className="mm-top" href="journal.html" onClick={() => setOpen(false)}>Journal</a>
+        <a className="mm-top" href="avis.html" onClick={() => setOpen(false)}>Avis</a>
+        <a className="mm-top" href="#contact" onClick={() => setOpen(false)}>Contact</a>
+      </div>
+    </div>,
+    document.body
+  );
   return (
-    <nav className={"nav" + (scrolled ? " scrolled" : "") + (open ? " menu-open" : "")}>
-      <a href="#hero" className="wordmark"><span className="wm-main">Afterglow</span><span className="wm-by">by Kevin Chinelli</span></a>
-      <div className="nav-links">
-        <div className="nav-item nav-extra">
-          <a href={PRESTATIONS[0].href} aria-haspopup="true">Prestations<span className="caret">▾</span></a>
-          <div className="nav-drop">
-            {PRESTATIONS.map((p) => <a key={p.id} href={p.href}>{p.title}</a>)}
+    <>
+      <nav className={"nav" + (scrolled ? " scrolled" : "") + (open ? " menu-open" : "")}>
+        <a href="#hero" className="wordmark"><span className="wm-main">Afterglow</span><span className="wm-by">by Kevin Chinelli</span></a>
+        <div className="nav-links">
+          <div className="nav-item nav-extra">
+            <a href={PRESTATIONS[0].href} aria-haspopup="true">Prestations<span className="caret">▾</span></a>
+            <div className="nav-drop">
+              {PRESTATIONS.map((p) => <a key={p.id} href={p.href}>{p.title}</a>)}
+            </div>
           </div>
+          <a href="portfolio.html" className="nav-extra">Portfolio</a>
+          <a href="tarifs.html" className="nav-extra">Tarifs</a>
+          <a href="journal.html" className="nav-extra">Journal</a>
+          <a href="avis.html" className="nav-extra">Avis</a>
+          <a href="#contact" className="nav-cta">Contact</a>
         </div>
-        <a href="portfolio.html" className="nav-extra">Portfolio</a>
-        <a href="tarifs.html" className="nav-extra">Tarifs</a>
-        <a href="journal.html" className="nav-extra">Journal</a>
-        <a href="avis.html" className="nav-extra">Avis</a>
-        <a href="#contact" className="nav-cta">Contact</a>
-      </div>
-      <button className="nav-burger" aria-label="Ouvrir le menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
-        <span></span><span></span>
-      </button>
-      <div className="mobile-menu" onClick={() => setOpen(false)}>
-        <div className="mm-inner" onClick={(e) => e.stopPropagation()}>
-          <div className="mm-group">
-            <span className="mm-label">Prestations</span>
-            {PRESTATIONS.map((p) => <a key={p.id} href={p.href} onClick={() => setOpen(false)}>{p.title}</a>)}
-          </div>
-          <a className="mm-top" href="portfolio.html" onClick={() => setOpen(false)}>Portfolio</a>
-          <a className="mm-top" href="tarifs.html" onClick={() => setOpen(false)}>Tarifs</a>
-          <a className="mm-top" href="journal.html" onClick={() => setOpen(false)}>Journal</a>
-          <a className="mm-top" href="avis.html" onClick={() => setOpen(false)}>Avis</a>
-          <a className="mm-top" href="#contact" onClick={() => setOpen(false)}>Contact</a>
-        </div>
-      </div>
-    </nav>
+        <button className="nav-burger" aria-label="Ouvrir le menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
+          <span></span><span></span>
+        </button>
+      </nav>
+      {menu}
+    </>
   );
 }
 

@@ -1,0 +1,63 @@
+# ============================================================
+# Afterglow by Kevin — Configuration Caddy
+# afterglowbykevin.ch
+#
+# Installation sur le VPS (une seule fois) :
+#   sudo cp Caddyfile /etc/caddy/Caddyfile
+#   sudo caddy validate --config /etc/caddy/Caddyfile
+#   sudo systemctl reload caddy
+#
+# Caddy gère le HTTPS automatiquement (Let's Encrypt) — aucun chemin de
+# certificat à indiquer. Adapter la version PHP-FPM si besoin (php8.2).
+# ============================================================
+
+# Redirection www → non-www
+www.afterglowbykevin.ch {
+	redir https://afterglowbykevin.ch{uri} permanent
+}
+
+afterglowbykevin.ch {
+	root * /var/www/afterglow
+	encode gzip zstd
+
+	# --- En-têtes de sécurité ---
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options    "nosniff"
+		Referrer-Policy           "strict-origin-when-cross-origin"
+		X-Frame-Options           "SAMEORIGIN"
+		Permissions-Policy        "camera=(), microphone=(), geolocation=()"
+		-Server
+	}
+
+	# --- Blocage des fichiers sensibles (404, jamais téléchargeables) ---
+	# NB : .image-slots.state.json DOIT rester servi (images), donc on ne
+	# bloque pas tous les .json — uniquement les fichiers réellement privés.
+	@blocked {
+		path /.git* /.env* /smtp-config.php /composer.json /composer.lock
+		path /contact-log.csv *.csv *.md *.jsx /vendor/* /.github/*
+	}
+	respond @blocked 404
+
+	# --- PHP (formulaire de contact) ---
+	php_fastcgi unix//run/php/php8.2-fpm.sock
+
+	# --- Cache long pour les assets statiques ---
+	@static {
+		path *.css *.js *.webp *.jpg *.jpeg *.png *.gif *.svg *.ico *.woff *.woff2
+	}
+	header @static Cache-Control "public, max-age=2592000, immutable"
+
+	# --- URLs propres (/mariages → mariages.html), sinon vrai 404 ---
+	try_files {path} {path}.html {path}/
+	file_server
+}
+
+# ============================================================
+# CSP (à activer quand les scripts externes seront auto-hébergés) :
+#   header Content-Security-Policy "default-src 'self'; img-src 'self' data:;
+#     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+#     font-src https://fonts.gstatic.com; script-src 'self'"
+# Bloquée pour l'instant car le splash inline + React/CDN exigeraient des
+# nonces. À faire après auto-hébergement de React.
+# ============================================================
