@@ -36,6 +36,7 @@ afterglowbykevin.ch {
 	@blocked {
 		path /.git* /.env* /smtp-config.php /composer.json /composer.lock
 		path /contact-log.csv *.csv *.md *.jsx /vendor/* /.github/*
+		path /package.json /package-lock.json /scripts/*
 	}
 	respond @blocked 404
 
