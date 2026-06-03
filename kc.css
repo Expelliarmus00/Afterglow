@@ -156,12 +156,12 @@ image-slot{ background:#1b1815; color:rgba(242,237,230,.5) !important; }
     background:color-mix(in oklab, var(--bg), #000 28%); backdrop-filter:blur(22px) saturate(130%);
     opacity:0; visibility:hidden; pointer-events:none; transition:opacity .45s ease, visibility .45s;
   }
-  .nav.menu-open .mobile-menu{ opacity:1; visibility:visible; pointer-events:auto; }
+  .mobile-menu.is-open{ opacity:1; visibility:visible; pointer-events:auto; }
   .mm-inner{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:clamp(12px,3vw,34px); text-align:center;
     padding:clamp(60px,10vh,80px) clamp(16px,4vw,40px) clamp(40px,6vh,60px);
     transform:translateY(14px); opacity:0; transition:transform .5s cubic-bezier(.2,.6,.15,1) .08s, opacity .5s .08s;
     width:100%; min-height:100%; box-sizing:border-box; }
-  .nav.menu-open .mm-inner{ transform:none; opacity:1; }
+  .mobile-menu.is-open .mm-inner{ transform:none; opacity:1; }
   .mm-group{ display:flex; flex-direction:column; align-items:center; gap:clamp(10px,2.5vw,18px); }
   .mm-label{ font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); margin-bottom:2px; }
   .mm-group a{ font-family:var(--font-display); font-size:clamp(16px,4.5vw,22px); color:color-mix(in oklab, var(--cream), transparent 14%); }
@@ -169,8 +169,6 @@ image-slot{ background:#1b1815; color:rgba(242,237,230,.5) !important; }
   .mobile-menu a{ transition:color .3s; }
   .mobile-menu a:active, .mobile-menu a:hover{ color:var(--accent); }
   /* cacher les boutons CTA fixes quand le menu est ouvert */
-  .nav.menu-open ~ * .kc-cta,
-  .nav.menu-open ~ .kc-cta,
   body:has(.nav.menu-open) .kc-cta{ opacity:0 !important; pointer-events:none !important; }
 }
 

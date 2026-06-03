@@ -63,39 +63,45 @@ function Nav({ active = "" }) {
     document.body.style.overflow = open ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [open]);
+  const menu = ReactDOM.createPortal(
+    <div className={"mobile-menu" + (open ? " is-open" : "")} onClick={() => setOpen(false)}>
+      <div className="mm-inner" onClick={(e) => e.stopPropagation()}>
+        <div className="mm-group">
+          <span className="mm-label">Prestations</span>
+          {PRESTA_NAV.map((p) => <a key={p.slug} href={p.href} onClick={() => setOpen(false)}>{p.title}</a>)}
+        </div>
+        <a className="mm-top" href="portfolio.html" onClick={() => setOpen(false)}>Portfolio</a>
+        <a className="mm-top" href="tarifs.html" onClick={() => setOpen(false)}>Tarifs</a>
+        <a className="mm-top" href="journal.html" onClick={() => setOpen(false)}>Journal</a>
+        <a className="mm-top" href="avis.html" onClick={() => setOpen(false)}>Avis</a>
+        <a className="mm-top" href="contact.html" onClick={() => setOpen(false)}>Contact</a>
+      </div>
+    </div>,
+    document.body
+  );
   return (
-    <nav className={"nav" + (scrolled ? " scrolled" : "") + (open ? " menu-open" : "")}>
-      <a href={KC.HOME} className="wordmark"><span className="wm-main">Afterglow</span><span className="wm-by">by Kevin Chinelli</span></a>
-      <div className="nav-links">
-        <div className={"nav-item nav-extra" + (PRESTA_NAV.some((p) => p.slug === active) ? " is-active" : "")}>
-          <a href={PRESTA_NAV[0].href} aria-haspopup="true">Prestations<span className="caret">▾</span></a>
-          <div className="nav-drop">
-            {PRESTA_NAV.map((p) => <a key={p.slug} href={p.href} className={active === p.slug ? "is-active" : ""}>{p.title}</a>)}
+    <>
+      <nav className={"nav" + (scrolled ? " scrolled" : "") + (open ? " menu-open" : "")}>
+        <a href={KC.HOME} className="wordmark"><span className="wm-main">Afterglow</span><span className="wm-by">by Kevin Chinelli</span></a>
+        <div className="nav-links">
+          <div className={"nav-item nav-extra" + (PRESTA_NAV.some((p) => p.slug === active) ? " is-active" : "")}>
+            <a href={PRESTA_NAV[0].href} aria-haspopup="true">Prestations<span className="caret">▾</span></a>
+            <div className="nav-drop">
+              {PRESTA_NAV.map((p) => <a key={p.slug} href={p.href} className={active === p.slug ? "is-active" : ""}>{p.title}</a>)}
+            </div>
           </div>
+          <a href="portfolio.html" className={"nav-extra" + (active === "portfolio" ? " is-active" : "")}>Portfolio</a>
+          <a href="tarifs.html" className={"nav-extra" + (active === "tarifs" ? " is-active" : "")}>Tarifs</a>
+          <a href="journal.html" className={"nav-extra" + (active === "journal" ? " is-active" : "")}>Journal</a>
+          <a href="avis.html" className={"nav-extra" + (active === "avis" ? " is-active" : "")}>Avis</a>
+          <a href="contact.html" className={"nav-cta" + (active === "contact" ? " is-active" : "")}>Contact</a>
         </div>
-        <a href="portfolio.html" className={"nav-extra" + (active === "portfolio" ? " is-active" : "")}>Portfolio</a>
-        <a href="tarifs.html" className={"nav-extra" + (active === "tarifs" ? " is-active" : "")}>Tarifs</a>
-        <a href="journal.html" className={"nav-extra" + (active === "journal" ? " is-active" : "")}>Journal</a>
-        <a href="avis.html" className={"nav-extra" + (active === "avis" ? " is-active" : "")}>Avis</a>
-        <a href="contact.html" className={"nav-cta" + (active === "contact" ? " is-active" : "")}>Contact</a>
-      </div>
-      <button className="nav-burger" aria-label="Ouvrir le menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
-        <span></span><span></span>
-      </button>
-      <div className="mobile-menu" onClick={() => setOpen(false)}>
-        <div className="mm-inner" onClick={(e) => e.stopPropagation()}>
-          <div className="mm-group">
-            <span className="mm-label">Prestations</span>
-            {PRESTA_NAV.map((p) => <a key={p.slug} href={p.href} onClick={() => setOpen(false)}>{p.title}</a>)}
-          </div>
-          <a className="mm-top" href="portfolio.html" onClick={() => setOpen(false)}>Portfolio</a>
-          <a className="mm-top" href="tarifs.html" onClick={() => setOpen(false)}>Tarifs</a>
-          <a className="mm-top" href="journal.html" onClick={() => setOpen(false)}>Journal</a>
-          <a className="mm-top" href="avis.html" onClick={() => setOpen(false)}>Avis</a>
-          <a className="mm-top" href="contact.html" onClick={() => setOpen(false)}>Contact</a>
-        </div>
-      </div>
-    </nav>
+        <button className="nav-burger" aria-label="Ouvrir le menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
+          <span></span><span></span>
+        </button>
+      </nav>
+      {menu}
+    </>
   );
 }
 
