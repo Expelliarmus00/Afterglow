@@ -21,12 +21,10 @@ jobs:
           script: |
             set -e
             echo "▶ Mise à jour du site Afterglow by Kevin..."
-            cd /var/www/afterglowbykevin.ch
+            cd /var/www/afterglow
             git pull origin main
             # Permissions correctes pour les fichiers PHP
             find . -type f -name "*.php" -exec chmod 644 {} \;
             find . -type d -exec chmod 755 {} \;
-            # Mettre à jour la config Nginx si elle a changé
-            cp nginx.conf /etc/nginx/sites-available/afterglowbykevin.ch
-            nginx -t && systemctl reload nginx
-            echo "✅ Déploiement terminé !"
+            # Caddy charge automatiquement les changements de fichiers statiques
+            echo "✅ Déploiement terminé ! Site à jour sur afterglowbykevin.ch"
