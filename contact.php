@@ -5,6 +5,20 @@
    Les identifiants SMTP sont dans smtp-config.php (hors git).
    ============================================================ */
 
+/* Mode debug : ?debug=afterglow2026 → capte aussi les erreurs FATALES (require
+   manquant, constante SMTP indéfinie…) et les renvoie en HTTP 200 + JSON, pour
+   qu'elles soient lisibles même derrière un handle_errors Caddy. À retirer ensuite. */
+$DEBUG = isset($_GET["debug"]) && $_GET["debug"] === "afterglow2026";
+if ($DEBUG) {
+  register_shutdown_function(function () {
+    $e = error_get_last();
+    if ($e && in_array($e["type"], [E_ERROR, E_PARSE, E_COMPILE_ERROR, E_CORE_ERROR], true)) {
+      if (!headers_sent()) { http_response_code(200); header("Content-Type: application/json; charset=utf-8"); }
+      echo json_encode(["ok" => false, "error" => "fatal", "detail" => $e["message"] . " @ " . basename($e["file"]) . ":" . $e["line"]]);
+    }
+  });
+}
+
 require_once __DIR__ . '/vendor/autoload.php';
 /* smtp-config.php contient les identifiants SMTP (hors git).
    On le cherche d'abord HORS de la racine web (plus sûr), puis dans le
@@ -113,10 +127,6 @@ if ($LOG_FILE) {
   $fh = @fopen($LOG_FILE, "a");
   if ($fh) { @fputcsv($fh, $row); @fclose($fh); }
 }
-
-/* Mode debug : ajouter ?debug=afterglow2026 à l'URL de POST pour récupérer
-   l'erreur SMTP réelle dans la réponse JSON (à retirer une fois le mail OK). */
-$DEBUG = isset($_GET["debug"]) && $_GET["debug"] === "afterglow2026";
 
 /* Tente l'envoi avec un (chiffrement, port) donné. Renvoie [ok, erreur]. */
 function kc_try_send($secure, $port, $TO, $FROM, $SITE_NAME, $email, $nom, $subject, $body) {
