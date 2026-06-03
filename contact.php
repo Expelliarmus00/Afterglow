@@ -5,20 +5,6 @@
    Les identifiants SMTP sont dans smtp-config.php (hors git).
    ============================================================ */
 
-/* Mode debug : ?debug=afterglow2026 → capte aussi les erreurs FATALES (require
-   manquant, constante SMTP indéfinie…) et les renvoie en HTTP 200 + JSON, pour
-   qu'elles soient lisibles même derrière un handle_errors Caddy. À retirer ensuite. */
-$DEBUG = isset($_GET["debug"]) && $_GET["debug"] === "afterglow2026";
-if ($DEBUG) {
-  register_shutdown_function(function () {
-    $e = error_get_last();
-    if ($e && in_array($e["type"], [E_ERROR, E_PARSE, E_COMPILE_ERROR, E_CORE_ERROR], true)) {
-      if (!headers_sent()) { http_response_code(200); header("Content-Type: application/json; charset=utf-8"); }
-      echo json_encode(["ok" => false, "error" => "fatal", "detail" => $e["message"] . " @ " . basename($e["file"]) . ":" . $e["line"]]);
-    }
-  });
-}
-
 require_once __DIR__ . '/vendor/autoload.php';
 /* smtp-config.php contient les identifiants SMTP (hors git).
    On le cherche d'abord HORS de la racine web (plus sûr), puis dans le
@@ -164,10 +150,6 @@ if (!$ok) {
 
 if ($ok) {
   echo json_encode(["ok" => true]);
-} else if ($DEBUG) {
-  // En debug : statut 200 + détail, pour que la réponse ne soit pas
-  // interceptée par un handle_errors Caddy. À retirer une fois le mail OK.
-  echo json_encode(["ok" => false, "error" => "mail", "detail" => $errInfo]);
 } else {
   http_response_code(502);
   echo json_encode(["ok" => false, "error" => "mail"]);

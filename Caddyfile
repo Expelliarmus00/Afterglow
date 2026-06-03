@@ -11,11 +11,6 @@
 # certificat à indiquer. Adapter la version PHP-FPM si besoin (php8.2).
 # ============================================================
 
-# Redirection www → non-www
-www.afterglowbykevin.ch {
-	redir https://afterglowbykevin.ch{uri} permanent
-}
-
 afterglowbykevin.ch {
 	root * /var/www/afterglow
 	encode gzip zstd
