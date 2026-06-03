@@ -72,7 +72,7 @@ function ContactApp() {
   const [step, setStep] = useState(0);
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
-  const [mode, setMode] = useState("backend");
+  const [sendError, setSendError] = useState(false);
   const [err, setErr] = useState({});
   const [a, setA] = useState({
     type: normType(Q.get("type") || ""),
@@ -102,26 +102,8 @@ function ContactApp() {
   const back = () => setStep((s) => Math.max(s - 1, 0));
 
   const submit = async () => {
-    const subject = encodeURIComponent("Demande de devis — " + (a.type || "Projet photo"));
-    const lines = [
-      "Prestation : " + (a.type || "—"),
-      hasFormules ? "Formule envisagée : " + (a.formule || "—") : null,
-      "Date envisagée : " + (a.date || "—"),
-      "Lieu / région : " + (a.region || "—"),
-      "",
-      "Nom : " + a.nom,
-      "Email : " + a.email,
-      "Téléphone : " + (a.tel || "—"),
-      "",
-      "Message :",
-      a.message || "—",
-    ].filter((l) => l !== null);
-    const mailtoFallback = () => {
-      window.location.href = "mailto:info@snapshotmedia.ch?subject=" + subject + "&body=" + encodeURIComponent(lines.join("\n"));
-      setMode("mailto");
-      setSent(true);
-    };
     setSending(true);
+    setSendError(false);
     try {
       const res = await fetch("contact.php", {
         method: "POST",
@@ -130,14 +112,12 @@ function ContactApp() {
       });
       const j = await res.json().catch(() => ({}));
       if (res.ok && j && j.ok) {
-        setMode("backend");
         setSent(true);
       } else {
-        mailtoFallback();
+        setSendError(true);
       }
     } catch (e) {
-      // pas de backend (préversion / hébergement statique) → repli mailto
-      mailtoFallback();
+      setSendError(true);
     } finally {
       setSending(false);
     }
@@ -162,11 +142,7 @@ function ContactApp() {
               <div className="form-sent reveal" style={{ margin: "0 auto", maxWidth: "560px" }}>
                 <div className="fs-mark">✓</div>
                 <h3>Merci, votre demande est bien partie.</h3>
-                {mode === "backend" ? (
-                  <p>Je l'ai bien reçue et je vous réponds personnellement sous 48&nbsp;h ouvrées. À très vite&nbsp;!</p>
-                ) : (
-                  <p>Votre messagerie s'est ouverte avec un récapitulatif. Si rien ne s'est passé, écrivez-moi directement — je réponds sous 48&nbsp;h ouvrées.</p>
-                )}
+                <p>Je l'ai bien reçue et je vous réponds personnellement sous 48&nbsp;h ouvrées. À très vite&nbsp;!</p>
                 <a href="mailto:info@snapshotmedia.ch" className="link-arrow">info@snapshotmedia.ch <span className="ar">→</span></a>
               </div>
             ) : (
@@ -256,6 +232,11 @@ function ContactApp() {
                   </div>
                 )}
 
+                {sendError && (
+                  <p className="field-err" style={{ textAlign: "center", marginBottom: "12px" }}>
+                    Une erreur est survenue. Réessayez ou écrivez-moi directement à <a href="mailto:info@snapshotmedia.ch">info@snapshotmedia.ch</a>.
+                  </p>
+                )}
                 <div className="fn-actions">
                   {step > 0 ? <button type="button" className="fn-back" onClick={back}>← Retour</button> : <span></span>}
                   {label === "Récapitulatif"
