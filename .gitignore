@@ -15,6 +15,15 @@ Wireframe - *.html
 # Docs de handoff dev
 HANDOFF-DEV.md
 
+# PHPMailer / Composer (installés directement sur le VPS)
+vendor/
+composer.phar
+composer.json
+composer.lock
+
+# Identifiants SMTP (jamais dans git)
+smtp-config.php
+
 # Journal CSV généré par contact.php (données privées)
 contact-log.csv
 
