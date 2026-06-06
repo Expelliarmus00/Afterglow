@@ -47,4 +47,23 @@
     + '<a class="kc-devis" href="contact.html">Demander un devis <span class="ar">→</span></a>';
   document.body.appendChild(wrap);
   requestAnimationFrame(function () { setTimeout(function () { wrap.classList.add("in"); }, 600); });
+
+  /* Remonte les boutons quand le footer entre dans le viewport,
+     pour ne jamais masquer son contenu. */
+  function baseBottom() {
+    return Math.max(16, Math.min(28, window.innerWidth * 0.024));
+  }
+  var footerEl = document.querySelector("footer");
+  if (footerEl && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      var r = entries[0];
+      if (r.isIntersecting) {
+        var overlap = r.intersectionRect.height;
+        wrap.style.bottom = (overlap + baseBottom()) + "px";
+      } else {
+        wrap.style.bottom = "";
+      }
+    }, { threshold: Array.from({ length: 101 }, function (_, i) { return i / 100; }) });
+    io.observe(footerEl);
+  }
 })();

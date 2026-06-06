@@ -530,6 +530,11 @@ select.control option{ background:#1a1714; color:#f2ede6; }
 
 /* ---------- FOOTER ---------- */
 .footer{ display:flex; align-items:center; justify-content:space-between; gap:20px; padding:40px clamp(20px,4vw,56px); flex-wrap:wrap; }
+@media(max-width:640px){
+  .footer{ flex-direction:column; align-items:center; text-align:center; gap:18px; padding:36px clamp(20px,5vw,40px); }
+  .footer .social{ flex-wrap:wrap; justify-content:center; gap:14px; }
+  .footer .wordmark{ justify-content:center; }
+}
 .footer .wordmark{ display:inline-flex; align-items:flex-end; gap:8px; }
 .footer .wm-main{ font-family:var(--font-display); font-weight:400; letter-spacing:.28em; font-size:15px; }
 .footer .wm-by{ font-size:12px; }
