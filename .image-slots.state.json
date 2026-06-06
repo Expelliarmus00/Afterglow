@@ -200,13 +200,9 @@
   "gal-main": { "u": "images/gal-main.webp", "s": 1, "x": 0, "y": 0 },
   "gal-2":    { "u": "images/gal-2.webp",    "s": 1, "x": 0, "y": 0 },
   "gal-3":    { "u": "images/gal-3.webp",    "s": 1, "x": 0, "y": 0 },
-  "pf-1":  { "u": "images/pf-mariage-1.webp", "s": 1, "x": 0, "y": 0 },
-  "pf-5":  { "u": "images/pf-mariage-2.webp", "s": 1, "x": 0, "y": 0 },
-  "pf-8":  { "u": "images/pf-mariage-3.webp", "s": 1, "x": 0, "y": 0 },
-  "pf-12": { "u": "images/pf-mariage-1.webp", "s": 1, "x": 0, "y": 0 },
-  "pf-16": { "u": "images/pf-mariage-2.webp", "s": 1, "x": 0, "y": 0 },
-  "pf-19": { "u": "images/pf-portrait-1.webp","s": 1, "x": 0, "y": 0 },
-  "pf-20": { "u": "images/pf-portrait-2.webp","s": 1, "x": 0, "y": 0 },
-  "pf-21": { "u": "images/pf-portrait-1.webp","s": 1, "x": 0, "y": 0 },
-  "pf-22": { "u": "images/pf-portrait-2.webp","s": 1, "x": 0, "y": 0 }
+  "pf-1":  { "u": "images/pf-mariage-1.webp",  "s": 1, "x": 0, "y": 0 },
+  "pf-5":  { "u": "images/pf-mariage-2.webp",  "s": 1, "x": 0, "y": 0 },
+  "pf-8":  { "u": "images/pf-mariage-3.webp",  "s": 1, "x": 0, "y": 0 },
+  "pf-19": { "u": "images/pf-portrait-1.webp", "s": 1, "x": 0, "y": 0 },
+  "pf-20": { "u": "images/pf-portrait-2.webp", "s": 1, "x": 0, "y": 0 }
 }
