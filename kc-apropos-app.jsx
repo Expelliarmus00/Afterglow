@@ -110,10 +110,12 @@ function ApApp() {
   });
   useApplyTweaks(t);
   useReveal([]);
-  /* Nav claire : ajoute nav-on-light au body pour inverser les couleurs du menu */
+  /* Force la nav en état "scrolled" dès le chargement :
+     fond droit clair + fond gauche sombre → impossible d'avoir une couleur unique lisible.
+     Le fond dépoli sombre résout les deux côtés. */
   React.useEffect(() => {
-    document.body.classList.add("nav-on-light");
-    return () => document.body.classList.remove("nav-on-light");
+    document.body.classList.add("nav-force-scrolled");
+    return () => document.body.classList.remove("nav-force-scrolled");
   }, []);
 
   return (

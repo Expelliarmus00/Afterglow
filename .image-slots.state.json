@@ -1,4 +1,10 @@
 {
+  "ap-portrait": {
+    "u": "images/ap-portrait.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
   "about-portrait": {
     "u": "images/about-portrait.webp",
     "s": 1,
