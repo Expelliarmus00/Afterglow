@@ -310,7 +310,7 @@ function PrestaApp() {
         <Process />
         <Inclus />
         {window.KC_SLUG === "couple" && <GiftBand />}
-        <Testimonials />
+        {/* <Testimonials /> — masqué tant qu'il n'y a pas de vrais avis clients (réactiver une fois disponibles) */}
         <Faq />
         {VILLE_LINKS[window.KC_SLUG] && <VillesBand />}
         <RelatedPresta current={window.KC_SLUG} />

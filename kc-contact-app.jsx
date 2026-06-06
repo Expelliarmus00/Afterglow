@@ -116,10 +116,10 @@ function ContactApp() {
       } else if (res.status === 429) {
         setSendError("Trop d'envois en peu de temps. Patientez quelques minutes, puis réessayez.");
       } else {
-        setSendError("Une erreur est survenue à l'envoi. Réessayez, ou écrivez-moi directement à info@snapshotmedia.ch.");
+        setSendError("Une erreur est survenue à l'envoi. Réessayez, ou écrivez-moi directement à contact@afterglowbykevin.ch.");
       }
     } catch (e) {
-      setSendError("Connexion impossible. Vérifiez votre réseau, ou écrivez-moi à info@snapshotmedia.ch.");
+      setSendError("Connexion impossible. Vérifiez votre réseau, ou écrivez-moi à contact@afterglowbykevin.ch.");
     } finally {
       setSending(false);
     }
@@ -145,7 +145,7 @@ function ContactApp() {
                 <div className="fs-mark">✓</div>
                 <h3>Merci, votre demande est bien partie.</h3>
                 <p>Je l'ai bien reçue et je vous réponds personnellement sous 48&nbsp;h ouvrées. À très vite&nbsp;!</p>
-                <a href="mailto:info@snapshotmedia.ch" className="link-arrow">info@snapshotmedia.ch <span className="ar">→</span></a>
+                <a href="mailto:contact@afterglowbykevin.ch" className="link-arrow">contact@afterglowbykevin.ch <span className="ar">→</span></a>
               </div>
             ) : (
             <div className="funnel reveal">
@@ -248,7 +248,7 @@ function ContactApp() {
             )}
 
             <div className="fn-aside reveal d1">
-              <a href="mailto:info@snapshotmedia.ch">info@snapshotmedia.ch</a>
+              <a href="mailto:contact@afterglowbykevin.ch">contact@afterglowbykevin.ch</a>
               <span className="jl-dot">·</span>
               <a href="tel:+41764247603">+41 76 424 76 03</a>
               <span className="jl-dot">·</span>

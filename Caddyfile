@@ -8,7 +8,7 @@
 #   sudo systemctl reload caddy
 #
 # Caddy gère le HTTPS automatiquement (Let's Encrypt) — aucun chemin de
-# certificat à indiquer. Adapter la version PHP-FPM si besoin (php8.2).
+# certificat à indiquer. Adapter la version PHP-FPM si besoin (php8.3).
 # ============================================================
 
 afterglowbykevin.ch {
@@ -24,11 +24,11 @@ afterglowbykevin.ch {
 		Permissions-Policy        "camera=(), microphone=(), geolocation=()"
 		-Server
 
-		# CSP en mode RAPPORT (ne bloque rien, signale les violations dans la
-		# console). React est auto-hébergé ; 'unsafe-inline' reste nécessaire
-		# pour le splash inline et les styles React. Une fois vérifié sans
-		# violation, renommer l'en-tête en "Content-Security-Policy" (enforce).
-		Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
+		# CSP en mode ENFORCE (bloque les ressources non autorisées).
+		# React est auto-hébergé ; 'unsafe-inline' reste nécessaire pour le
+		# splash inline (script) et les styles React. Vérifié : Google Fonts,
+		# data: (favicon SVG + previews image-slot), POST same-origin (contact).
+		Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
 	}
 
 	# --- Blocage des fichiers sensibles (404, jamais téléchargeables) ---
@@ -42,7 +42,7 @@ afterglowbykevin.ch {
 	respond @blocked 404
 
 	# --- PHP (formulaire de contact) ---
-	php_fastcgi unix//run/php/php8.2-fpm.sock
+	php_fastcgi unix//run/php/php8.3-fpm.sock
 
 	# --- Cache long pour les assets statiques ---
 	@static {

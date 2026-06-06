@@ -15,7 +15,7 @@ else                                               require_once __DIR__ . '/smtp
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-$TO        = "info@snapshotmedia.ch";
+$TO        = "contact@afterglowbykevin.ch";
 $FROM      = SMTP_USER;
 $SUBJECT_P = "[Afterglow] Demande de devis — ";
 $SITE_NAME = "Afterglow by Kevin";

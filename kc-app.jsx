@@ -420,10 +420,10 @@ function Contact() {
       } else if (res.status === 429) {
         setSendError("Trop d'envois en peu de temps. Patientez quelques minutes, puis réessayez.");
       } else {
-        setSendError("Une erreur est survenue à l'envoi. Réessayez, ou écrivez-moi directement à info@snapshotmedia.ch.");
+        setSendError("Une erreur est survenue à l'envoi. Réessayez, ou écrivez-moi directement à contact@afterglowbykevin.ch.");
       }
     } catch (e) {
-      setSendError("Connexion impossible. Vérifiez votre réseau, ou écrivez-moi à info@snapshotmedia.ch.");
+      setSendError("Connexion impossible. Vérifiez votre réseau, ou écrivez-moi à contact@afterglowbykevin.ch.");
     } finally {
       setSending(false);
     }
@@ -442,7 +442,7 @@ function Contact() {
               <div className="fs-mark">✓</div>
               <h3>Merci, votre demande est bien partie.</h3>
               <p>Je l'ai bien reçue et je vous réponds personnellement sous 48&nbsp;h ouvrées. À très vite&nbsp;!</p>
-              <a href="mailto:info@snapshotmedia.ch" className="link-arrow">info@snapshotmedia.ch <span className="ar">→</span></a>
+              <a href="mailto:contact@afterglowbykevin.ch" className="link-arrow">contact@afterglowbykevin.ch <span className="ar">→</span></a>
             </div>
           ) : (
             <form className="form reveal d2" noValidate onSubmit={onSubmit}>
@@ -476,7 +476,7 @@ function Contact() {
             </form>
           )}
           <div className="contact-direct reveal d3">
-            <a href="mailto:info@snapshotmedia.ch">info@snapshotmedia.ch</a>
+            <a href="mailto:contact@afterglowbykevin.ch">contact@afterglowbykevin.ch</a>
           </div>
         </div>
       </div>
@@ -491,7 +491,7 @@ function Footer() {
       <div className="footer">
         <div className="wordmark"><span className="wm-main">Afterglow</span><span className="wm-by">by Kevin Chinelli</span></div>
         <div className="copy">© 2026 — Tous droits réservés · Site créé par <a href="https://snapshotmedia.ch" target="_blank" rel="noopener">Snapshot Media</a></div>
-        <div className="social"><a href="apropos.html">À propos</a><a href="https://www.instagram.com/afterglowbykevin/" target="_blank" rel="noopener">Instagram</a><a href="tel:+41764247603">+41 76 424 76 03</a><a href="mailto:info@snapshotmedia.ch">info@snapshotmedia.ch</a></div>
+        <div className="social"><a href="apropos.html">À propos</a><a href="confidentialite.html">Confidentialité</a><a href="https://www.instagram.com/afterglowbykevin/" target="_blank" rel="noopener">Instagram</a><a href="tel:+41764247603">+41 76 424 76 03</a><a href="mailto:contact@afterglowbykevin.ch">contact@afterglowbykevin.ch</a></div>
       </div>
     </footer>
   );

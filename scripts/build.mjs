@@ -32,6 +32,7 @@ const ENTRIES = [
   "kc-avis-app.jsx",
   "kc-contact-app.jsx",
   "kc-journal-app.jsx",
+  "kc-legal-app.jsx",
   "kc-portfolio-app.jsx",
   "kc-presta-app.jsx",
   "kc-tarifs-app.jsx",

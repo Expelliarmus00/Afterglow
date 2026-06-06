@@ -6,7 +6,7 @@
 const GOOGLE_REVIEWS_URL = "https://search.google.com/local/writereview"; // ⚠️ placeholder
 
 const ALL_REVIEWS = (function () {
-  const cats = { mariage: "Mariage", portrait: "Portrait", studio: "Studio", maternite: "Maternité", couple: "Couple" };
+  const cats = { mariage: "Mariage", portrait: "Portrait", studio: "Studio", maternite: "Maternité", couple: "Couple", famille: "Famille" };
   const out = [];
   Object.keys(window.KC_PRESTA).forEach((slug) => {
     (window.KC_PRESTA[slug].testimonials || []).forEach((t) => {
@@ -33,15 +33,13 @@ function AvisApp() {
         <section className="sec s-dark pf-head">
           <div className="wrap">
             <Overline className="reveal">Avis clients</Overline>
-            <h1 className="display reveal d1">Ils m'ont fait confiance.</h1>
-            <p className="reveal d1">Mariés, familles, futures mamans et professionnels de toute la Suisse romande — voici ce qu'ils retiennent de nos séances. La meilleure façon de savoir si l'on s'entendra.</p>
-            <div className="avis-stars reveal d1">
-              <span className="stars" aria-hidden="true">★★★★★</span>
-              <span>5,0 / 5 — sur l'ensemble des retours clients</span>
-            </div>
+            <h1 className="display reveal d1">Bientôt vos mots ici.</h1>
+            <p className="reveal d1">Afterglow démarre — les premières séances arrivent. Les retours de mes clients prendront place ici au fur et à mesure, avec authenticité. En attendant, le meilleur moyen de vous faire une idée reste d'échanger directement avec moi.</p>
           </div>
         </section>
 
+        {/* Grille d'avis — réactiver quand de VRAIS témoignages clients seront disponibles.
+            Les données dans kc-presta-data.js doivent alors refléter de vrais retours.
         <section className="sec s-light pad-y">
           <div className="wrap">
             <div className="avis-grid">
@@ -58,20 +56,9 @@ function AvisApp() {
             </div>
           </div>
         </section>
+        */}
 
-        <section className="sec s-darker pad-y">
-          <div className="wrap" style={{ textAlign: "center" }}>
-            <Overline className="reveal" style={{ justifyContent: "center" }}>Votre avis compte</Overline>
-            <h2 className="display reveal d1" style={{ fontSize: "clamp(28px,3.6vw,52px)", margin: "20px 0 16px" }}>Vous avez travaillé avec moi&nbsp;?</h2>
-            <p className="reveal d1" style={{ color: "var(--muted)", maxWidth: "52ch", margin: "0 auto clamp(28px,4vw,42px)" }}>
-              Partager votre expérience sur Google aide d'autres couples et familles à franchir le pas. Merci du fond du cœur.
-            </p>
-            <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener" className="link-arrow reveal d2" style={{ fontSize: "14px" }}>
-              Laisser un avis sur Google <span className="ar">→</span>
-            </a>
-          </div>
-        </section>
-        <CtaContact title="Écrivons votre histoire." />
+        <CtaContact overline="Parlons de votre projet" title="Discutons de votre séance." />
       </main>
       <Footer />
       <TweaksBase t={t} setTweak={setTweak} />
