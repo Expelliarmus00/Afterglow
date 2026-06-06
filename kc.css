@@ -151,6 +151,7 @@ image-slot{ background:#1b1815; color:rgba(242,237,230,.5) !important; }
     transition:transform .45s cubic-bezier(.2,.7,.2,1), opacity .3s; }
   .nav.menu-open .nav-burger span:nth-child(1){ transform:translateY(3.75px) rotate(45deg); }
   .nav.menu-open .nav-burger span:nth-child(2){ transform:translateY(-3.75px) rotate(-45deg); }
+  .nav{ z-index:58; } /* au-dessus du menu mobile (55) pour que la croix reste cliquable */
   .mobile-menu{
     position:fixed; inset:0; z-index:55; display:flex; align-items:flex-start; justify-content:center;
     overflow-y:auto;
@@ -163,10 +164,12 @@ image-slot{ background:#1b1815; color:rgba(242,237,230,.5) !important; }
     transform:translateY(14px); opacity:0; transition:transform .5s cubic-bezier(.2,.6,.15,1) .08s, opacity .5s .08s;
     width:100%; min-height:100%; box-sizing:border-box; }
   .mobile-menu.is-open .mm-inner{ transform:none; opacity:1; }
-  .mm-group{ display:flex; flex-direction:column; align-items:center; gap:clamp(10px,2.5vw,18px); }
-  .mm-label{ font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); margin-bottom:2px; }
-  .mm-group a{ font-family:var(--font-display); font-size:clamp(16px,4.5vw,22px); color:color-mix(in oklab, var(--cream), transparent 14%); }
-  .mm-top{ font-family:var(--font-display); font-size:clamp(18px,5vw,28px); letter-spacing:.02em; color:var(--cream); }
+  .mm-group{ display:flex; flex-direction:column; align-items:center; gap:clamp(6px,1.8vw,12px); }
+  .mm-label{ font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); margin-bottom:4px; }
+  /* sous-pages prestations : plus petites, police corps, couleur atténuée */
+  .mm-group a{ font-family:var(--font-body); font-size:clamp(13px,3.5vw,16px); letter-spacing:.1em; text-transform:uppercase; color:color-mix(in oklab, var(--cream), transparent 44%); }
+  /* pages principales : grandes, police titre, couleur pleine */
+  .mm-top{ font-family:var(--font-display); font-size:clamp(22px,6vw,34px); letter-spacing:.02em; color:var(--cream); }
   .mobile-menu a{ transition:color .3s; }
   .mobile-menu a:active, .mobile-menu a:hover{ color:var(--accent); }
   /* cacher les boutons CTA fixes quand le menu est ouvert */
