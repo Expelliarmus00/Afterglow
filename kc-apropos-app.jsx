@@ -111,7 +111,7 @@ function ApApp() {
   useApplyTweaks(t);
   useReveal([]);
   /* Nav claire : ajoute nav-on-light au body pour inverser les couleurs du menu */
-  useEffect(() => {
+  React.useEffect(() => {
     document.body.classList.add("nav-on-light");
     return () => document.body.classList.remove("nav-on-light");
   }, []);
