@@ -82,7 +82,6 @@ function Nav() {
         <a className="mm-top" href="portfolio.html" onClick={() => setOpen(false)}>Portfolio</a>
         <a className="mm-top" href="tarifs.html" onClick={() => setOpen(false)}>Tarifs</a>
         <a className="mm-top" href="journal.html" onClick={() => setOpen(false)}>Journal</a>
-        <a className="mm-top" href="avis.html" onClick={() => setOpen(false)}>Avis</a>
         <a className="mm-top" href="#contact" onClick={() => setOpen(false)}>Contact</a>
       </div>
     </div>,
@@ -102,7 +101,6 @@ function Nav() {
           <a href="portfolio.html" className="nav-extra">Portfolio</a>
           <a href="tarifs.html" className="nav-extra">Tarifs</a>
           <a href="journal.html" className="nav-extra">Journal</a>
-          <a href="avis.html" className="nav-extra">Avis</a>
           <a href="#contact" className="nav-cta">Contact</a>
         </div>
         <button className="nav-burger" aria-label="Ouvrir le menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
@@ -304,7 +302,7 @@ function Prestations({ layout }) {
       <div className="wrap" style={{ paddingTop: "clamp(90px,12vw,150px)", paddingBottom: "clamp(50px,6vw,80px)", textAlign: "center" }}>
         <Overline className="reveal" >Prestations</Overline>
         <h2 className="display reveal d1" style={{ fontSize: "clamp(30px,4vw,56px)", marginTop: "22px" }}>
-          Chaque histoire, son écriture.
+          À chaque histoire, son écriture.
         </h2>
       </div>
       {layout === "grille" ? <PrestationsGrille /> : <PrestationsBandes />}
@@ -336,7 +334,36 @@ function Gallery() {
   );
 }
 
-/* ---------- TESTIMONIALS ---------- */
+/* ---------- PROCESSUS ---------- */
+const PROCESS = [
+  { n: "01", title: "On se parle", text: "Un échange sans engagement pour comprendre votre projet, vos envies, et trouver ensemble la date idéale." },
+  { n: "02", title: "La séance", text: "Je vous guide avec discrétion. Pas de poses figées — juste la lumière, le moment, ce qui se passe naturellement." },
+  { n: "03", title: "La sélection", text: "Je prends le temps de sélectionner et retoucher chaque image avec soin. Votre galerie est prête sous trois semaines." },
+  { n: "04", title: "La livraison", text: "Vos photos en haute résolution, dans une galerie privée en ligne. Des souvenirs pour toujours." },
+];
+function Process() {
+  return (
+    <section className="sec s-light pad-y">
+      <div className="wrap">
+        <Overline className="reveal">Comment ça se passe</Overline>
+        <h2 className="display reveal d1" style={{ fontSize: "clamp(28px,3.4vw,48px)", marginTop: "18px", marginBottom: "clamp(50px,7vw,90px)" }}>
+          De la prise de contact<br />à vos souvenirs.
+        </h2>
+        <div className="process-grid">
+          {PROCESS.map((s, i) => (
+            <div key={s.n} className={"process-step reveal d" + (i + 1)}>
+              <div className="process-num">{s.n}</div>
+              <h3 className="process-title">{s.title}</h3>
+              <p className="process-text">{s.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- TESTIMONIALS (désactivé — réactiver quand disponibles) ---------- */
 function Testimonials() {
   return (
     <section className="sec s-light pad-y">
@@ -462,7 +489,7 @@ function Footer() {
       <div className="footer">
         <div className="wordmark"><span className="wm-main">Afterglow</span><span className="wm-by">by Kevin Chinelli</span></div>
         <div className="copy">© 2026 — Tous droits réservés · Site créé par <a href="https://snapshotmedia.ch" target="_blank" rel="noopener">Snapshot Media</a></div>
-        <div className="social"><a href="apropos.html">À propos</a><a href="avis.html">Avis</a><a href="https://www.instagram.com/afterglowbykevin/" target="_blank" rel="noopener">Instagram</a><a href="tel:+41764247603">+41 76 424 76 03</a><a href="mailto:info@snapshotmedia.ch">info@snapshotmedia.ch</a></div>
+        <div className="social"><a href="apropos.html">À propos</a><a href="https://www.instagram.com/afterglowbykevin/" target="_blank" rel="noopener">Instagram</a><a href="tel:+41764247603">+41 76 424 76 03</a><a href="mailto:info@snapshotmedia.ch">info@snapshotmedia.ch</a></div>
       </div>
     </footer>
   );
@@ -563,7 +590,8 @@ function App() {
         <About layout={t.aboutLayout} />
         <Prestations layout={t.prestaLayout} />
         <Gallery />
-        <Testimonials />
+        <Process />
+        {/* <Testimonials /> — réactiver quand les premiers avis sont disponibles */}
         <Contact />
       </main>
       <Footer />
