@@ -170,7 +170,10 @@ function HomeHero({ variant = "a" }) {
   /* variant "a" — full-bleed cinematic */
   return (
     <section id="hero" className="hhero va">
-      <div className="hh-bg"><Slot id="home-hero-full" ph="Image hero — pleine page" style={{ width: "100%", height: "100%" }} /></div>
+      <div className="hh-bg">
+        <Slot id="home-hero-full" ph="Image hero — pleine page" style={{ width: "100%", height: "100%" }} />
+        <Slot id="home-hero-mobile" ph="Image hero — portrait mobile" style={{ width: "100%", height: "100%" }} />
+      </div>
       <div className="scrim"></div>
       <div className="hh-inner">
         <div className="overline hh-over reveal in">{H.over}</div>
