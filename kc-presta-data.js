@@ -25,32 +25,33 @@ window.KC_PRESTA = {
       "Émotion d'un invité", "Détails du lieu / décor", "Première danse", "Fin de soirée",
     ],
     formules: [
-      { tag: "Demi-journée · 6 h", name: "Essentiel", price: "CHF 1'690",
-        items: ["Couverture 6 h continues", "Cérémonie + vin d'honneur", "Galerie privée en ligne", "Env. 250 photos livrées, 120 retouchées", "Livraison sous 4 semaines"] },
-      { tag: "Le plus choisi · 10 h", name: "Signature", price: "CHF 2'690", feature: true,
-        items: ["Couverture 10 h, des préparatifs à la soirée", "Séance couple à l'heure dorée", "Galerie privée + sélection de favoris", "Env. 500 photos livrées, 300 retouchées", "Tirage fine art A4 offert"] },
+      { tag: "Demi-journée · 4 h", name: "Essentiel", price: "dès CHF 1'690",
+        items: ["Couverture 4 h continues", "Cérémonie & vin d'honneur", "Galerie privée en ligne, téléchargement HD", "Env. 200 photos, toutes retouchées"] },
+      { tag: "Le plus choisi · 10 h", name: "Signature", price: "dès CHF 2'990", feature: true,
+        items: ["Couverture 10 h, des préparatifs à la soirée", "Séance d'engagement (1 h) avant le mariage", "Séance couple à l'heure dorée", "Galerie privée + sélection de favoris", "Env. 500 photos, toutes retouchées", "Tirage fine art — format à votre choix"] },
       { tag: "Sur mesure · 2 jours", name: "Prestige", price: "dès CHF 4'500",
         items: ["Présence sur 2 jours (veille / brunch)", "Second photographe", "Séance engagement offerte", "Album fine art relié 30×30", "Livraison express sous 10 jours"] },
     ],
     process: [
       { n: "01", title: "Prise de contact", text: "Un appel ou un café pour faire connaissance, comprendre votre histoire, votre lieu et vérifier mes disponibilités sur votre date." },
-      { n: "02", title: "Repérage & déroulé", text: "On cale ensemble le timing de la journée, les moments à ne pas manquer et, quand c'est possible, on visite les lieux pour anticiper la lumière." },
+      { n: "02", title: "Repérage & déroulé", text: "On cale ensemble le timing de la journée, les moments à ne pas manquer et, si besoin, on visite les lieux pour anticiper la lumière." },
       { n: "03", title: "Le jour J", text: "Je suis là tôt, en retrait, à l'écoute. Je connais le déroulé par cœur pour saisir l'instant sans jamais avoir à le provoquer." },
-      { n: "04", title: "Tri & livraison", text: "Un aperçu sous 3 à 5 jours, puis la galerie complète retouchée sous 4 semaines, et enfin vos tirages ou votre album." },
+      { n: "04", title: "Tri & livraison", text: "Une sélection de 10 photos pour vos réseaux livrée sous 3 à 5 jours. La galerie complète, toutes photos retouchées, est disponible sous 4 semaines (10 jours en formule Prestige)." },
     ],
     inclus: [
-      "Appel préparatoire et conseils déroulé", "Repérage des lieux quand c'est possible",
-      "Galerie privée en ligne, téléchargement HD", "Retouche soignée image par image",
-      "Droits d'usage privé inclus", "Double sauvegarde sécurisée pendant 1 an",
+      "Appel préparatoire et conseils déroulé", "Repérage des lieux si besoin",
+      "Galerie privée en ligne, téléchargement HD", "Toutes les photos livrées retouchées une à une",
+      "Sélection réseaux sociaux livrée sous 3–5 jours", "Droits d'usage privé inclus",
+      "Double sauvegarde sécurisée pendant 1 an", "Déplacement jusqu'à 30 km de Mézières offert — au-delà, supplément à convenir",
     ],
     testimonials: [
       { quote: "Kevin a capturé notre mariage avec une justesse rare. Chaque image raconte précisément ce que nous avons ressenti ce jour-là.", who: "Camille & Thomas, Lavaux" },
       { quote: "Discret toute la journée, et pourtant rien ne lui a échappé. Nos photos sont d'une élégance folle.", who: "Sophie & Julien, Fribourg" },
     ],
     faq: [
-      { q: "Dans quelles régions vous déplacez-vous ?", a: "Je couvre toute la Suisse romande — Vaud, Genève, Fribourg, Neuchâtel, le Valais et le Jura — des domaines de Lavaux aux rives du Léman, en passant par la Gruyère et les Alpes vaudoises. Aucun frais de déplacement à l'intérieur de la Suisse romande. Pour un mariage ailleurs en Suisse ou à l'étranger, le déplacement et l'hébergement éventuel sont chiffrés clairement dans le devis." },
+      { q: "Dans quelles régions vous déplacez-vous ?", a: "Je me déplace avec plaisir pour tout mariage en Suisse romande et au-delà. Le déplacement est offert dans un rayon de 30 km autour de Mézières (VD) — ce qui couvre la grande région lausannoise. Au-delà, un supplément kilométrique est prévu et chiffré clairement dans le devis selon l'endroit. Pour un mariage à l'étranger, hébergement et transport sont intégrés au devis." },
       { q: "Photographiez-vous plusieurs mariages le même jour ?", a: "Jamais. Je ne réserve qu'un seul mariage par date : vous avez ma disponibilité et mon énergie du matin jusqu'à la fin de soirée." },
-      { q: "Combien de photos recevons-nous, et quand ?", a: "Selon la formule, de 250 à 500 photos livrées en pleine résolution. Vous recevez un aperçu d'une dizaine d'images sous 3 à 5 jours, puis la galerie complète et retouchée sous 4 semaines (10 jours en formule Prestige)." },
+      { q: "Combien de photos recevons-nous, et quand ?", a: "Selon la formule, de 200 à 500+ photos — toutes retouchées, en pleine résolution. Vous recevez une sélection de 10 images sous 3 à 5 jours (parfait pour vos réseaux), puis la galerie complète sous 4 semaines (10 jours en formule Prestige)." },
       { q: "Que se passe-t-il s'il pleut ?", a: "On prévoit toujours un plan B avec vous au repérage : un abri couvert, une arche, une grange ou un coin du lieu de réception. La pluie offre souvent les images les plus tendres — parapluie transparent à l'appui." },
       { q: "Proposez-vous un album et des tirages ?", a: "Oui. Albums fine art reliés à la main (papier mat ou brillant, couverture lin ou cuir) et tirages d'art encadrés, sur devis. C'est, de loin, ce qui traverse le mieux les années." },
       { q: "Comment réserver notre date ?", a: "La date est bloquée à la signature du contrat et au versement d'un acompte de 30 %. Le solde est réglé une semaine avant le mariage. Je conseille de réserver 8 à 14 mois à l'avance pour les samedis de mai à septembre." },
@@ -92,7 +93,8 @@ window.KC_PRESTA = {
     ],
     inclus: [
       "Échange préparatoire", "Conseils lieu, tenues & couleurs", "Direction de pose bienveillante",
-      "Retouche naturelle, fidèle à la peau", "Fichiers web et impression HD", "Galerie privée en ligne",
+      "Toutes les photos livrées retouchées", "Fichiers web et impression HD", "Galerie privée en ligne",
+      "Déplacement jusqu'à 30 km de Mézières offert — au-delà, supplément à convenir",
     ],
     testimonials: [
       { quote: "Je me trouve enfin à mon avantage sur une photo. Naturel, juste, sans surjeu.", who: "Sarah, Lausanne" },
@@ -110,7 +112,7 @@ window.KC_PRESTA = {
 
   /* ============== MATERNITÉ & GROSSESSE ============== */
   maternite: {
-    slug: "maternite", title: "Maternité & Grossesse", crumb: "Maternité & Grossesse", heroDefault: "centre",
+    slug: "maternite", title: "Maternité & Grossesse", crumb: "Maternité & Grossesse", heroDefault: "bas",
     heroImg: "Photo hero — silhouette de grossesse, lumière douce",
     heroHint: "Photographe grossesse & maternité en Suisse romande — la douceur de l'attente.",
     intro: {
@@ -143,7 +145,8 @@ window.KC_PRESTA = {
     ],
     inclus: [
       "Conseils tenues & préparation", "Studio chauffé et équipé", "Drapés et accessoires fournis",
-      "Retouche douce et naturelle", "Galerie privée en ligne", "Droits d'usage privé",
+      "Toutes les photos livrées retouchées", "Galerie privée en ligne", "Droits d'usage privé",
+      "Déplacement jusqu'à 30 km de Mézières offert — au-delà, supplément à convenir",
     ],
     testimonials: [
       { quote: "Une bulle de douceur. Je ne me trouvais jamais photogénique enceinte — Kevin m'a fait changer d'avis.", who: "Marie, Vevey" },
@@ -161,7 +164,7 @@ window.KC_PRESTA = {
 
   /* ====================== STUDIO ====================== */
   studio: {
-    slug: "studio", title: "Studio", crumb: "Studio", heroDefault: "centre",
+    slug: "studio", title: "Studio", crumb: "Studio", heroDefault: "bas",
     heroImg: "Photo hero — portrait studio, fond sobre",
     heroHint: "Portrait studio, corporate & éditorial en Suisse romande.",
     intro: {
@@ -194,7 +197,8 @@ window.KC_PRESTA = {
     ],
     inclus: [
       "Studio professionnel équipé", "Direction de pose", "Choix des fonds et lumières",
-      "Retouche professionnelle", "Formats web et impression", "Galerie privée en ligne",
+      "Toutes les photos livrées retouchées", "Formats web et impression", "Galerie privée en ligne",
+      "Déplacement jusqu'à 30 km de Mézières offert — au-delà, supplément à convenir",
     ],
     testimonials: [
       { quote: "Mes nouveaux portraits corporate ont transformé l'image de mon entreprise. Net, élégant, professionnel.", who: "Antoine, CEO · Genève" },
@@ -245,7 +249,8 @@ window.KC_PRESTA = {
     ],
     inclus: [
       "Échange préparatoire", "Conseils lieu & tenues", "Direction décontractée",
-      "Retouche naturelle", "Galerie privée en ligne", "Droits d'usage privé",
+      "Toutes les photos livrées retouchées", "Galerie privée en ligne", "Droits d'usage privé",
+      "Déplacement jusqu'à 30 km de Mézières offert — au-delà, supplément à convenir",
     ],
     testimonials: [
       { quote: "On riait tellement qu'on a oublié l'appareil. Les photos sont à notre image : vivantes et vraies.", who: "Inès & Karim, Montreux" },
@@ -296,7 +301,8 @@ window.KC_PRESTA = {
     ],
     inclus: [
       "Échange préparatoire", "Conseils tenues & couleurs accordées", "Séance en extérieur ou à domicile",
-      "Direction bienveillante, au rythme des enfants", "Retouche naturelle, fidèle à la peau", "Galerie privée en ligne",
+      "Direction bienveillante, au rythme des enfants", "Toutes les photos livrées retouchées", "Galerie privée en ligne",
+      "Déplacement jusqu'à 30 km de Mézières offert — au-delà, supplément à convenir",
     ],
     testimonials: [
       { quote: "Les premières photos de famille où nos enfants sont vraiment eux-mêmes. On rit à chaque fois qu'on les regarde.", who: "Famille Rochat, Lausanne" },
@@ -304,7 +310,7 @@ window.KC_PRESTA = {
     ],
     faq: [
       { q: "À partir de quel âge photographier les enfants ?", a: "À tout âge — du nouveau-né aux adolescents. Pour les bébés, on privilégie les dix premiers jours ou la période après 6 mois (quand ils tiennent assis). Pour les plus grands, la séance se transforme en jeu : c'est souvent là que naissent les plus belles images." },
-      { q: "Où se déroule la séance photo de famille ?", a: "Au lieu de votre choix en Suisse romande — bord du Léman à Lausanne, forêt, vignes de Lavaux, parc — ou à votre domicile pour des images intimes du quotidien. Je me déplace dans le canton de Vaud, à Genève, Fribourg, Neuchâtel et en Valais romand, sans frais de déplacement." },
+      { q: "Où se déroule la séance photo de famille ?", a: "Au lieu de votre choix — bord du Léman, forêt, vignes de Lavaux, parc — ou à votre domicile pour des images intimes du quotidien. Le déplacement est offert dans un rayon de 30 km autour de Mézières (VD). Au-delà, un supplément est prévu selon l'endroit." },
       { q: "Comment ça se passe avec des enfants en bas âge ou agités ?", a: "C'est tout l'intérêt du reportage : je ne cherche pas à les figer. On joue, on bouge, on fait des pauses goûter si besoin. Je m'adapte à leur rythme et à leur humeur — les enfants qui « ne tiennent pas en place » donnent souvent les photos les plus vivantes." },
       { q: "Peut-on faire une séance avec les grands-parents ?", a: "Oui, et c'est très demandé. La formule Tribu élargie est pensée pour les séances multigénérationnelles, jusqu'à douze personnes — un magnifique cadeau pour réunir toute la famille autour d'images qui restent." },
       { q: "Que porter pour une séance photo de famille ?", a: "Des tenues coordonnées, sans être assorties à l'identique : une palette de 2 ou 3 couleurs douces et naturelles fonctionne très bien. Évitez les gros logos et les motifs chargés. Je vous envoie des conseils personnalisés avant la séance." },

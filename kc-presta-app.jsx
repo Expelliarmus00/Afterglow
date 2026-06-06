@@ -31,7 +31,7 @@ function PrestaHero({ layout }) {
 /* ---------- REASSURANCE BAR (trust strip under hero) ---------- */
 function ReassureBar() {
   const points = [
-    "Suisse romande — déplacement inclus",
+    "30 km offerts · au-delà sur devis",
     "Réponse sous 48 h",
     "Tarifs transparents",
   ];
