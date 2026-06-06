@@ -113,30 +113,13 @@
     "x": 0,
     "y": 0
   },
-  "phero-mariage": {
-    "u": "images/phero-mariage.webp",
-    "s": 1,
-    "x": 0,
-    "y": 0
-  },
-  "phero-portrait": {
-    "u": "images/phero-portrait.webp",
-    "s": 1,
-    "x": 0,
-    "y": 0
-  },
-  "phero-maternite": {
-    "u": "images/presta-maternite.webp",
-    "s": 1,
-    "x": 0,
-    "y": 0
-  },
-  "phero-studio": {
-    "u": "images/hero-studio.webp",
-    "s": 1,
-    "x": 0,
-    "y": 0
-  },
+  "phero-mariage": { "u": "images/phero-mariage.webp",         "s": 1, "x": 0, "y": 0 },
+  "phero-mariage-mobile": { "u": "images/phero-mariage-mobile.webp", "s": 1, "x": 0, "y": 0 },
+  "phero-portrait": { "u": "images/phero-portrait.webp",        "s": 1, "x": 0, "y": 0 },
+  "phero-portrait-mobile": { "u": "images/phero-portrait-mobile.webp","s": 1, "x": 0, "y": 0 },
+  "phero-studio": { "u": "images/phero-studio.webp",          "s": 1, "x": 0, "y": 0 },
+  "phero-studio-mobile": { "u": "images/phero-studio-mobile.webp",  "s": 1, "x": 0, "y": 0 },
+  "phero-maternite": { "u": "images/presta-maternite.webp",     "s": 1, "x": 0, "y": 0 },
   "phero-couple": {
     "u": "images/presta-couple.webp",
     "s": 1,
