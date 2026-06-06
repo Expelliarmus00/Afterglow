@@ -19,7 +19,7 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "heading": "Cinzel",
   "body": "Jost",
   "heroVariant": "a",
-  "prestaLayout": "bandes",
+  "prestaLayout": "grille",
   "aboutLayout": "triptyque"
 }/*EDITMODE-END*/;
 
