@@ -82,6 +82,7 @@ function Nav() {
         <a className="mm-top" href="portfolio.html" onClick={() => setOpen(false)}>Portfolio</a>
         <a className="mm-top" href="tarifs.html" onClick={() => setOpen(false)}>Tarifs</a>
         <a className="mm-top" href="journal.html" onClick={() => setOpen(false)}>Journal</a>
+        <a className="mm-top" href="apropos.html" onClick={() => setOpen(false)}>À propos</a>
         <a className="mm-top" href="#contact" onClick={() => setOpen(false)}>Contact</a>
       </div>
     </div>,
@@ -101,6 +102,7 @@ function Nav() {
           <a href="portfolio.html" className="nav-extra">Portfolio</a>
           <a href="tarifs.html" className="nav-extra">Tarifs</a>
           <a href="journal.html" className="nav-extra">Journal</a>
+          <a href="apropos.html" className="nav-extra">À propos</a>
           <a href="#contact" className="nav-cta">Contact</a>
         </div>
         <button className="nav-burger" aria-label="Ouvrir le menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
