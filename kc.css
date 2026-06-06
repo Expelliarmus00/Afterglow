@@ -327,6 +327,8 @@ image-slot[id="home-hero-mobile"]{ position:absolute; inset:0; display:none; }
 @media(max-width:560px){ .hhero.va .hh-meta{ font-size:10.5px; letter-spacing:.16em; } }
 @media(max-width:400px){ .hh-title{ font-size:clamp(36px,11vw,54px); } }
 @media(max-width:600px){
+  /* padding-left aligné sur le logo AFTERGLOW de la nav (padding nav + .3em wordmark) */
+  .hhero.va .hh-inner{ padding-left:calc(clamp(20px,4vw,56px) + .3em); }
   .hhero.va .hh-tag{ margin-top:10px; }
   .hhero.va .hh-ctas{ margin-top:18px; }
   .hhero.va .hh-meta{ margin-top:12px; }
