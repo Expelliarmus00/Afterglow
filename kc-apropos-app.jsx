@@ -24,7 +24,7 @@ function ApHero() {
         <Overline className="reveal">Photographe · Suisse romande</Overline>
         <h1 className="reveal d1">Kevin Chinelli</h1>
         <p className="ap-manifesto reveal d2">
-          Les moments qui comptent <em>ne se mettent pas en scène.</em>
+          « Les moments qui comptent ne se mettent pas en scène. »
         </p>
         <p className="ap-body reveal d2">
           Mon travail, c'est d'être là — attentif, discret, à l'écoute — au moment exact où
@@ -39,7 +39,6 @@ function ApHero() {
             </div>
           ))}
         </div>
-        <div className="signature reveal d4">Kevin</div>
       </div>
     </section>
   );
