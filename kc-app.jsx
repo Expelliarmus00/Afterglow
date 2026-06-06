@@ -188,7 +188,7 @@ function HomeHero({ variant = "a" }) {
 
 /* ---------- ABOUT (3 layouts via tweak) ---------- */
 const ABOUT_INTRO = [
-  "Je photographie depuis bientôt dix ans celles et ceux qui traversent les grands moments de la vie. Mon travail cherche la vérité d'un regard, la lumière juste, l'émotion qui ne se rejoue pas.",
+  "Depuis une dizaine d'années que je travaille à travers l'image, j'ai appris une chose : les moments qui comptent ne se mettent pas en scène. Mon travail, c'est d'être là — attentif, discret, à l'écoute — au moment exact où quelque chose de vrai se passe.",
   "Basé en Suisse romande, je me déplace partout où une histoire mérite d'être racontée — avec discrétion, patience, et le souci constant du détail.",
 ];
 const ABOUT_QUOTE = "« Une photographie réussie, c'est un souvenir qui respire encore, des années plus tard. »";
