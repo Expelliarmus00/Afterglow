@@ -87,6 +87,7 @@ function StudioStrip() {
             <Overline className="reveal">L'atelier</Overline>
             <h2 className="display reveal d1" style={{ fontSize: "clamp(26px,3vw,44px)", marginTop: "16px" }}>Là où naissent les images.</h2>
           </div>
+          <a href="portfolio.html" className="link-arrow reveal d1">Voir le portfolio <span className="ar">→</span></a>
         </div>
         <div className="gal reveal d1" data-lb-group="atelier">
           <div className="cell"><Slot id="ap-studio-1" ph="Studio — vue d'ensemble" style={{ width: "100%", height: "100%" }} /></div>
