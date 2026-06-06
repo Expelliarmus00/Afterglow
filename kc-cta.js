@@ -48,22 +48,24 @@
   document.body.appendChild(wrap);
   requestAnimationFrame(function () { setTimeout(function () { wrap.classList.add("in"); }, 600); });
 
-  /* Remonte les boutons quand le footer entre dans le viewport,
-     pour ne jamais masquer son contenu. */
+  /* Remonte les boutons quand le footer entre dans le viewport.
+     getBoundingClientRect() est fiable sur mobile (barre URL dynamique incluse). */
   function baseBottom() {
     return Math.max(16, Math.min(28, window.innerWidth * 0.024));
   }
   var footerEl = document.querySelector("footer");
-  if (footerEl && "IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
-      var r = entries[0];
-      if (r.isIntersecting) {
-        var overlap = r.intersectionRect.height;
-        wrap.style.bottom = (overlap + baseBottom()) + "px";
+  if (footerEl) {
+    function updateCtaBottom() {
+      var rect = footerEl.getBoundingClientRect();
+      var wh = window.innerHeight;
+      if (rect.top < wh) {
+        wrap.style.bottom = (wh - rect.top + baseBottom()) + "px";
       } else {
         wrap.style.bottom = "";
       }
-    }, { threshold: Array.from({ length: 101 }, function (_, i) { return i / 100; }) });
-    io.observe(footerEl);
+    }
+    window.addEventListener("scroll", updateCtaBottom, { passive: true });
+    window.addEventListener("resize", updateCtaBottom);
+    updateCtaBottom();
   }
 })();
