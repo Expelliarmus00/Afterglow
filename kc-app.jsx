@@ -281,15 +281,15 @@ function PrestationsGrille() {
     <div className="wrap" style={{ paddingBottom: "clamp(90px,12vw,170px)" }}>
       <div className="svc-grid">
         {PRESTATIONS.map((p) => (
-          <div key={p.id} className="svc-card reveal">
+          <a key={p.id} href={p.href} className="svc-card reveal">
             <Slot id={p.id} ph={p.img} style={{ width: "100%", height: "100%" }} />
             <div className="veil"></div>
             <div className="svc-body">
               <div className="num">{p.n}</div>
               <h3>{p.title}</h3>
-              <a href={p.href} className="link-arrow">Découvrir <span className="ar">→</span></a>
+              <span className="link-arrow">Découvrir <span className="ar">→</span></span>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>

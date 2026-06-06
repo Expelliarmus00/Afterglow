@@ -102,7 +102,6 @@ image-slot{ background:#1b1815; color:rgba(242,237,230,.5) !important; }
 .hero-carousel .hero-content button{ pointer-events:auto; }
 .svc-card .veil{ pointer-events:none; }
 .svc-card .svc-body{ pointer-events:none; }
-.svc-card .svc-body a{ pointer-events:auto; }
 
 /* ---------- NAV ---------- */
 .nav{
@@ -431,9 +430,9 @@ body.is-leaving{ opacity:0; }
 
 /* ---------- PRESTATIONS — grille ---------- */
 .svc-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-.svc-card{ position:relative; aspect-ratio:4/3.1; overflow:hidden; }
-.svc-card image-slot{ width:100%; height:100%; transition:transform 1.4s cubic-bezier(.2,.7,.2,1); }
-.svc-card:hover image-slot{ transform:scale(1.05); }
+.svc-card{ position:relative; aspect-ratio:4/3.1; overflow:hidden; display:block; text-decoration:none; cursor:pointer; }
+.svc-card image-slot{ width:100%; height:100%; transition:transform 1.4s cubic-bezier(.2,.7,.2,1); transform:scale(1) translateZ(0); }
+.svc-card:hover image-slot{ transform:scale(1.05) translateZ(0); }
 .svc-card .veil{ position:absolute; inset:0; z-index:1; background:linear-gradient(to top, rgba(0,0,0,.66), rgba(0,0,0,.05) 55%, rgba(0,0,0,.18)); transition:background .5s; }
 .svc-card:hover .veil{ background:linear-gradient(to top, rgba(0,0,0,.74), rgba(0,0,0,.12) 60%, rgba(0,0,0,.22)); }
 .svc-card .svc-body{ position:absolute; z-index:2; inset:auto 0 0 0; padding:clamp(26px,3vw,44px); display:flex; flex-direction:column; gap:14px; color:#fff; }
