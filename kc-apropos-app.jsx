@@ -21,16 +21,15 @@ function ApHero() {
         <Slot id="ap-portrait" ph="Portrait — Kevin Chinelli, vertical" style={{ width: "100%", height: "100%" }} />
       </div>
       <div className="intro">
-        <Overline className="reveal">À propos</Overline>
-        <h1 className="reveal d1">Kevin<br />Chinelli</h1>
-        <p className="reveal d2">
-          Depuis une dizaine d'années que je travaille à travers l'image, j'ai appris une chose :
-          les moments qui comptent ne se mettent pas en scène. Mon travail, c'est d'être là —
-          attentif, discret, à l'écoute — au moment exact où quelque chose de vrai se passe.
+        <Overline className="reveal">Photographe · Suisse romande</Overline>
+        <h1 className="reveal d1">Kevin Chinelli</h1>
+        <p className="ap-manifesto reveal d2">
+          Les moments qui comptent <em>ne se mettent pas en scène.</em>
         </p>
-        <p className="reveal d2">
-          Basé en Suisse romande, je me déplace partout où une histoire mérite d'être racontée —
-          avec discrétion, patience, et le souci constant du détail.
+        <p className="ap-body reveal d2">
+          Mon travail, c'est d'être là — attentif, discret, à l'écoute — au moment exact où
+          quelque chose de vrai se passe. Partout où une histoire mérite d'être racontée, avec
+          patience et le souci constant du détail.
         </p>
         <div className="ap-facts reveal d3">
           {AP_FACTS.map((f, i) => (
