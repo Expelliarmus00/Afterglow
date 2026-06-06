@@ -318,8 +318,9 @@ image-slot[id="home-hero-mobile"]{ position:absolute; inset:0; display:none; }
   background:linear-gradient(to bottom, rgba(0,0,0,.5) 0%, rgba(0,0,0,.16) 11%, rgba(0,0,0,0) 24%),
   linear-gradient(to top right, rgba(0,0,0,.82) 0%, rgba(0,0,0,.5) 18%, rgba(0,0,0,.12) 40%, rgba(0,0,0,0) 60%); }
 @media(max-width:600px){
+  /* dégradé bas renforcé, linéaire droit (to top) */
   .hhero.va .scrim{ background:linear-gradient(to bottom, rgba(0,0,0,.56) 0%, rgba(0,0,0,0) 22%),
-  linear-gradient(to top, rgba(0,0,0,.74) 0%, rgba(0,0,0,.22) 40%, rgba(0,0,0,0) 64%); }
+  linear-gradient(to top, rgba(0,0,0,.88) 0%, rgba(0,0,0,.55) 38%, rgba(0,0,0,0) 68%); }
 }
 .hhero.va .hh-inner{ position:relative; z-index:2; max-width:min(720px,90vw); margin:0;
   padding:0 clamp(20px,4vw,56px) clamp(52px,8vw,128px) clamp(52px,8vw,128px); text-align:left; display:flex; flex-direction:column; align-items:flex-start; }
@@ -331,7 +332,8 @@ image-slot[id="home-hero-mobile"]{ position:absolute; inset:0; display:none; }
 @media(max-width:400px){ .hh-title{ font-size:clamp(36px,11vw,54px); } }
 @media(max-width:600px){
   /* padding-left aligné sur le logo AFTERGLOW de la nav (padding nav + .3em wordmark) */
-  .hhero.va .hh-inner{ padding-left:calc(clamp(20px,4vw,56px) + .3em); }
+  /* padding-bottom : dégagement du bouton "Demander un devis" fixé en bas (~58px) */
+  .hhero.va .hh-inner{ padding-left:calc(clamp(20px,4vw,56px) + .3em); padding-bottom:110px; }
   .hhero.va .hh-tag{ margin-top:10px; }
   .hhero.va .hh-ctas{ margin-top:18px; }
   .hhero.va .hh-meta{ margin-top:12px; }
