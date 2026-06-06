@@ -16,32 +16,31 @@ const AP_FACTS = [
 
 function ApHero() {
   return (
-    <section className="ap-hero s-light">
-      <div className="portrait reveal">
-        <Slot id="ap-portrait" ph="Portrait — Kevin Chinelli, vertical" style={{ width: "100%", height: "100%" }} />
-      </div>
+    <section className="ap-hero">
       <div className="intro">
         <Overline className="reveal">À propos</Overline>
-        <h1 className="reveal d1">Kevin Chinelli</h1>
+        <h1 className="reveal d1">Kevin<br />Chinelli</h1>
         <p className="reveal d2">
-          Je photographie depuis bientôt dix ans celles et ceux qui traversent les grands moments
-          de la vie — mariages, naissances, portraits. Mon travail cherche la vérité d'un regard,
-          la lumière juste, l'émotion qui ne se rejoue pas.
+          Depuis une dizaine d'années que je travaille à travers l'image, j'ai appris une chose :
+          les moments qui comptent ne se mettent pas en scène. Mon travail, c'est d'être là —
+          attentif, discret, à l'écoute — au moment exact où quelque chose de vrai se passe.
         </p>
         <p className="reveal d2">
-          Basé en Suisse romande, je me déplace partout où une histoire mérite d'être racontée,
-          avec discrétion, patience et un souci constant du détail. Mon ambition : vous offrir des
-          images qui respirent encore, des années plus tard.
+          Basé en Suisse romande, je me déplace partout où une histoire mérite d'être racontée —
+          avec discrétion, patience, et le souci constant du détail.
         </p>
-        <div className="reveal d3" style={{ display: "flex", flexWrap: "wrap", gap: "32px", marginTop: "8px" }}>
+        <div className="ap-facts reveal d3">
           {AP_FACTS.map((f, i) => (
-            <div key={i}>
-              <div style={{ fontSize: "10.5px", letterSpacing: ".18em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "6px" }}>{f.k}</div>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: "17px", color: "var(--fg)" }}>{f.v}</div>
+            <div key={i} className="ap-fact">
+              <div className="ap-fact-k">{f.k}</div>
+              <div className="ap-fact-v">{f.v}</div>
             </div>
           ))}
         </div>
         <div className="signature reveal d4">Kevin</div>
+      </div>
+      <div className="portrait reveal">
+        <Slot id="ap-portrait" ph="Portrait — Kevin Chinelli, vertical" style={{ width: "100%", height: "100%" }} />
       </div>
     </section>
   );

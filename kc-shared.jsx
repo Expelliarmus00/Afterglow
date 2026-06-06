@@ -73,7 +73,7 @@ function Nav({ active = "" }) {
         <a className="mm-top" href="portfolio.html" onClick={() => setOpen(false)}>Portfolio</a>
         <a className="mm-top" href="tarifs.html" onClick={() => setOpen(false)}>Tarifs</a>
         <a className="mm-top" href="journal.html" onClick={() => setOpen(false)}>Journal</a>
-        <a className="mm-top" href="avis.html" onClick={() => setOpen(false)}>Avis</a>
+        <a className="mm-top" href="apropos.html" onClick={() => setOpen(false)}>À propos</a>
         <a className="mm-top" href="contact.html" onClick={() => setOpen(false)}>Contact</a>
       </div>
     </div>,
@@ -93,7 +93,7 @@ function Nav({ active = "" }) {
           <a href="portfolio.html" className={"nav-extra" + (active === "portfolio" ? " is-active" : "")}>Portfolio</a>
           <a href="tarifs.html" className={"nav-extra" + (active === "tarifs" ? " is-active" : "")}>Tarifs</a>
           <a href="journal.html" className={"nav-extra" + (active === "journal" ? " is-active" : "")}>Journal</a>
-          <a href="avis.html" className={"nav-extra" + (active === "avis" ? " is-active" : "")}>Avis</a>
+          <a href="apropos.html" className={"nav-extra" + (active === "apropos" ? " is-active" : "")}>À propos</a>
           <a href="contact.html" className={"nav-cta" + (active === "contact" ? " is-active" : "")}>Contact</a>
         </div>
         <button className="nav-burger" aria-label="Ouvrir le menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
@@ -111,8 +111,8 @@ function Footer() {
     <footer className="s-dark" style={{ borderTop: "1px solid var(--line-d)" }}>
       <div className="footer">
         <a href={KC.HOME} className="wordmark"><span className="wm-main">Afterglow</span><span className="wm-by">by Kevin Chinelli</span></a>
-        <div className="copy">© 2026 — Tous droits réservés</div>
-        <div className="social"><a href="apropos.html">À propos</a><a href="avis.html">Avis</a><a href="https://www.instagram.com/afterglowbykevin/" target="_blank" rel="noopener">Instagram</a><a href="tel:+41764247603">+41 76 424 76 03</a><a href="mailto:info@snapshotmedia.ch">info@snapshotmedia.ch</a></div>
+        <div className="copy">© 2026 — Tous droits réservés · Site créé par <a href="https://snapshotmedia.ch" target="_blank" rel="noopener">Snapshot Media</a></div>
+        <div className="social"><a href="apropos.html">À propos</a><a href="https://www.instagram.com/afterglowbykevin/" target="_blank" rel="noopener">Instagram</a><a href="tel:+41764247603">+41 76 424 76 03</a><a href="mailto:info@snapshotmedia.ch">info@snapshotmedia.ch</a></div>
       </div>
     </footer>
   );
