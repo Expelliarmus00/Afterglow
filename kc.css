@@ -165,7 +165,7 @@ image-slot{ background:#1b1815; color:rgba(242,237,230,.5) !important; }
     width:100%; min-height:100%; box-sizing:border-box; }
   .mobile-menu.is-open .mm-inner{ transform:none; opacity:1; }
   .mm-group{ display:flex; flex-direction:column; align-items:center; gap:clamp(6px,1.8vw,12px); }
-  .mm-label{ font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); margin-bottom:4px; }
+  .mm-label{ font-family:var(--font-display); font-size:clamp(22px,6vw,34px); letter-spacing:.02em; text-transform:none; color:var(--accent); margin-bottom:4px; }
   /* sous-pages prestations : plus petites, police corps, couleur atténuée */
   .mm-group a{ font-family:var(--font-body); font-size:clamp(13px,3.5vw,16px); letter-spacing:.1em; text-transform:uppercase; color:color-mix(in oklab, var(--cream), transparent 44%); }
   /* pages principales : grandes, police titre, couleur pleine */
