@@ -458,7 +458,7 @@ function Footer() {
     <footer className="s-dark" style={{ borderTop: "1px solid var(--line-d)" }}>
       <div className="footer">
         <div className="wordmark"><span className="wm-main">Afterglow</span><span className="wm-by">by Kevin Chinelli</span></div>
-        <div className="copy">© 2026 — Tous droits réservés</div>
+        <div className="copy">© 2026 — Tous droits réservés · Site créé par <a href="https://snapshotmedia.ch" target="_blank" rel="noopener">Snapshot Media</a></div>
         <div className="social"><a href="apropos.html">À propos</a><a href="avis.html">Avis</a><a href="https://www.instagram.com/afterglowbykevin/" target="_blank" rel="noopener">Instagram</a><a href="tel:+41764247603">+41 76 424 76 03</a><a href="mailto:info@snapshotmedia.ch">info@snapshotmedia.ch</a></div>
       </div>
     </footer>
@@ -500,6 +500,36 @@ function App() {
     r.setProperty("--font-display", HEAD_FONTS[t.heading] || HEAD_FONTS.Cinzel);
     r.setProperty("--font-body", BODY_FONTS[t.body] || BODY_FONTS.Jost);
   }, [t.palette, t.heading, t.body]);
+
+  // smooth scroll — easing cubique sur les liens d'ancre (#section)
+  useEffect(() => {
+    function ease(t) { return t < .5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1; }
+    function smoothTo(target, dur) {
+      const start = window.scrollY, dist = target - start;
+      let t0 = null;
+      document.documentElement.style.scrollBehavior = "auto";
+      function step(now) {
+        if (!t0) t0 = now;
+        const p = Math.min((now - t0) / dur, 1);
+        window.scrollTo(0, start + dist * ease(p));
+        if (p < 1) requestAnimationFrame(step);
+        else document.documentElement.style.scrollBehavior = "";
+      }
+      requestAnimationFrame(step);
+    }
+    function onClick(e) {
+      const a = e.target.closest('a[href^="#"]');
+      if (!a) return;
+      const id = a.getAttribute("href").slice(1);
+      const el = id ? document.getElementById(id) : null;
+      if (id && !el) return;
+      e.preventDefault();
+      const y = el ? el.getBoundingClientRect().top + window.scrollY : 0;
+      smoothTo(y, 900);
+    }
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, []);
 
   // scroll reveals (rect-based — robust across environments)
   useEffect(() => {
