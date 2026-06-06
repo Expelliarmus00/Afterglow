@@ -16,7 +16,10 @@ const AP_FACTS = [
 
 function ApHero() {
   return (
-    <section className="ap-hero">
+    <section className="ap-hero s-light">
+      <div className="portrait reveal">
+        <Slot id="ap-portrait" ph="Portrait — Kevin Chinelli, vertical" style={{ width: "100%", height: "100%" }} />
+      </div>
       <div className="intro">
         <Overline className="reveal">À propos</Overline>
         <h1 className="reveal d1">Kevin<br />Chinelli</h1>
@@ -38,9 +41,6 @@ function ApHero() {
           ))}
         </div>
         <div className="signature reveal d4">Kevin</div>
-      </div>
-      <div className="portrait reveal">
-        <Slot id="ap-portrait" ph="Portrait — Kevin Chinelli, vertical" style={{ width: "100%", height: "100%" }} />
       </div>
     </section>
   );
@@ -110,6 +110,11 @@ function ApApp() {
   });
   useApplyTweaks(t);
   useReveal([]);
+  /* Nav claire : ajoute nav-on-light au body pour inverser les couleurs du menu */
+  useEffect(() => {
+    document.body.classList.add("nav-on-light");
+    return () => document.body.classList.remove("nav-on-light");
+  }, []);
 
   return (
     <>

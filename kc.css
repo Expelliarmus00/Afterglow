@@ -103,6 +103,19 @@ image-slot{ background:#1b1815; color:rgba(242,237,230,.5) !important; }
 .svc-card .veil{ pointer-events:none; }
 .svc-card .svc-body{ pointer-events:none; }
 
+/* ---------- NAV SUR FOND CLAIR (page À propos) ---------- */
+/* Classe nav-on-light ajoutée au body via useEffect dans kc-apropos-app.jsx */
+body.nav-on-light .nav .wm-main,
+body.nav-on-light .nav .wm-by{ color:var(--bg); }
+body.nav-on-light .nav .nav-links a:not(.nav-cta){ color:color-mix(in oklab,var(--bg),transparent 20%); }
+body.nav-on-light .nav .nav-links a:not(.nav-cta):hover{ color:var(--bg); }
+body.nav-on-light .nav .nav-cta{ color:var(--bg); border-color:color-mix(in oklab,var(--bg),transparent 55%); }
+body.nav-on-light .nav .nav-cta:hover{ border-color:var(--accent); color:var(--accent); }
+body.nav-on-light .nav .nav-burger span{ background:var(--bg); }
+body.nav-on-light .nav .caret{ color:var(--bg); }
+/* Scrolled : fond clair crème avec blur */
+body.nav-on-light .nav.scrolled{ background:color-mix(in oklab,var(--cream),transparent 8%); border-bottom-color:color-mix(in oklab,var(--bg),transparent 86%); }
+
 /* ---------- NAV ---------- */
 .nav{
   position:fixed; top:0; left:0; right:0; z-index:50;
