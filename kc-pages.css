@@ -57,20 +57,20 @@
 }
 /* scrim universel : bande top pour la lisibilité de la nav */
 .phero .scrim{ position:absolute; inset:0; z-index:1;
-  background: linear-gradient(to bottom, rgba(0,0,0,.44) 0%, rgba(0,0,0,0) 20%); }
+  background: linear-gradient(to bottom, rgba(0,0,0,.56) 0%, rgba(0,0,0,.22) 16%, rgba(0,0,0,0) 30%); }
 /* bas-gauche : radial ancré sous le bloc titre (bas-gauche)
    — centre à 28% horiz (texte débute ~9–20% selon largeur écran, s'étend jusqu'à ~50%)
    — plateau 0→22% pour un pool large, puis fondu */
 .phero.bas .scrim{
   background:
     radial-gradient(ellipse 92% 66% at 28% 92%, rgba(0,0,0,.78) 0%, rgba(0,0,0,.74) 22%, rgba(0,0,0,.22) 56%, rgba(0,0,0,0) 72%),
-    linear-gradient(to bottom, rgba(0,0,0,.44) 0%, rgba(0,0,0,0) 20%); }
+    linear-gradient(to bottom, rgba(0,0,0,.56) 0%, rgba(0,0,0,.22) 16%, rgba(0,0,0,0) 30%); }
 /* centré : radial ancré sous le bloc titre (centre)
    — même logique avec plateau */
 .phero.centre .scrim{
   background:
     radial-gradient(ellipse 94% 64% at 50% 62%, rgba(0,0,0,.76) 0%, rgba(0,0,0,.72) 22%, rgba(0,0,0,.20) 55%, rgba(0,0,0,0) 70%),
-    linear-gradient(to bottom, rgba(0,0,0,.44) 0%, rgba(0,0,0,0) 20%); }
+    linear-gradient(to bottom, rgba(0,0,0,.56) 0%, rgba(0,0,0,.22) 16%, rgba(0,0,0,0) 30%); }
 .phero .phero-content{ position:relative; z-index:3; width:100%; display:flex; flex-direction:column; gap:24px; }
 .phero h1{ font-family:var(--font-display); font-weight:400; color:#fff; line-height:1.05;
   font-size:clamp(40px,7vw,96px); margin:0; text-shadow:0 2px 40px rgba(0,0,0,.4); }
