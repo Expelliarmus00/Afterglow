@@ -10,6 +10,7 @@ import { build, transform } from "esbuild";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
+import { prerenderAll } from "./prerender.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -64,10 +65,14 @@ await build({
 
 console.log("✅ JSX pré-compilé en .js");
 
+// Pré-rendu SSG : injecte le HTML React dans #root (doit tourner APRÈS la
+// compilation des .js, car il les exécute côté Node).
+const htmlFiles = readdirSync(root).filter((f) => f.endsWith(".html"));
+prerenderAll(root, htmlFiles);
+
 // Stamp a ?v=YYYYMMDD querystring on every local JS/CSS reference in all HTML
 // files so browser caches are invalidated after each deployment.
 const version = new Date().toISOString().slice(0, 10).replace(/-/g, "");
-const htmlFiles = readdirSync(root).filter((f) => f.endsWith(".html"));
 const assetRe = /(<(?:script|link)[^>]+(?:src|href)=")((?:(?:lib|kc|tweaks|image-slot|kc-)[^"?]*|kc\.min\.css|kc-pages\.min\.css)[^"?]*)(\?v=[^"]*)?(")([^>]*>)/g;
 let stampCount = 0;
 for (const htmlFile of htmlFiles) {
