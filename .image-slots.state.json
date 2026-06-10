@@ -113,6 +113,8 @@
     "x": 0,
     "y": 0
   },
+  "about-photo": { "u": "images/about-photo.webp", "s": 1, "x": 0, "y": 0 },
+  "about-photo-mobile": { "u": "images/about-photo-mobile.webp", "s": 1, "x": 0, "y": 0 },
   "phero-mariage": { "u": "images/phero-mariage.webp",         "s": 1, "x": 0, "y": 0 },
   "phero-mariage-mobile": { "u": "images/phero-mariage-mobile.webp", "s": 1, "x": 0, "y": 0 },
   "phero-portrait": { "u": "images/phero-portrait.webp",        "s": 1, "x": 0, "y": 0 },

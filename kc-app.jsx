@@ -240,10 +240,9 @@ function AboutTriptyque() {
           {ABOUT_INTRO.map((p, i) => <p key={i}>{p}</p>)}
         </div>
       </div>
-      <div className="tri-row reveal d2">
-        <div className="tri-cell"><Slot id="about-tri-1" ph="Détail — paysage" style={{ width: "100%", height: "100%" }} /></div>
-        <div className="tri-cell tall"><Slot id="about-portrait" ph="Portrait — Kevin, vertical" style={{ width: "100%", height: "100%" }} /></div>
-        <div className="tri-cell"><Slot id="about-tri-2" ph="Détail — paysage" style={{ width: "100%", height: "100%" }} /></div>
+      <div className="about-solo reveal d2">
+        <Slot id="about-photo" ph="Kevin Chinelli — paysage" style={{ width: "100%", height: "100%" }} />
+        <Slot id="about-photo-mobile" ph="Kevin Chinelli — portrait" style={{ width: "100%", height: "100%" }} />
       </div>
       <blockquote className="kicker-quote about-tri-quote reveal d2">{ABOUT_QUOTE}</blockquote>
       <div className="signature reveal d3" style={{ textAlign: "center" }}>Kevin Chinelli</div>
