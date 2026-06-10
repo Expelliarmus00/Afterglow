@@ -72,11 +72,11 @@ window.KC_PRESTA = {
     heroImg: "Photo hero — portrait en lumière naturelle, extérieur",
     heroHint: "Photographe portrait en Suisse romande, en lumière naturelle.",
     intro: {
-      lead: "Un portrait, c'est une rencontre. Le mien cherche votre vérité — une attitude, un regard, une présence — plutôt que la pose parfaite.",
+      lead: "Une séance portrait, c'est un cadeau qu'on se fait à soi-même : un temps suspendu, rien que pour vous, et des images qui vous ressemblent vraiment. Mon approche cherche votre vérité — une attitude, un regard, une présence — plutôt que la pose parfaite.",
       paragraphs: [
-        "On commence par marcher et discuter : le temps que l'appareil se fasse oublier. Je vous donne des indications simples et précises — où poser le regard, quoi faire de vos mains — pour que vous n'ayez jamais à « prendre la pose ». Les meilleures images arrivent presque toujours entre deux consignes.",
-        "Je travaille la lumière naturelle, en extérieur ou dans un lieu qui compte pour vous : un quai du Léman à Lausanne, une ruelle de la vieille ville de Genève, votre atelier ou votre intérieur. Portrait personnel, artistique ou pour votre image professionnelle — le cadre s'adapte à l'usage que vous ferez des photos.",
-        "Vous repartez avec une galerie privée, des fichiers haute définition prêts pour l'impression comme pour le web (LinkedIn, presse, réseaux), et des droits d'usage clairs.",
+        "On commence par marcher et discuter, le temps que l'appareil se fasse oublier. Je vous donne des indications simples et précises — où poser le regard, quoi faire de vos mains — pour que vous n'ayez jamais à « prendre la pose ». Les plus belles images arrivent presque toujours entre deux consignes, quand vous redevenez tout simplement vous-même.",
+        "On repousse si souvent les belles photos de soi à « plus tard » : au bon moment, à quand on sera prêt, à quand on aura le temps. Ce moment, c'est maintenant. S'offrir une séance, c'est s'accorder le droit de se voir autrement, de prendre soin de son image et de garder une trace juste de qui l'on est aujourd'hui.",
+        "Je travaille la lumière naturelle, en extérieur ou dans un lieu qui compte pour vous : un quai du Léman à Lausanne, une ruelle de la vieille ville de Genève, votre atelier ou votre intérieur. Portrait personnel, artistique ou pour votre image professionnelle, le cadre s'adapte à l'usage que vous ferez des photos. Vous repartez avec une galerie privée et des fichiers haute définition, prêts pour l'impression comme pour le web.",
       ],
       quote: "« Un visage en dit toujours plus qu'un long discours. »",
     },
@@ -93,12 +93,10 @@ window.KC_PRESTA = {
       { ph: "Noir & blanc", o: "v" },
     ],
     formules: [
-      { tag: "Découverte · 45 min", name: "Signature", price: "CHF 320",
-        items: ["Séance 45 min", "1 lieu extérieur", "Galerie privée en ligne", "10 photos retouchées", "Fichiers web + impression"] },
-      { tag: "Le plus choisi · 1 h 30", name: "Lumière", price: "CHF 520", feature: true,
-        items: ["Séance 1 h 30", "2 lieux ou 2 ambiances", "Conseils tenues & repérage", "25 photos retouchées", "Tirage A5 offert"] },
-      { tag: "Image de marque · 2 h", name: "Présence", price: "CHF 850",
-        items: ["Séance 2 h", "Extérieur + intérieur / bureau", "Portraits + scènes de travail", "40 photos retouchées", "Droits d'usage commercial inclus"] },
+      { tag: "Découverte · 30 min", name: "Essentiel", price: "CHF 290",
+        items: ["1 lieu extérieur", "10 photos retouchées", "Galerie privée en ligne"] },
+      { tag: "Le plus choisi · 1 h", name: "Signature", price: "CHF 420", feature: true,
+        items: ["2 lieux (intérieur ou extérieur) ou 2 ambiances proches", "25 photos retouchées", "Galerie privée en ligne"] },
     ],
     process: [
       { n: "01", title: "Prise de contact", text: "On clarifie l'usage des images, l'ambiance recherchée et le lieu qui vous correspond le mieux." },
@@ -118,7 +116,7 @@ window.KC_PRESTA = {
     faq: [
       { q: "Où se déroule la séance ?", a: "Au lieu de votre choix en Suisse romande — quais de Lausanne, vieille ville de Genève, vignobles de Lavaux, forêt, bord de lac, ou votre intérieur — ou dans un cadre que je vous propose selon l'ambiance souhaitée. Je me déplace dans tout le canton de Vaud, à Genève, Fribourg, Neuchâtel et alentours." },
       { q: "Portrait extérieur ou studio, comment choisir ?", a: "Le portrait en extérieur, en lumière naturelle, donne un rendu vivant et personnel. Le studio offre un cadre maîtrisé, idéal pour le corporate et l'éditorial. Si vous hésitez, on en parle : je vous oriente selon l'usage final des images." },
-      { q: "Puis-je utiliser les photos pour mon activité ?", a: "Oui. La formule Présence est pensée pour le personal branding et inclut des droits d'usage commercial (site, réseaux, presse, supports imprimés). Pour un usage purement personnel, les droits privés sont inclus dans toutes les formules." },
+      { q: "Puis-je utiliser les photos pour mon activité ?", a: "Oui. Pour un usage purement personnel, les droits privés sont inclus dans toutes les formules. Pour un usage professionnel ou commercial — site, réseaux, presse, supports imprimés, personal branding — des droits d'usage commercial sont disponibles en option : dites-moi simplement l'usage prévu et je vous prépare une proposition adaptée." },
       { q: "Combien de tenues puis-je prévoir ?", a: "Une à deux selon la durée. Je vous conseille en amont sur les couleurs et les matières qui rendent le mieux en photo, et qui s'accordent avec le décor." },
       { q: "Je ne suis pas à l'aise devant l'objectif, est-ce un problème ?", a: "C'est le cas de la grande majorité des gens — et c'est précisément mon métier. Je guide pas à pas, sans jamais vous laisser chercher quoi faire. La plupart repartent en se disant que c'était bien plus simple que prévu." },
       { q: "Sous quel délai les images sont-elles livrées ?", a: "Environ deux semaines, avec une livraison express possible en option si vous en avez besoin plus vite." },

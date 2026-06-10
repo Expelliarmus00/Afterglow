@@ -102,7 +102,7 @@ function Formules() {
           <Overline className="reveal" style={{ justifyContent: "center" }}>Formules & tarifs</Overline>
           <h2 className="display reveal d1" style={{ fontSize: "clamp(30px,4vw,56px)", marginTop: "20px" }}>Trouvons la bonne formule.</h2>
         </div>
-        <div className="formules">
+        <div className={"formules" + (DATA.formules.length === 2 ? " two" : "")}>
           {DATA.formules.map((f, i) => (
             <div key={i} className={"formule reveal d" + (i + 1) + (f.feature ? " feature" : "")}>
               <div className="tag">{f.tag}</div>

@@ -111,6 +111,7 @@
 
 /* ---------- FORMULES & TARIFS ---------- */
 .formules{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; align-items:stretch; }
+.formules.two{ grid-template-columns:repeat(2,1fr); max-width:720px; margin-inline:auto; }
 .formule{ border:1px solid var(--hair); padding:clamp(28px,2.6vw,40px); display:flex; flex-direction:column; gap:20px; position:relative; transition:border-color .4s, transform .4s; }
 .formule:hover{ border-color:var(--accent); transform:translateY(-4px); }
 .formule.feature{ border-color:color-mix(in oklab,var(--accent),transparent 40%); }
@@ -126,7 +127,7 @@
 .formule .pick .ar{ color:var(--accent); transition:transform .5s cubic-bezier(.2,.7,.2,1); }
 .formule .pick:hover{ border-color:var(--accent); } .formule .pick:hover .ar{ transform:translateX(7px); }
 .tarif-note{ margin-top:26px; text-align:center; color:var(--muted); font-size:13px; letter-spacing:.02em; }
-@media(max-width:880px){ .formules{ grid-template-columns:1fr; } }
+@media(max-width:880px){ .formules, .formules.two{ grid-template-columns:1fr; max-width:420px; margin-inline:auto; } }
 
 /* ---------- PROCESS / DÉROULÉ ---------- */
 .steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(24px,3vw,46px); }
