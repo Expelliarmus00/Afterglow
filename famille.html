@@ -33,6 +33,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="preload" href=".image-slots.state.json" as="fetch" crossorigin>
+<link rel="preload" as="image" href="images/hero-main.webp">
 <link rel="stylesheet" href="kc.min.css?v=20260610">
 <link rel="stylesheet" href="kc-pages.min.css?v=20260610">
 <script type="application/ld+json">
@@ -45,22 +46,12 @@
     "url": "https://afterglowbykevin.ch/famille.html",
     "description": "Photographe de famille en Suisse romande : séance photo famille en extérieur ou à domicile, à Lausanne, Genève et alentours. Des images vraies, sans poses figées, livrées sous 2 semaines.",
     "areaServed": "Suisse romande",
-    "provider": {
-      "@type": ["LocalBusiness", "ProfessionalService"],
-      "name": "Afterglow by Kevin Chinelli",
-      "email": "contact@afterglowbykevin.ch",
-      "areaServed": "Suisse romande",
-      "telephone": "+41764247603",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Ch. de l'Ancien-Tram 18",
-        "postalCode": "1083",
-        "addressLocality": "Mézières",
-        "addressRegion": "Vaud",
-        "addressCountry": "CH"
-      },
-      "sameAs": ["https://www.instagram.com/afterglowbykevin/"]
-    }
+    "provider": { "@id": "https://afterglowbykevin.ch/#business" },
+    "offers": [
+      { "@type": "Offer", "name": "Tribu", "description": "1 h extérieur, 20 photos", "priceCurrency": "CHF", "price": "390" },
+      { "@type": "Offer", "name": "Complices", "description": "1 h 30, jusqu'à 6 personnes, 35 photos", "priceCurrency": "CHF", "price": "590" },
+      { "@type": "Offer", "name": "Tribu élargie", "description": "2 h, jusqu'à 12 personnes, album fine art", "priceCurrency": "CHF", "price": "890" }
+    ]
   },
   {
     "@context": "https://schema.org",
@@ -138,13 +129,12 @@
 
 <script src="image-slot.js?v=20260610"></script>
 <script src="kc-lightbox.js?v=20260610"></script>
-<script src="tweaks-panel.js?v=20260610"></script>
 <script src="kc-shared.js?v=20260610"></script>
 <script src="kc-presta-data.js?v=20260610"></script>
 <script src="kc-presta-app.js?v=20260610"></script>
 <script src="kc-cta.js?v=20260610"></script>
 <script src="kc-polish.js?v=20260610"></script>
-<script src="kc-slot-uploaders.js?v=20260610"></script>
 <script src="kc-transitions.js?v=20260610"></script>
+<script src="kc-edit-mode.js?v=20260610"></script>
 </body>
 </html>

@@ -33,6 +33,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="preload" href=".image-slots.state.json" as="fetch" crossorigin>
+<link rel="preload" as="image" href="images/presta-couple.webp">
 <link rel="stylesheet" href="kc.min.css?v=20260610">
 <link rel="stylesheet" href="kc-pages.min.css?v=20260610">
 <script type="application/ld+json">
@@ -45,25 +46,12 @@
     "url": "https://afterglowbykevin.ch/couple.html",
     "description": "Séance photo couple en extérieur ou en atelier, en Suisse romande. Une séance complice pour célébrer ce qui vous lie.",
     "areaServed": "Suisse romande",
-    "provider": {
-      "@type": [
-        "LocalBusiness",
-        "ProfessionalService"
-      ],
-      "name": "Afterglow by Kevin Chinelli",
-      "email": "contact@afterglowbykevin.ch",
-      "areaServed": "Suisse romande",
-      "telephone": "+41764247603",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Ch. de l'Ancien-Tram 18",
-        "postalCode": "1083",
-        "addressLocality": "Mézières",
-        "addressRegion": "Vaud",
-        "addressCountry": "CH"
-      },
-      "sameAs": ["https://www.instagram.com/afterglowbykevin/"]
-    }
+        "provider": { "@id": "https://afterglowbykevin.ch/#business" },
+"offers": [
+      { "@type": "Offer", "name": "Escapade", "description": "45 min, 1 lieu, 20 photos", "priceCurrency": "CHF", "price": "320" },
+      { "@type": "Offer", "name": "Complices", "description": "1 h 30, 2 lieux, 40 photos", "priceCurrency": "CHF", "price": "520" },
+      { "@type": "Offer", "name": "Promesse", "description": "2 h fiançailles, mini-film + album", "priceCurrency": "CHF", "price": "850" }
+    ],
   },
   {
     "@context": "https://schema.org",
@@ -169,13 +157,12 @@
 
 <script src="image-slot.js?v=20260610"></script>
 <script src="kc-lightbox.js?v=20260610"></script>
-<script src="tweaks-panel.js?v=20260610"></script>
 <script src="kc-shared.js?v=20260610"></script>
 <script src="kc-presta-data.js?v=20260610"></script>
 <script src="kc-presta-app.js?v=20260610"></script>
 <script src="kc-cta.js?v=20260610"></script>
 <script src="kc-polish.js?v=20260610"></script>
-<script src="kc-slot-uploaders.js?v=20260610"></script>
 <script src="kc-transitions.js?v=20260610"></script>
+<script src="kc-edit-mode.js?v=20260610"></script>
 </body>
 </html>
