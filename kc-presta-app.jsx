@@ -6,8 +6,11 @@
 const { useEffect } = React;
 const DATA = window.KC_PRESTA[window.KC_SLUG];
 
-/* mosaic size pattern (cycles for any gallery length) */
-const M_PATTERN = ["m-big", "", "", "m-tall", "m-wide", "", "", "m-big", "m-wide", ""];
+/* mosaic cell class par orientation de la photo :
+   v = verticale → cellule verticale (m-tall) · h = horizontale → cellule large (m-wide)
+   big = horizontale mise en avant → grande cellule (m-big).
+   Règle : une photo verticale ne va JAMAIS dans une cellule non verticale. */
+const M_CLASS = { v: "m-tall", h: "m-wide", big: "m-big" };
 
 /* ---------- HERO ---------- */
 function PrestaHero({ layout }) {
@@ -31,17 +34,17 @@ function PrestaHero({ layout }) {
 
 /* ---------- REASSURANCE BAR (trust strip under hero) ---------- */
 function ReassureBar() {
-  const points = [
-    "30 km offerts · au-delà sur devis",
-    "Réponse sous 48 h",
-    "Tarifs transparents",
-  ];
-  if (window.KC_SLUG === "mariage") points.splice(2, 0, "1 seul mariage par jour");
+  const isMariage = window.KC_SLUG === "mariage";
+  const points = isMariage
+    ? ["Réponse sous 48 h", "1 seul mariage par jour", "Tarifs transparents"]
+    : ["Réponse sous 48 h", "Tarifs transparents"];
+  // Sur mobile, on ne garde qu'un seul point — le plus pertinent selon la prestation.
+  const mobileKeep = isMariage ? "1 seul mariage par jour" : "Réponse sous 48 h";
   return (
     <section className="reassure s-dark" aria-label="Engagements">
       <div className="wrap reassure-row">
         {points.map((p, i) => (
-          <div key={i} className="reassure-item"><span className="rdot"></span>{p}</div>
+          <div key={i} className={"reassure-item" + (p === mobileKeep ? " keep-mobile" : "")}><span className="rdot"></span>{p}</div>
         ))}
       </div>
     </section>
@@ -80,8 +83,8 @@ function GalleryMosaic() {
         </div>
         <div className="mosaic reveal d1" data-lb-group="mosaic">
           {DATA.gallery.map((g, i) => (
-            <div key={i} className={"cell " + M_PATTERN[i % M_PATTERN.length]}>
-              <Slot id={DATA.slug + "-g" + i} ph={g} alt={g + " — " + DATA.title.toLowerCase() + " en Suisse romande, photographie par Kevin Chinelli"} style={{ width: "100%", height: "100%" }} />
+            <div key={i} className={"cell " + (M_CLASS[g.o] || "")}>
+              <Slot id={DATA.slug + "-g" + i} ph={g.ph} alt={g.ph + " — " + DATA.title.toLowerCase() + " en Suisse romande, photographie par Kevin Chinelli"} style={{ width: "100%", height: "100%" }} />
             </div>
           ))}
         </div>
@@ -104,7 +107,7 @@ function Formules() {
             <div key={i} className={"formule reveal d" + (i + 1) + (f.feature ? " feature" : "")}>
               <div className="tag">{f.tag}</div>
               <h3>{f.name}</h3>
-              <div className="price">{f.price}</div>
+              <div className="price">{f.price.startsWith("dès ") ? <><small>dès</small>{f.price.slice(3)}</> : f.price}</div>
               <ul>{f.items.map((it, j) => <li key={j}>{it}</li>)}</ul>
               <a href="contact.html" className="pick">Choisir <span className="ar">→</span></a>
             </div>
