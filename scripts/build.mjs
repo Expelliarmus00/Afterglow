@@ -9,7 +9,7 @@
 import { build, transform } from "esbuild";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -63,3 +63,19 @@ await build({
 });
 
 console.log("✅ JSX pré-compilé en .js");
+
+// Stamp a ?v=YYYYMMDD querystring on every local JS/CSS reference in all HTML
+// files so browser caches are invalidated after each deployment.
+const version = new Date().toISOString().slice(0, 10).replace(/-/g, "");
+const htmlFiles = readdirSync(root).filter((f) => f.endsWith(".html"));
+const assetRe = /(<(?:script|link)[^>]+(?:src|href)=")((?:(?:lib|kc|tweaks|image-slot|kc-)[^"?]*|kc\.min\.css|kc-pages\.min\.css)[^"?]*)(\?v=[^"]*)?(")([^>]*>)/g;
+let stampCount = 0;
+for (const htmlFile of htmlFiles) {
+  const fp = resolve(root, htmlFile);
+  const original = readFileSync(fp, "utf8");
+  const stamped = original.replace(assetRe, (_, pre, path, _v, quote, post) =>
+    `${pre}${path}?v=${version}${quote}${post}`
+  );
+  if (stamped !== original) { writeFileSync(fp, stamped); stampCount++; }
+}
+console.log(`✅ Cache version ${version} appliquée (${stampCount} fichiers HTML)`);

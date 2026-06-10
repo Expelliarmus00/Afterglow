@@ -15,11 +15,11 @@
 <meta property="og:title" content="Photographe de mariage en Suisse romande — Kevin Chinelli">
 <meta property="og:description" content="Photographe de mariage à Lausanne, Genève, Fribourg et dans toute la Suisse romande. Reportage discret, émotion vraie, galerie complète livrée sous 4 semaines.">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://afterglowbykevin.ch/og-default.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Kevin Chinelli — Photographe · Suisse romande">
-<meta name="twitter:image" content="https://afterglowbykevin.ch/og-default.png">
+<meta property="og:image" content="https://afterglowbykevin.ch/images/phero-mariage.webp">
+<meta property="og:image:width" content="1800">
+<meta property="og:image:height" content="1200">
+<meta property="og:image:alt" content="Photographe de mariage en Suisse romande — Afterglow by Kevin Chinelli">
+<meta name="twitter:image" content="https://afterglowbykevin.ch/images/phero-mariage.webp">
 <meta property="og:url" content="https://afterglowbykevin.ch/mariages.html">
 <link rel="canonical" href="https://afterglowbykevin.ch/mariages.html">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -31,9 +31,10 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20fill='%23141210'/%3E%3Ctext%20x='16'%20y='21'%20font-family='Georgia,serif'%20font-size='15'%20fill='%23b9926b'%20text-anchor='middle'%3EKC%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="kc.min.css">
-<link rel="stylesheet" href="kc-pages.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" href=".image-slots.state.json" as="fetch" crossorigin>
+<link rel="stylesheet" href="kc.min.css?v=20260610">
+<link rel="stylesheet" href="kc-pages.min.css?v=20260610">
 <script type="application/ld+json">
 [
   {
@@ -92,7 +93,7 @@
         "name": "Dans quelles régions vous déplacez-vous ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Je couvre toute la Suisse romande — Vaud, Genève, Fribourg, Neuchâtel, le Valais et le Jura — des domaines de Lavaux aux rives du Léman, en passant par la Gruyère et les Alpes vaudoises. Aucun frais de déplacement à l'intérieur de la Suisse romande. Pour un mariage ailleurs en Suisse ou à l'étranger, le déplacement et l'hébergement éventuel sont chiffrés clairement dans le devis."
+          "text": "Je me déplace avec plaisir pour tout mariage en Suisse romande et au-delà. Le déplacement est offert dans un rayon de 30 km autour de Mézières (VD) — ce qui couvre la grande région lausannoise. Pour les principales villes romandes (Lausanne, Genève, Montreux, Fribourg…), un forfait déplacement est intégré directement dans la formule, sans surprise. Pour un mariage à l'étranger, transport et hébergement sont détaillés clairement dans le devis."
         }
       },
       {
@@ -105,10 +106,18 @@
       },
       {
         "@type": "Question",
+        "name": "Qu'est-ce qu'une séance d'engagement ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "C'est une séance de couple, incluse dans les formules Signature et Prestige, réalisée quelques semaines ou mois avant le mariage. On se retrouve une petite heure dans un lieu qui vous ressemble pour des photos détendues, rien que vous deux. Vous repartez avec de belles images pour votre faire-part — et surtout, vous prenez vos marques avec ma façon de travailler avant le jour J."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "Combien de photos recevons-nous, et quand ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Selon la formule, de 250 à 500 photos livrées en pleine résolution. Vous recevez un aperçu d'une dizaine d'images sous 3 à 5 jours, puis la galerie complète et retouchée sous 4 semaines (10 jours en formule Prestige)."
+          "text": "Selon la formule, de 200 à 500+ photos — toutes retouchées, en pleine résolution. Ces nombres sont une estimation, pas un engagement contractuel : je tiens avant tout à ce que chaque image soit juste et aboutie. Vous recevez une sélection de 10 images sous 3 à 5 jours, puis la galerie complète sous 4 semaines (10 jours en formule Prestige)."
         }
       },
       {
@@ -163,18 +172,18 @@
 
 <script>window.KC_SLUG = "mariage";</script>
 
-<script src="lib/react.production.min.js"></script>
-<script src="lib/react-dom.production.min.js"></script>
+<script src="lib/react.production.min.js?v=20260610"></script>
+<script src="lib/react-dom.production.min.js?v=20260610"></script>
 
-<script src="image-slot.js"></script>
-<script src="kc-lightbox.js"></script>
-<script src="tweaks-panel.js"></script>
-<script src="kc-shared.js"></script>
-<script src="kc-presta-data.js"></script>
-<script src="kc-presta-app.js"></script>
-<script src="kc-cta.js"></script>
-<script src="kc-polish.js"></script>
-<script src="kc-slot-uploaders.js"></script>
-<script src="kc-transitions.js"></script>
+<script src="image-slot.js?v=20260610"></script>
+<script src="kc-lightbox.js?v=20260610"></script>
+<script src="tweaks-panel.js?v=20260610"></script>
+<script src="kc-shared.js?v=20260610"></script>
+<script src="kc-presta-data.js?v=20260610"></script>
+<script src="kc-presta-app.js?v=20260610"></script>
+<script src="kc-cta.js?v=20260610"></script>
+<script src="kc-polish.js?v=20260610"></script>
+<script src="kc-slot-uploaders.js?v=20260610"></script>
+<script src="kc-transitions.js?v=20260610"></script>
 </body>
 </html>

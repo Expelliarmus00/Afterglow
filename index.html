@@ -31,27 +31,74 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20fill='%23141210'/%3E%3Ctext%20x='16'%20y='21'%20font-family='Georgia,serif'%20font-size='15'%20fill='%23b9926b'%20text-anchor='middle'%3EKC%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="kc.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" href=".image-slots.state.json" as="fetch" crossorigin>
+<link rel="stylesheet" href="kc.min.css?v=20260610">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "ProfessionalService"],
-  "@id": "https://afterglowbykevin.ch/#business",
-  "name": "Afterglow by Kevin Chinelli",
-  "description": "Photographe en Suisse romande — mariages, couples, studio et maternité.",
-  "email": "contact@afterglowbykevin.ch",
-  "areaServed": ["Suisse romande","Canton de Vaud","Genève","Fribourg","Neuchâtel","Valais","Lausanne","Montreux","Lavaux"],
-  "url": "https://afterglowbykevin.ch/",
-  "image": "https://afterglowbykevin.ch/og-default.png",
-  "logo": "https://afterglowbykevin.ch/icon-512.png",
-  "founder": { "@type": "Person", "name": "Kevin Chinelli", "jobTitle": "Photographe", "sameAs": ["https://www.instagram.com/afterglowbykevin/"] },
-  "priceRange": "$$",
-  "telephone": "+41764247603",
-  "address": { "@type": "PostalAddress", "streetAddress": "Ch. de l'Ancien-Tram 18", "postalCode": "1083", "addressLocality": "Mézières", "addressRegion": "Vaud", "addressCountry": "CH" },
-  "sameAs": ["https://www.instagram.com/afterglowbykevin/"],
-  "knowsAbout": ["Photographie de mariage", "Photographie de couple", "Portrait studio", "Photographie de maternité"]
-}
+[
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "@id": "https://afterglowbykevin.ch/#business",
+    "name": "Afterglow by Kevin Chinelli",
+    "description": "Photographe en Suisse romande — mariages, portraits, studio, maternité, couple et famille. Des instants vrais, capturés avec justesse.",
+    "email": "contact@afterglowbykevin.ch",
+    "telephone": "+41764247603",
+    "url": "https://afterglowbykevin.ch/",
+    "image": "https://afterglowbykevin.ch/images/about-photo.webp",
+    "logo": "https://afterglowbykevin.ch/icon-512.png",
+    "priceRange": "$$",
+    "currenciesAccepted": "CHF",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" }
+    ],
+    "geo": { "@type": "GeoCoordinates", "latitude": 46.5655, "longitude": 6.8063 },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ch. de l'Ancien-Tram 18",
+      "postalCode": "1083",
+      "addressLocality": "Mézières",
+      "addressRegion": "Vaud",
+      "addressCountry": "CH"
+    },
+    "areaServed": ["Suisse romande","Canton de Vaud","Genève","Fribourg","Neuchâtel","Valais","Lausanne","Montreux","Lavaux"],
+    "sameAs": [
+      "https://www.instagram.com/afterglowbykevin/"
+    ],
+    "knowsAbout": ["Photographie de mariage","Photographie de couple","Portrait studio","Photographie de maternité","Photographie de famille"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Prestations photographiques",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mariage", "url": "https://afterglowbykevin.ch/mariages.html" }, "priceCurrency": "CHF", "price": "1690", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1690" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Portrait", "url": "https://afterglowbykevin.ch/portraits.html" }, "priceCurrency": "CHF", "price": "240", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "240" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Studio", "url": "https://afterglowbykevin.ch/studio.html" }, "priceCurrency": "CHF", "price": "220", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "220" } }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://afterglowbykevin.ch/#kevin",
+    "name": "Kevin Chinelli",
+    "jobTitle": "Photographe",
+    "url": "https://afterglowbykevin.ch/apropos.html",
+    "image": "https://afterglowbykevin.ch/images/about-photo.webp",
+    "worksFor": { "@id": "https://afterglowbykevin.ch/#business" },
+    "sameAs": ["https://www.instagram.com/afterglowbykevin/"],
+    "knowsAbout": ["Photographie de mariage","Portrait","Studio photo","Photographie de maternité"]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://afterglowbykevin.ch/#website",
+    "url": "https://afterglowbykevin.ch/",
+    "name": "Afterglow by Kevin Chinelli",
+    "description": "Photographe en Suisse romande — mariages, portraits, studio, maternité.",
+    "publisher": { "@id": "https://afterglowbykevin.ch/#business" },
+    "inLanguage": "fr-CH"
+  }
+]
 </script>
 </head>
 <body>
@@ -126,16 +173,16 @@
 })();
 </script>
 
-<script src="lib/react.production.min.js"></script>
-<script src="lib/react-dom.production.min.js"></script>
+<script src="lib/react.production.min.js?v=20260610"></script>
+<script src="lib/react-dom.production.min.js?v=20260610"></script>
 
-<script src="image-slot.js"></script>
-<script src="kc-lightbox.js"></script>
-<script src="tweaks-panel.js"></script>
-<script src="kc-app.js"></script>
-<script src="kc-cta.js"></script>
-<script src="kc-polish.js"></script>
-<script src="kc-slot-uploaders.js"></script>
-<script src="kc-transitions.js"></script>
+<script src="image-slot.js?v=20260610"></script>
+<script src="kc-lightbox.js?v=20260610"></script>
+<script src="tweaks-panel.js?v=20260610"></script>
+<script src="kc-app.js?v=20260610"></script>
+<script src="kc-cta.js?v=20260610"></script>
+<script src="kc-polish.js?v=20260610"></script>
+<script src="kc-slot-uploaders.js?v=20260610"></script>
+<script src="kc-transitions.js?v=20260610"></script>
 </body>
 </html>

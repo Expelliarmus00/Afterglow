@@ -226,7 +226,7 @@
 
   class ImageSlot extends HTMLElement {
     static get observedAttributes() {
-      return ['shape', 'radius', 'mask', 'fit', 'position', 'placeholder', 'src', 'id'];
+      return ['shape', 'radius', 'mask', 'fit', 'position', 'placeholder', 'src', 'id', 'loading', 'fetchpriority'];
     }
 
     constructor() {
@@ -632,8 +632,11 @@
         }
         var altText = this.getAttribute('alt') || this.getAttribute('placeholder') || '';
         this._img.alt = altText;
-        if (!this._img.getAttribute('loading')) this._img.setAttribute('loading', 'lazy');
-        this._img.setAttribute('decoding', 'async');
+        const loadingVal = this.getAttribute('loading') || 'lazy';
+        this._img.setAttribute('loading', loadingVal);
+        const fp = this.getAttribute('fetchpriority');
+        if (fp) this._img.setAttribute('fetchpriority', fp);
+        this._img.setAttribute('decoding', fp === 'high' ? 'sync' : 'async');
         this._img.style.display = 'block';
         this._empty.style.display = 'none';
         this.setAttribute('data-filled', '');

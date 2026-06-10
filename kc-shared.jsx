@@ -42,8 +42,8 @@ const PRESTA_NAV = [
 ];
 
 /* ---------- atoms ---------- */
-function Slot({ id, ph, alt, style, className }) {
-  return <image-slot id={id} shape="rect" fit="cover" placeholder={ph} alt={alt || ph} aria-label={alt || ph} role="img" style={style} class={className}></image-slot>;
+function Slot({ id, ph, alt, style, className, loading, fetchpriority }) {
+  return <image-slot id={id} shape="rect" fit="cover" placeholder={ph} alt={alt || ph} aria-label={alt || ph} role="img" style={style} class={className} loading={loading} fetchpriority={fetchpriority}></image-slot>;
 }
 function Overline({ children, className = "" }) {
   return <div className={"overline " + className}><span className="tick"></span>{children}</div>;
@@ -111,7 +111,7 @@ function Footer() {
     <footer className="s-dark" style={{ borderTop: "1px solid var(--line-d)" }}>
       <div className="footer">
         <a href={KC.HOME} className="wordmark"><span className="wm-main">Afterglow</span><span className="wm-by">by Kevin Chinelli</span></a>
-        <div className="copy">© 2026 — Tous droits réservés · Site créé par <a href="https://snapshotmedia.ch" target="_blank" rel="noopener">Snapshot Media</a></div>
+        <div className="copy">© 2026 Afterglow by Kevin Chinelli — Tous droits réservés</div>
         <div className="social"><a href="apropos.html">À propos</a><a href="confidentialite.html">Confidentialité</a><a href="https://www.instagram.com/afterglowbykevin/" target="_blank" rel="noopener">Instagram</a><a href="tel:+41764247603">+41 76 424 76 03</a><a href="mailto:contact@afterglowbykevin.ch">contact@afterglowbykevin.ch</a></div>
       </div>
     </footer>

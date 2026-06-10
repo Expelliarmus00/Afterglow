@@ -51,8 +51,8 @@ const TESTIMONIALS = [
 ];
 
 /* ---------- SMALL HELPERS ---------- */
-function Slot({ id, ph, style }) {
-  return <image-slot id={id} shape="rect" fit="cover" placeholder={ph} aria-label={ph} role="img" style={style}></image-slot>;
+function Slot({ id, ph, style, loading, fetchpriority }) {
+  return <image-slot id={id} shape="rect" fit="cover" placeholder={ph} aria-label={ph} role="img" style={style} loading={loading} fetchpriority={fetchpriority}></image-slot>;
 }
 function Overline({ children, className = "" }) {
   return <div className={"overline " + className}><span className="tick"></span>{children}</div>;
@@ -145,7 +145,7 @@ function HomeHero({ variant = "a" }) {
           <HeroCtas />
           <div className="hh-meta reveal in d3">Mariage · Couple · Studio · Maternité</div>
         </div>
-        <div className="hh-img"><Slot id="home-hero-split" ph="Image hero — portrait vertical" style={{ width: "100%", height: "100%" }} /></div>
+        <div className="hh-img"><Slot id="home-hero-split" ph="Image hero — portrait vertical" loading="eager" fetchpriority="high" style={{ width: "100%", height: "100%" }} /></div>
       </section>
     );
   }
@@ -159,7 +159,7 @@ function HomeHero({ variant = "a" }) {
           <HeroCtas />
         </div>
         <div className="hh-strip reveal in d2">
-          <div className="cell"><Slot id="home-hero-strip-1" ph="Sélection — 1" style={{ width: "100%", height: "100%" }} /></div>
+          <div className="cell"><Slot id="home-hero-strip-1" ph="Sélection — 1" loading="eager" fetchpriority="high" style={{ width: "100%", height: "100%" }} /></div>
           <div className="cell"><Slot id="home-hero-strip-2" ph="Sélection — 2" style={{ width: "100%", height: "100%" }} /></div>
           <div className="cell"><Slot id="home-hero-strip-3" ph="Sélection — 3" style={{ width: "100%", height: "100%" }} /></div>
         </div>
@@ -171,8 +171,8 @@ function HomeHero({ variant = "a" }) {
   return (
     <section id="hero" className="hhero va">
       <div className="hh-bg">
-        <Slot id="home-hero-full" ph="Image hero — pleine page" style={{ width: "100%", height: "100%" }} />
-        <Slot id="home-hero-mobile" ph="Image hero — portrait mobile" style={{ width: "100%", height: "100%" }} />
+        <Slot id="home-hero-full" ph="Image hero — pleine page" loading="eager" fetchpriority="high" style={{ width: "100%", height: "100%" }} />
+        <Slot id="home-hero-mobile" ph="Image hero — portrait mobile" loading="eager" fetchpriority="high" style={{ width: "100%", height: "100%" }} />
       </div>
       <div className="scrim"></div>
       <div className="hh-inner">
@@ -489,7 +489,7 @@ function Footer() {
     <footer className="s-dark" style={{ borderTop: "1px solid var(--line-d)" }}>
       <div className="footer">
         <div className="wordmark"><span className="wm-main">Afterglow</span><span className="wm-by">by Kevin Chinelli</span></div>
-        <div className="copy">© 2026 — Tous droits réservés · Site créé par <a href="https://snapshotmedia.ch" target="_blank" rel="noopener">Snapshot Media</a></div>
+        <div className="copy">© 2026 Afterglow by Kevin Chinelli — Tous droits réservés</div>
         <div className="social"><a href="apropos.html">À propos</a><a href="confidentialite.html">Confidentialité</a><a href="https://www.instagram.com/afterglowbykevin/" target="_blank" rel="noopener">Instagram</a><a href="tel:+41764247603">+41 76 424 76 03</a><a href="mailto:contact@afterglowbykevin.ch">contact@afterglowbykevin.ch</a></div>
       </div>
     </footer>

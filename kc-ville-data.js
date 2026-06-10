@@ -64,7 +64,7 @@ window.KC_VILLE = {
       ],
     },
     faq: [
-      { q: "Intervenez-vous à Genève sans supplément ?", a: "Oui, Genève fait partie de ma zone de couverture en Suisse romande : pas de frais de déplacement. Je rayonne aussi sur Vaud, Fribourg, Neuchâtel et le Valais romand." },
+      { q: "Intervenez-vous à Genève sans supplément ?", a: "Oui. Le déplacement pour un mariage à Genève est inclus dans la formule — il est chiffré au forfait dans le devis, sans mauvaise surprise. Je couvre l'ensemble de la Suisse romande : Vaud, Genève, Fribourg, Neuchâtel et le Valais romand." },
       { q: "Où faire les photos de couple à Genève ?", a: "La vieille ville et la cathédrale Saint-Pierre pour le cachet historique, le Parc des Bastions pour la verdure, et les quais ou les Bains des Pâquis pour le lac et le jet d'eau. On choisit selon votre déroulé et la lumière du jour." },
       { q: "Gérez-vous les cérémonies civiles à Genève ?", a: "Oui, j'ai l'habitude des salles des mariages et des contraintes de lumière en intérieur. On anticipe ensemble le timing pour ne rien manquer de l'échange des consentements." },
     ],
@@ -97,7 +97,7 @@ window.KC_VILLE = {
       ],
     },
     faq: [
-      { q: "Vous déplacez-vous à Montreux et sur la Riviera ?", a: "Oui, Montreux, Vevey et toute la Riviera vaudoise sont dans ma zone de couverture : aucun frais de déplacement. Je rayonne sur l'ensemble de la Suisse romande." },
+      { q: "Vous déplacez-vous à Montreux et sur la Riviera ?", a: "Oui. Le déplacement pour un mariage à Montreux, Vevey ou sur la Riviera est inclus dans la formule — chiffré au forfait dans le devis, sans surprise. Je couvre l'ensemble de la Suisse romande." },
       { q: "Peut-on faire des photos au château de Chillon ?", a: "Oui, les abords du château offrent un décor spectaculaire. L'accès aux intérieurs et certaines zones peut nécessiter une autorisation : on anticipe ce point ensemble lors de la préparation." },
       { q: "Quelle est la meilleure heure pour les quais de Montreux ?", a: "L'heure dorée, en fin de journée : la lumière chaude sublime les massifs fleuris et le lac, avec les Alpes qui rosissent en arrière-plan. Le matin tôt est aussi superbe et plus calme." },
     ],
