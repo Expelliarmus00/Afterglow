@@ -201,6 +201,8 @@
   "mariage-g5": { "u": "images/pf-mariage-6.webp", "s": 1, "x": 0, "y": 0 },
   "pf-17": { "u": "images/pf-mariage-6.webp", "s": 1, "x": 0, "y": 0 },
   "pf-22": { "u": "images/pf-portrait-8.webp", "s": 1, "x": 0, "y": 0 },
+  "pf-23": { "u": "images/pf-mariage-7.webp", "s": 1, "x": 0, "y": 0 },
+  "pf-24": { "u": "images/pf-mariage-8.webp", "s": 1, "x": 0, "y": 0 },
   "portrait-g0": { "u": "images/pf-portrait-1.webp", "s": 1, "x": 0, "y": 0 },
   "portrait-g1": { "u": "images/pf-portrait-2.webp", "s": 1, "x": 0, "y": 0 },
   "portrait-g2": { "u": "images/pf-portrait-3.webp", "s": 1, "x": 0, "y": 0 },

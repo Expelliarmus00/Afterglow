@@ -20,12 +20,14 @@ const PF_ITEMS = [
   { id: "pf-1",  cat: "mariage",  ph: "Mariage — cérémonie" },
   { id: "pf-5",  cat: "mariage",  ph: "Mariage — préparatifs" },
   { id: "pf-8",  cat: "mariage",  ph: "Mariage — première danse" },
-  { id: "pf-22", cat: "portrait", ph: "Portrait — regard", wide: true },
+  { id: "pf-24", cat: "mariage",  ph: "Mariage — regards", wide: true },
   { id: "pf-12", cat: "mariage",  ph: "Mariage — détails du lieu" },
   { id: "pf-16", cat: "mariage",  ph: "Mariage — sortie de cérémonie" },
   { id: "pf-17", cat: "mariage",  ph: "Mariage — moment clé" },
+  { id: "pf-23", cat: "mariage",  ph: "Mariage — lumière de fin de journée" },
   { id: "pf-19", cat: "portrait", ph: "Portrait — lumière naturelle" },
   { id: "pf-20", cat: "portrait", ph: "Portrait — extérieur" },
+  { id: "pf-22", cat: "portrait", ph: "Portrait — regard", wide: true },
   { id: "pf-21", cat: "portrait", ph: "Portrait — regard franc" },
 ];
 
