@@ -424,7 +424,7 @@ body.is-leaving{ opacity:0; }
 .signature{ font-family:var(--font-display); font-style:italic; font-size:20px; color:var(--accent); }
 
 /* — Bande immersive : photo fond plein cadre, dégradé gauche, texte en surimpression — */
-.about-band{ position:relative; overflow:hidden; height:clamp(480px,62vh,700px); padding:0; }
+.about-band{ position:relative; overflow:hidden; height:80vh; padding:0; }
 .ab-bg{ position:absolute; inset:0; }
 .ab-bg image-slot{ position:absolute; inset:0; width:100%; height:100%; }
 .ab-bg image-slot + image-slot{ display:none; }
