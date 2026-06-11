@@ -403,13 +403,18 @@
     if (reduce) return;
     var vy = 0, raf = 0;
     var FRICTION = 0.80, STOP = 0.5, MULT = 0.55, CAP = 600;
+    var html = document.documentElement;
     function step() {
-      if (Math.abs(vy) < STOP) { vy = 0; raf = 0; return; }
+      if (Math.abs(vy) < STOP) {
+        vy = 0; raf = 0;
+        html.style.scrollBehavior = "";  /* restaure smooth pour les ancres */
+        return;
+      }
       window.scrollBy(0, vy);
       vy *= FRICTION;
       raf = requestAnimationFrame(step);
     }
-    window._stopInertia = function () { vy = 0; };
+    window._stopInertia = function () { vy = 0; html.style.scrollBehavior = ""; };
     document.addEventListener("wheel", function (e) {
       /* trackpad → petits deltas continus, déjà gérés nativement */
       if (e.deltaMode === 0 && Math.abs(e.deltaY) < 50) return;
@@ -422,6 +427,9 @@
         el = el.parentElement;
       }
       e.preventDefault();
+      /* désactive scroll-behavior:smooth pendant l'inertia (sinon chaque scrollBy
+         lance une micro-animation CSS qui entre en conflit avec la suivante) */
+      html.style.scrollBehavior = "auto";
       var d = e.deltaMode === 1 ? e.deltaY * 40 : e.deltaMode === 2 ? e.deltaY * window.innerHeight : e.deltaY;
       vy = Math.max(-CAP, Math.min(CAP, vy + d * MULT));
       if (!raf) raf = requestAnimationFrame(step);
