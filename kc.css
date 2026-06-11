@@ -406,6 +406,13 @@ body.is-leaving{ opacity:0; }
 .kicker-quote{ font-family:var(--font-display); font-weight:400; font-style:italic; line-height:1.5;
   font-size:clamp(18px,2vw,28px); color:var(--fg); max-width:24ch; }
 
+/* ---------- INTRO ---------- */
+.intro-welcome{ text-align:center; }
+.intro-inner{ display:flex; flex-direction:column; align-items:center; gap:clamp(18px,2.4vw,30px); }
+.intro-hdl{ font-size:clamp(26px,3.4vw,48px); max-width:22ch; line-height:1.22; margin:0; }
+.intro-txt{ color:var(--muted); font-size:clamp(15px,1.15vw,17.5px); line-height:1.85; max-width:52ch; margin:0; }
+.intro-rule{ width:48px; background:var(--accent); opacity:.55; }
+
 /* ---------- ABOUT ---------- */
 .about-name{ font-size:clamp(32px,3.8vw,52px); }
 .signature{ font-family:var(--font-display); font-style:italic; font-size:20px; color:var(--accent); }
