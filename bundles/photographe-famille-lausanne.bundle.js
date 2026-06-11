@@ -8,7 +8,7 @@
 
   function load() {
     if (loadP) return loadP;
-    loadP = fetch(STATE_FILE)
+    loadP = fetch(STATE_FILE, { cache: 'no-cache' })
       .then((r) => (r.ok ? r.json() : null))
       .then((j) => { if (j && typeof j === 'object') slots = j; })
       .catch(() => {})

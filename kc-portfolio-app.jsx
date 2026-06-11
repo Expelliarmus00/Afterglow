@@ -20,6 +20,7 @@ const PF_ITEMS = [
   { id: "pf-1",  cat: "mariage",  ph: "Mariage — cérémonie" },
   { id: "pf-5",  cat: "mariage",  ph: "Mariage — préparatifs" },
   { id: "pf-8",  cat: "mariage",  ph: "Mariage — première danse" },
+  { id: "pf-22", cat: "portrait", ph: "Portrait — regard", wide: true },
   { id: "pf-12", cat: "mariage",  ph: "Mariage — détails du lieu" },
   { id: "pf-16", cat: "mariage",  ph: "Mariage — sortie de cérémonie" },
   { id: "pf-17", cat: "mariage",  ph: "Mariage — moment clé" },
@@ -69,7 +70,7 @@ function PortfolioApp() {
           <div className="wrap">
             <div className="pf-grid" data-lb-group="portfolio">
               {PF_ITEMS.map((it) => (
-                <div key={it.id} className={"pf-cell" + (cat === "all" || it.cat === cat ? "" : " hide")}>
+                <div key={it.id} className={"pf-cell" + (it.wide ? " pf-cell--wide" : "") + (cat === "all" || it.cat === cat ? "" : " hide")}>
                   <Slot id={it.id} ph={it.ph} style={{ width: "100%", height: "100%" }} />
                 </div>
               ))}
