@@ -184,7 +184,7 @@ function HomeHero({ variant = "a" }) {
         <div className="hh-meta on-img reveal in d3">Mariage · Couple · Famille · Studio · Maternité</div>
       </div>
       <div className="hh-scroll reveal in d3">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="12" y1="3" x2="12" y2="19"/><polyline points="6 13 12 19 18 13"/></svg>
+        <svg viewBox="0 0 14 52" fill="none" stroke="currentColor" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="7" y1="1" x2="7" y2="41"/><polyline points="1 35 7 41 13 35"/></svg>
       </div>
     </section>
   );
@@ -505,6 +505,7 @@ function App() {
       const el = id ? document.getElementById(id) : null;
       if (id && !el) return;
       e.preventDefault();
+      window._stopInertia && window._stopInertia();
       const y = el ? el.getBoundingClientRect().top + window.scrollY : 0;
       smoothTo(y, 900);
     }

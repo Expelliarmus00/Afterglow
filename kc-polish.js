@@ -48,6 +48,36 @@
     return true;
   }
 
+  /* ---------- inertia scroll (mouse wheel) ---------- */
+  function initInertia() {
+    if (reduce) return;
+    var vy = 0, raf = 0;
+    var FRICTION = 0.86, STOP = 0.4, MULT = 0.75, CAP = 900;
+    function step() {
+      if (Math.abs(vy) < STOP) { vy = 0; raf = 0; return; }
+      window.scrollBy(0, vy);
+      vy *= FRICTION;
+      raf = requestAnimationFrame(step);
+    }
+    window._stopInertia = function () { vy = 0; };
+    document.addEventListener("wheel", function (e) {
+      /* trackpad → petits deltas continus, déjà gérés nativement */
+      if (e.deltaMode === 0 && Math.abs(e.deltaY) < 50) return;
+      var tag = e.target && e.target.tagName;
+      if (tag === "TEXTAREA" || tag === "SELECT") return;
+      var el = e.target;
+      while (el && el !== document.body) {
+        var cs = getComputedStyle(el);
+        if ((cs.overflowY === "auto" || cs.overflowY === "scroll") && el.scrollHeight > el.clientHeight) return;
+        el = el.parentElement;
+      }
+      e.preventDefault();
+      var d = e.deltaMode === 1 ? e.deltaY * 40 : e.deltaMode === 2 ? e.deltaY * window.innerHeight : e.deltaY;
+      vy = Math.max(-CAP, Math.min(CAP, vy + d * MULT));
+      if (!raf) raf = requestAnimationFrame(step);
+    }, { passive: false, capture: true });
+  }
+
   /* ---------- "Voir" cursor over zoomable gallery images ---------- */
   function initCursor() {
     if (reduce || !finePointer) return;
@@ -79,6 +109,7 @@
   }
 
   function init() {
+    initInertia();
     initCursor();
     // React apps mount async (Babel) — retry skip link + parallax until <main> exists.
     var tries = 0;
