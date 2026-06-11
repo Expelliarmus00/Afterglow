@@ -402,7 +402,7 @@
   function initInertia() {
     if (reduce) return;
     var vy = 0, raf = 0;
-    var FRICTION = 0.84, STOP = 0.5, MULT = 0.65, CAP = 700;
+    var FRICTION = 0.82, STOP = 0.5, MULT = 0.60, CAP = 680;
     var html = document.documentElement;
     function step() {
       if (Math.abs(vy) < STOP) {
