@@ -107,10 +107,12 @@
         this._img.setAttribute('decoding', fp === 'high' ? 'sync' : 'async');
         this._img.style.display = 'block';
         this._empty.style.display = 'none';
+        this.setAttribute('data-filled', '');
       } else {
         this._img.style.display = 'none';
         this._img.removeAttribute('src');
         this._empty.style.display = 'flex';
+        this.removeAttribute('data-filled');
       }
     }
   }
