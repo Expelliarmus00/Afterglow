@@ -20,7 +20,7 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "body": "Jost",
   "heroVariant": "a",
   "prestaLayout": "grille",
-  "aboutLayout": "triptyque"
+  "aboutLayout": "split"
 }/*EDITMODE-END*/;
 
 /* ---------- CONTENT ---------- */
@@ -250,10 +250,33 @@ function AboutTriptyque() {
   );
 }
 
+function AboutSplit() {
+  return (
+    <div className="wrap about-split">
+      <div className="about-split-txt">
+        <Overline className="reveal">À propos</Overline>
+        <h2 className="display about-name reveal d1">Kevin Chinelli</h2>
+        {ABOUT_INTRO.map((p, i) => <p key={i} className={"reveal d" + (i + 2)}>{p}</p>)}
+        <hr className="hair reveal d3" style={{ width: "60px", margin: "4px 0" }} />
+        <blockquote className="kicker-quote reveal d3" style={{ margin: 0 }}>{ABOUT_QUOTE}</blockquote>
+        <div className="signature reveal d4">Kevin</div>
+        <a href="apropos.html" className="link-arrow reveal d4" style={{ marginTop: "8px" }}>En savoir plus <span className="ar">→</span></a>
+      </div>
+      <div className="about-split-fig">
+        <div className="about-split-img reveal d2">
+          <div className="about-split-frame"></div>
+          <Slot id="about-photo" ph="Kevin Chinelli — paysage" style={{ width: "100%", height: "100%" }} />
+          <Slot id="about-photo-mobile" ph="Kevin Chinelli — portrait" style={{ width: "100%", height: "100%" }} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function About({ layout }) {
   return (
     <section id="about" className="sec s-light pad-y">
-      {layout === "decale" ? <AboutDecale /> : layout === "triptyque" ? <AboutTriptyque /> : <AboutEditorial />}
+      {layout === "split" ? <AboutSplit /> : layout === "decale" ? <AboutDecale /> : layout === "triptyque" ? <AboutTriptyque /> : <AboutEditorial />}
     </section>
   );
 }
@@ -505,7 +528,7 @@ function Tweaks({ t, setTweak }) {
         onChange={(v) => setTweak("heroVariant", v)} />
       <TweakRadio label="Prestations" value={t.prestaLayout} options={[{ value: "bandes", label: "Bandes" }, { value: "grille", label: "Grille" }]}
         onChange={(v) => setTweak("prestaLayout", v)} />
-      <TweakRadio label="À propos" value={t.aboutLayout} options={[{ value: "editorial", label: "Éditorial" }, { value: "decale", label: "Décalé" }, { value: "triptyque", label: "Triptyque" }]}
+      <TweakRadio label="À propos" value={t.aboutLayout} options={[{ value: "split", label: "Split" }, { value: "editorial", label: "Éditorial" }, { value: "decale", label: "Décalé" }, { value: "triptyque", label: "Triptyque" }]}
         onChange={(v) => setTweak("aboutLayout", v)} />
       <TweakSection label="Couleur" />
       <TweakColor label="Palette" value={t.palette} options={PALETTE_OPTS} onChange={(v) => setTweak("palette", v)} />

@@ -449,6 +449,26 @@ body.is-leaving{ opacity:0; }
   .about-solo image-slot + image-slot{ display:block; }
 }
 
+/* — Split : texte gauche, photo droite (centrée, ne remplit pas toute la section) — */
+.about-split{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(60px,8vw,100px); align-items:center; }
+.about-split-txt{ display:flex; flex-direction:column; gap:22px; }
+.about-split-txt p{ margin:0; color:var(--muted); max-width:46ch; font-size:clamp(15px,1.1vw,17px); }
+.about-split-fig{ display:flex; align-items:center; justify-content:center; padding:clamp(28px,6vw,80px) 0; }
+.about-split-img{ position:relative; width:82%; aspect-ratio:4/5; flex-shrink:0; }
+/* Cadre accent cuivre décalé (bas-gauche pour que la photo reste dans les marges) */
+.about-split-frame{ position:absolute; z-index:0; left:-18px; bottom:-18px; width:58%; height:64%; border:1px solid var(--accent); opacity:.5; pointer-events:none; }
+/* Image slots : desktop (paysage) visible, mobile (portrait) masqué par défaut */
+.about-split-img image-slot{ position:relative; z-index:1; width:100%; height:100%; }
+.about-split-img image-slot + image-slot{ position:absolute; inset:0; display:none; }
+@media(max-width:820px){
+  .about-split{ grid-template-columns:1fr; gap:clamp(40px,8vw,60px); }
+  .about-split-fig{ padding:0; justify-content:flex-start; }
+  .about-split-img{ width:76%; max-width:320px; aspect-ratio:3/4; }
+  /* Mobile : masquer desktop, afficher portrait */
+  .about-split-img image-slot:first-child{ display:none; }
+  .about-split-img image-slot + image-slot{ display:block; }
+}
+
 /* ---------- PRESTATIONS — bandes ---------- */
 .band{ position:relative; display:grid; grid-template-columns:1fr 1fr; min-height:clamp(440px,52vw,640px); }
 .band .band-img{ position:relative; }
