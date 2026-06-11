@@ -144,11 +144,25 @@ function prerenderPage(root, htmlFile, htmlRaw) {
     if (/window\.KC_\w+\s*=/.test(code)) inlineGlobals.push(code);
   }
 
-  // 2) scripts locaux à exécuter (ordre du HTML), query ?v= retirée
+  // 2) scripts locaux à exécuter (ordre du HTML), query ?v= retirée.
+  // Si le HTML a déjà été bundlé (data-bundle-sources), on expand l'attribut
+  // pour retrouver la liste des fichiers source originaux.
   const scripts = [];
-  for (const m of html.matchAll(/<script[^>]+src="([^"]+)"/g)) {
-    const src = m[1].replace(/\?.*$/, "");
-    const base = src.split("/").pop();
+  for (const m of html.matchAll(/<script([^>]*)>/g)) {
+    const attrs = m[1];
+
+    // HTML bundlé → data-bundle-sources liste les fichiers originaux
+    const sourcesM = attrs.match(/data-bundle-sources="([^"]+)"/);
+    if (sourcesM) {
+      for (const s of sourcesM[1].split(",")) {
+        if (SSR_SCRIPT.test(s)) scripts.push(s);
+      }
+      continue;
+    }
+
+    const srcM = attrs.match(/src="([^"?]+)/);
+    if (!srcM) continue;
+    const base = srcM[1].split("/").pop();
     if (SSR_SCRIPT.test(base)) scripts.push(base);
   }
   if (!scripts.some((s) => /-app\.js$/.test(s))) return null; // pas d'app → page non React

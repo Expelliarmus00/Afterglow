@@ -11,6 +11,8 @@ import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { prerenderAll } from "./prerender.mjs";
+import { bundleAll } from "./bundle-scripts.mjs";
+import { downloadFonts } from "./download-fonts.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -65,15 +67,46 @@ await build({
 
 console.log("✅ JSX pré-compilé en .js");
 
+const htmlFiles = readdirSync(root).filter((f) => f.endsWith(".html"));
+
+// Polices locales (skip si fonts/fonts.css existe déjà)
+await downloadFonts();
+
 // Pré-rendu SSG : injecte le HTML React dans #root (doit tourner APRÈS la
 // compilation des .js, car il les exécute côté Node).
-const htmlFiles = readdirSync(root).filter((f) => f.endsWith(".html"));
+// prerender.mjs gère les deux cas : refs originales ou data-bundle-sources (HTML déjà bundlé).
 prerenderAll(root, htmlFiles);
+
+// Bundling JS : 10 requêtes → 2 par page (vendor + page-bundle).
+// Doit tourner APRÈS prerender (pour que la logique SSG n'ait pas à lire les bundles
+// mais les sources originales), et APRÈS downloadFonts.
+bundleAll(root, htmlFiles);
+
+// Remplace les liens Google Fonts par fonts/fonts.css local sur toutes les pages.
+let fontUpdated = 0;
+for (const htmlFile of htmlFiles) {
+  const fp = resolve(root, htmlFile);
+  const original = readFileSync(fp, "utf8");
+  let html = original;
+
+  // Retire les preconnect Google Fonts (inutiles avec les polices locales)
+  html = html.replace(/<link[^>]+preconnect[^>]+fonts\.googleapis\.com[^>]*>\n?/g, "");
+  html = html.replace(/<link[^>]+preconnect[^>]+fonts\.gstatic\.com[^>]*>\n?/g, "");
+  // Remplace le <link> stylesheet Google Fonts (href ou src en premier)
+  html = html.replace(
+    /<link[^>]+(?:href|src)="https:\/\/fonts\.googleapis\.com\/css2[^"]*"[^>]*>/g,
+    '<link rel="stylesheet" href="fonts/fonts.css">'
+  );
+
+  if (html !== original) { writeFileSync(fp, html); fontUpdated++; }
+}
+if (fontUpdated > 0) console.log(`✅ Polices locales : ${fontUpdated} pages mises à jour`);
 
 // Stamp a ?v=YYYYMMDD querystring on every local JS/CSS reference in all HTML
 // files so browser caches are invalidated after each deployment.
+// Couvre désormais : lib/, kc*, tweaks*, image-slot*, bundles/, fonts/fonts.css
 const version = new Date().toISOString().slice(0, 10).replace(/-/g, "");
-const assetRe = /(<(?:script|link)[^>]+(?:src|href)=")((?:(?:lib|kc|tweaks|image-slot|kc-)[^"?]*|kc\.min\.css|kc-pages\.min\.css)[^"?]*)(\?v=[^"]*)?(")([^>]*>)/g;
+const assetRe = /(<(?:script|link)[^>]+(?:src|href)=")((?:(?:lib\/|bundles\/|kc|tweaks|image-slot)[^"?]*|kc\.min\.css|kc-pages\.min\.css|fonts\/fonts\.css)[^"?]*)(\?v=[^"]*)?(")([^>]*>)/g;
 let stampCount = 0;
 for (const htmlFile of htmlFiles) {
   const fp = resolve(root, htmlFile);
