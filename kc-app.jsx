@@ -183,7 +183,9 @@ function HomeHero({ variant = "a" }) {
         <HeroCtas light />
         <div className="hh-meta on-img reveal in d3">Mariage · Couple · Famille · Studio · Maternité</div>
       </div>
-      <div className="hh-scroll reveal in d3">↓</div>
+      <div className="hh-scroll reveal in d3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="12" y1="3" x2="12" y2="19"/><polyline points="6 13 12 19 18 13"/></svg>
+      </div>
     </section>
   );
 }
@@ -219,7 +221,6 @@ function About() {
           <h2 className="display about-name reveal d1">Kevin Chinelli</h2>
           <hr className="hair reveal d2" style={{ width: "44px", margin: "0" }} />
           <p className="reveal d2">{ABOUT_INTRO}</p>
-          <div className="ab-sig reveal d3">Kevin</div>
           <a href="apropos.html" className="link-arrow reveal d3">En savoir plus <span className="ar">→</span></a>
         </div>
       </div>
