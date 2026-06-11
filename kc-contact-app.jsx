@@ -260,7 +260,6 @@ function ContactApp() {
         </section>
       </main>
       <Footer />
-      <TweaksBase t={t} setTweak={setTweak} />
     </>
   );
 }

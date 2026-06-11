@@ -102,7 +102,6 @@ function LegalApp() {
         <CtaContact overline="Une question ?" title="Parlons de votre projet." />
       </main>
       <Footer />
-      <TweaksBase t={t} setTweak={setTweak} />
     </>
   );
 }

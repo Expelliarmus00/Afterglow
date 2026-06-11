@@ -84,7 +84,6 @@ function ArticleApp() {
         <CtaContact title="Réservez votre séance." />
       </main>
       <Footer />
-      <TweaksBase t={t} setTweak={setTweak} />
     </>
   );
 }

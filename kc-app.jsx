@@ -519,26 +519,6 @@ function Footer() {
   );
 }
 
-/* ---------- TWEAKS ---------- */
-function Tweaks({ t, setTweak }) {
-  return (
-    <TweaksPanel title="Tweaks">
-      <TweakSection label="Mise en page" />
-      <TweakRadio label="Hero" value={t.heroVariant} options={[{ value: "a", label: "Plein cadre" }, { value: "b", label: "Diptyque" }, { value: "c", label: "Éditorial" }]}
-        onChange={(v) => setTweak("heroVariant", v)} />
-      <TweakRadio label="Prestations" value={t.prestaLayout} options={[{ value: "bandes", label: "Bandes" }, { value: "grille", label: "Grille" }]}
-        onChange={(v) => setTweak("prestaLayout", v)} />
-      <TweakRadio label="À propos" value={t.aboutLayout} options={[{ value: "split", label: "Split" }, { value: "editorial", label: "Éditorial" }, { value: "decale", label: "Décalé" }, { value: "triptyque", label: "Triptyque" }]}
-        onChange={(v) => setTweak("aboutLayout", v)} />
-      <TweakSection label="Couleur" />
-      <TweakColor label="Palette" value={t.palette} options={PALETTE_OPTS} onChange={(v) => setTweak("palette", v)} />
-      <TweakSection label="Typographie" />
-      <TweakRadio label="Titres" value={t.heading} options={["Cinzel", "Cormorant"]} onChange={(v) => setTweak("heading", v)} />
-      <TweakRadio label="Texte" value={t.body} options={["Jost", "Mulish"]} onChange={(v) => setTweak("body", v)} />
-    </TweaksPanel>
-  );
-}
-
 /* ---------- APP ---------- */
 function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
@@ -619,7 +599,6 @@ function App() {
         <Contact />
       </main>
       <Footer />
-      <Tweaks t={t} setTweak={setTweak} />
     </>
   );
 }

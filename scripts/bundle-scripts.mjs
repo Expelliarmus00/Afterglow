@@ -81,20 +81,19 @@ export function bundleAll(root, htmlFiles) {
 
     const slug = htmlFile.replace(".html", "");
 
-    // Concatène les scripts de page dans l'ordre
+    // Concatène les scripts de page dans l'ordre (ignore les fichiers supprimés)
+    const existingScripts = [];
     const parts = [];
     for (const base of pageScripts) {
       const fp = resolve(root, base);
-      if (!existsSync(fp)) {
-        console.warn(`  ⚠ script manquant dans ${htmlFile}: ${base}`);
-        continue;
-      }
+      if (!existsSync(fp)) continue;
+      existingScripts.push(base);
       parts.push(readFileSync(fp, "utf8"));
     }
     writeFileSync(resolve(root, "bundles", `${slug}.bundle.js`), parts.join("\n;\n"));
 
-    // Met à jour les script tags dans le HTML
-    const newHtml = replaceScriptTags(html, slug, pageScripts);
+    // Met à jour les script tags dans le HTML (data-bundle-sources ne liste que les fichiers existants)
+    const newHtml = replaceScriptTags(html, slug, existingScripts);
     writeFileSync(htmlPath, newHtml);
     bundled++;
   }

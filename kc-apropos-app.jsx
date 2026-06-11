@@ -129,7 +129,6 @@ function ApApp() {
         <CtaContact overline="Travaillons ensemble" title="Racontons votre histoire." />
       </main>
       <Footer />
-      <TweaksBase t={t} setTweak={setTweak} />
     </>
   );
 }

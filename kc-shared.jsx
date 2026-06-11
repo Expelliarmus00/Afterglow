@@ -188,22 +188,8 @@ function useApplyTweaks(t) {
   }, [t.palette, t.heading, t.body]);
 }
 
-/* ---------- shared tweaks (palette + typo); page controls passed as children ---------- */
-function TweaksBase({ t, setTweak, children }) {
-  return (
-    <TweaksPanel title="Tweaks">
-      {children}
-      <TweakSection label="Couleur" />
-      <TweakColor label="Palette" value={t.palette} options={PALETTE_OPTS} onChange={(v) => setTweak("palette", v)} />
-      <TweakSection label="Typographie" />
-      <TweakRadio label="Titres" value={t.heading} options={["Cinzel", "Cormorant"]} onChange={(v) => setTweak("heading", v)} />
-      <TweakRadio label="Texte" value={t.body} options={["Jost", "Mulish"]} onChange={(v) => setTweak("body", v)} />
-    </TweaksPanel>
-  );
-}
-
 Object.assign(window, {
   KC, PALETTE_OPTS, PRESTA_NAV,
   Slot, Overline, Nav, Footer, CtaContact, RelatedPresta,
-  useReveal, useApplyTweaks, TweaksBase,
+  useReveal, useApplyTweaks,
 });

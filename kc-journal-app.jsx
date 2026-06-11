@@ -46,7 +46,6 @@ function JournalApp() {
         <CtaContact overline="Une question, un projet ?" title="Écrivons votre histoire." />
       </main>
       <Footer />
-      <TweaksBase t={t} setTweak={setTweak} />
     </>
   );
 }

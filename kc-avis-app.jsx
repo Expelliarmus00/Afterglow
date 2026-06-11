@@ -61,7 +61,6 @@ function AvisApp() {
         <CtaContact overline="Parlons de votre projet" title="Discutons de votre séance." />
       </main>
       <Footer />
-      <TweaksBase t={t} setTweak={setTweak} />
     </>
   );
 }

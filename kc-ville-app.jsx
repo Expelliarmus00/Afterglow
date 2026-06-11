@@ -111,7 +111,6 @@ function VilleApp() {
         <CtaContact overline={VLOCAL} title={VP.slug === "mariage" ? "Vérifions votre date." : "Réservez votre séance."} />
       </main>
       <Footer />
-      <TweaksBase t={t} setTweak={setTweak} />
     </>
   );
 }

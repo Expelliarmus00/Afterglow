@@ -93,7 +93,6 @@ function PortfolioApp() {
         <CtaContact overline="Une séance en tête ?" title="Réservez votre date." />
       </main>
       <Footer />
-      <TweaksBase t={t} setTweak={setTweak} />
     </>
   );
 }

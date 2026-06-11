@@ -119,7 +119,6 @@ function TarifsApp() {
         <CtaContact overline="Parlons de votre projet" title="Demandez votre devis." />
       </main>
       <Footer />
-      <TweaksBase t={t} setTweak={setTweak} />
     </>
   );
 }

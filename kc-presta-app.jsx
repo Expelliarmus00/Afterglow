@@ -277,18 +277,6 @@ function VillesBand() {
   );
 }
 
-/* ---------- TWEAKS ---------- */
-function PrestaTweaks({ t, setTweak }) {
-  return (
-    <TweaksBase t={t} setTweak={setTweak}>
-      <TweakSection label="Mise en page" />
-      <TweakRadio label="Hero" value={t.heroLayout}
-        options={[{ value: "centre", label: "Centré" }, { value: "bas", label: "Bas-gauche" }]}
-        onChange={(v) => setTweak("heroLayout", v)} />
-    </TweaksBase>
-  );
-}
-
 /* ---------- APP ---------- */
 function PrestaApp() {
   const [t, setTweak] = useTweaks({
@@ -321,7 +309,6 @@ function PrestaApp() {
         <CtaContact title="Réservez votre séance." />
       </main>
       <Footer />
-      <PrestaTweaks t={t} setTweak={setTweak} />
     </>
   );
 }
