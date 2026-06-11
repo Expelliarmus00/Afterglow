@@ -188,95 +188,27 @@ function HomeHero({ variant = "a" }) {
   );
 }
 
-/* ---------- ABOUT (3 layouts via tweak) ---------- */
-const ABOUT_INTRO = [
-  "Depuis une dizaine d'années que je travaille à travers l'image, j'ai appris une chose : les moments qui comptent ne se mettent pas en scène. Mon travail, c'est d'être là — attentif, discret, à l'écoute — au moment exact où quelque chose de vrai se passe.",
-  "Basé en Suisse romande, je me déplace partout où une histoire mérite d'être racontée — avec discrétion, patience, et le souci constant du détail.",
-];
-const ABOUT_QUOTE = "« Une photographie réussie, c'est un souvenir qui respire encore, des années plus tard. »";
+/* ---------- ABOUT ---------- */
+const ABOUT_INTRO = "Depuis une dizaine d'années que je travaille à travers l'image, j'ai appris une chose : les moments qui comptent ne se mettent pas en scène. Mon travail, c'est d'être là — attentif, discret, à l'écoute — au moment exact où quelque chose de vrai se passe.";
 
-function AboutEditorial() {
+function About() {
   return (
-    <div className="wrap-narrow about-edi">
-      <Overline className="reveal ab-center">À propos</Overline>
-      <blockquote className="kicker-quote about-edi-lead reveal d1">{ABOUT_QUOTE}</blockquote>
-      <div className="about-edi-body reveal d2">
-        {ABOUT_INTRO.map((p, i) => <p key={i}>{p}</p>)}
+    <section id="about" className="sec about-band">
+      <div className="ab-bg">
+        <Slot id="about-photo" ph="Kevin Chinelli" loading="lazy" style={{ width: "100%", height: "100%" }} />
+        <Slot id="about-photo-mobile" ph="Kevin Chinelli — portrait" loading="lazy" style={{ width: "100%", height: "100%" }} />
       </div>
-      <div className="signature reveal d3">Kevin Chinelli</div>
-      <div className="about-edi-img reveal d3">
-        <Slot id="about-wide" ph="Kevin au travail — format paysage" style={{ width: "100%", height: "100%" }} />
-      </div>
-    </div>
-  );
-}
-
-function AboutDecale() {
-  return (
-    <div className="wrap about-dec">
-      <div className="about-dec-fig reveal">
-        <div className="ab-frame"></div>
-        <Slot id="about-portrait" ph="Portrait — Kevin Chinelli, vertical" style={{ width: "100%", height: "100%" }} />
-      </div>
-      <div className="about-dec-txt">
-        <Overline className="reveal">À propos</Overline>
-        <h2 className="display about-name reveal d1">Kevin Chinelli</h2>
-        {ABOUT_INTRO.map((p, i) => <p key={i} className={"reveal d" + (i + 2)}>{p}</p>)}
-        <hr className="hair reveal d3" style={{ width: "90px", margin: "6px 0" }} />
-        <blockquote className="kicker-quote reveal d3" style={{ margin: 0, fontSize: "clamp(20px,2.2vw,30px)" }}>{ABOUT_QUOTE}</blockquote>
-        <div className="signature reveal d4">Kevin</div>
-      </div>
-    </div>
-  );
-}
-
-function AboutTriptyque() {
-  return (
-    <div className="wrap about-tri">
-      <div className="about-tri-head">
-        <Overline className="reveal ab-center">À propos</Overline>
-        <h2 className="display about-name reveal d1" style={{ marginTop: "20px" }}>Kevin Chinelli</h2>
-        <div className="about-tri-body reveal d2">
-          {ABOUT_INTRO.map((p, i) => <p key={i}>{p}</p>)}
+      <div className="ab-veil"></div>
+      <div className="wrap ab-inner">
+        <div className="ab-text">
+          <Overline className="reveal">À propos</Overline>
+          <h2 className="display about-name reveal d1">Kevin Chinelli</h2>
+          <hr className="hair reveal d2" style={{ width: "44px", margin: "0" }} />
+          <p className="reveal d2">{ABOUT_INTRO}</p>
+          <div className="ab-sig reveal d3">Kevin</div>
+          <a href="apropos.html" className="link-arrow reveal d3">En savoir plus <span className="ar">→</span></a>
         </div>
       </div>
-      <div className="about-solo reveal d2">
-        <Slot id="about-photo" ph="Kevin Chinelli — paysage" style={{ width: "100%", height: "100%" }} />
-        <Slot id="about-photo-mobile" ph="Kevin Chinelli — portrait" style={{ width: "100%", height: "100%" }} />
-      </div>
-      <blockquote className="kicker-quote about-tri-quote reveal d2">{ABOUT_QUOTE}</blockquote>
-      <div className="signature reveal d3" style={{ textAlign: "center" }}>Kevin Chinelli</div>
-    </div>
-  );
-}
-
-function AboutSplit() {
-  return (
-    <div className="wrap about-split">
-      <div className="about-split-txt">
-        <Overline className="reveal">À propos</Overline>
-        <h2 className="display about-name reveal d1">Kevin Chinelli</h2>
-        {ABOUT_INTRO.map((p, i) => <p key={i} className={"reveal d" + (i + 2)}>{p}</p>)}
-        <hr className="hair reveal d3" style={{ width: "60px", margin: "4px 0" }} />
-        <blockquote className="kicker-quote reveal d3" style={{ margin: 0 }}>{ABOUT_QUOTE}</blockquote>
-        <div className="signature reveal d4">Kevin</div>
-        <a href="apropos.html" className="link-arrow reveal d4" style={{ marginTop: "8px" }}>En savoir plus <span className="ar">→</span></a>
-      </div>
-      <div className="about-split-fig">
-        <div className="about-split-img reveal d2">
-          <div className="about-split-frame"></div>
-          <Slot id="about-photo" ph="Kevin Chinelli — paysage" style={{ width: "100%", height: "100%" }} />
-          <Slot id="about-photo-mobile" ph="Kevin Chinelli — portrait" style={{ width: "100%", height: "100%" }} />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function About({ layout }) {
-  return (
-    <section id="about" className="sec s-light pad-y">
-      {layout === "split" ? <AboutSplit /> : layout === "decale" ? <AboutDecale /> : layout === "triptyque" ? <AboutTriptyque /> : <AboutEditorial />}
     </section>
   );
 }
@@ -591,7 +523,7 @@ function App() {
       <Nav />
       <main>
         <HomeHero variant={t.heroVariant} />
-        <About layout={t.aboutLayout} />
+        <About />
         <Prestations layout={t.prestaLayout} />
         <Gallery />
         <Process />
