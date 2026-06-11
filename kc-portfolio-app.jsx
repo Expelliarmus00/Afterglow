@@ -17,28 +17,15 @@ const PF_CATS = [
 ];
 
 const PF_ITEMS = [
-  { id: "pf-1",  cat: "mariage",   ph: "Mariage — cérémonie" },
-  { id: "pf-2",  cat: "couple",    ph: "Couple — golden hour" },
-  { id: "pf-3",  cat: "studio",    ph: "Studio — portrait éditorial" },
-  { id: "pf-4",  cat: "maternite", ph: "Maternité — lumière douce" },
-  { id: "pf-5",  cat: "mariage",   ph: "Mariage — préparatifs" },
-  { id: "pf-6",  cat: "couple",    ph: "Couple — complicité" },
-  { id: "pf-7",  cat: "studio",    ph: "Studio — corporate" },
-  { id: "pf-8",  cat: "mariage",   ph: "Mariage — première danse" },
-  { id: "pf-9",  cat: "maternite", ph: "Maternité — en couple" },
-  { id: "pf-10", cat: "studio",    ph: "Studio — clair-obscur" },
-  { id: "pf-11", cat: "couple",    ph: "Couple — en extérieur" },
-  { id: "pf-12", cat: "mariage",   ph: "Mariage — détails du lieu" },
-  { id: "pf-13", cat: "maternite", ph: "Maternité — silhouette" },
-  { id: "pf-14", cat: "studio",    ph: "Studio — noir & blanc" },
-  { id: "pf-15", cat: "couple",    ph: "Couple — tendresse" },
-  { id: "pf-16", cat: "mariage",   ph: "Mariage — sortie de cérémonie" },
-  { id: "pf-17", cat: "maternite", ph: "Maternité — détail intime" },
-  { id: "pf-18", cat: "studio",    ph: "Studio — attitude" },
-  { id: "pf-19", cat: "portrait",  ph: "Portrait — lumière naturelle" },
-  { id: "pf-20", cat: "portrait",  ph: "Portrait — extérieur" },
-  { id: "pf-21", cat: "portrait",  ph: "Portrait — regard franc" },
-  { id: "pf-22", cat: "portrait",  ph: "Portrait — noir & blanc" },
+  { id: "pf-1",  cat: "mariage",  ph: "Mariage — cérémonie" },
+  { id: "pf-5",  cat: "mariage",  ph: "Mariage — préparatifs" },
+  { id: "pf-8",  cat: "mariage",  ph: "Mariage — première danse" },
+  { id: "pf-12", cat: "mariage",  ph: "Mariage — détails du lieu" },
+  { id: "pf-16", cat: "mariage",  ph: "Mariage — sortie de cérémonie" },
+  { id: "pf-17", cat: "mariage",  ph: "Mariage — moment clé" },
+  { id: "pf-19", cat: "portrait", ph: "Portrait — lumière naturelle" },
+  { id: "pf-20", cat: "portrait", ph: "Portrait — extérieur" },
+  { id: "pf-21", cat: "portrait", ph: "Portrait — regard franc" },
 ];
 
 function PortfolioApp() {

@@ -198,6 +198,8 @@
   "mariage-g2": { "u": "images/pf-mariage-3.webp", "s": 1, "x": 0, "y": 0 },
   "mariage-g3": { "u": "images/pf-mariage-4.webp", "s": 1, "x": 0, "y": 0 },
   "mariage-g4": { "u": "images/pf-mariage-5.webp", "s": 1, "x": 0, "y": 0 },
+  "mariage-g5": { "u": "images/pf-mariage-6.webp", "s": 1, "x": 0, "y": 0 },
+  "pf-17": { "u": "images/pf-mariage-6.webp", "s": 1, "x": 0, "y": 0 },
   "portrait-g0": { "u": "images/pf-portrait-1.webp", "s": 1, "x": 0, "y": 0 },
   "portrait-g1": { "u": "images/pf-portrait-2.webp", "s": 1, "x": 0, "y": 0 },
   "portrait-g2": { "u": "images/pf-portrait-3.webp", "s": 1, "x": 0, "y": 0 },

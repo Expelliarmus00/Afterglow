@@ -401,6 +401,44 @@
     return true;
   }
 
+  /* ---------- inertia scroll (mouse wheel) ---------- */
+  function initInertia() {
+    if (reduce) return;
+    var vy = 0, raf = 0;
+    var FRICTION = 0.76, STOP = 0.2, MULT = 0.48, CAP = 520;
+    var html = document.documentElement;
+    function step() {
+      if (Math.abs(vy) < STOP) {
+        vy = 0; raf = 0;
+        html.style.scrollBehavior = "";  /* restaure smooth pour les ancres */
+        return;
+      }
+      window.scrollBy(0, vy);
+      vy *= FRICTION;
+      raf = requestAnimationFrame(step);
+    }
+    window._stopInertia = function () { vy = 0; html.style.scrollBehavior = ""; };
+    document.addEventListener("wheel", function (e) {
+      /* trackpad → petits deltas continus, déjà gérés nativement */
+      if (e.deltaMode === 0 && Math.abs(e.deltaY) < 50) return;
+      var tag = e.target && e.target.tagName;
+      if (tag === "TEXTAREA" || tag === "SELECT") return;
+      var el = e.target;
+      while (el && el !== document.body) {
+        var cs = getComputedStyle(el);
+        if ((cs.overflowY === "auto" || cs.overflowY === "scroll") && el.scrollHeight > el.clientHeight) return;
+        el = el.parentElement;
+      }
+      e.preventDefault();
+      /* désactive scroll-behavior:smooth pendant l'inertia (sinon chaque scrollBy
+         lance une micro-animation CSS qui entre en conflit avec la suivante) */
+      html.style.scrollBehavior = "auto";
+      var d = e.deltaMode === 1 ? e.deltaY * 40 : e.deltaMode === 2 ? e.deltaY * window.innerHeight : e.deltaY;
+      vy = Math.max(-CAP, Math.min(CAP, vy + d * MULT));
+      if (!raf) raf = requestAnimationFrame(step);
+    }, { passive: false, capture: true });
+  }
+
   /* ---------- "Voir" cursor over zoomable gallery images ---------- */
   function initCursor() {
     if (reduce || !finePointer) return;
@@ -432,6 +470,7 @@
   }
 
   function init() {
+    initInertia();
     initCursor();
     // React apps mount async (Babel) — retry skip link + parallax until <main> exists.
     var tries = 0;
