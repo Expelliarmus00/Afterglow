@@ -69,7 +69,7 @@ function ArticleApp() {
               <div className="journal-list two" style={{ marginTop: "clamp(30px,4vw,52px)" }}>
                 {others.map((o, i) => (
                   <a key={o.slug} href={o.file} className={"jl-card reveal d" + (i + 1)}>
-                    <div className="jl-img"><Slot id={"rel-art-" + o.slug} ph={o.hero} alt={o.heroAlt} style={{ width: "100%", height: "100%" }} /></div>
+                    <div className="jl-img"><Slot id={"art-hero-" + o.slug} ph={o.hero} alt={o.heroAlt} style={{ width: "100%", height: "100%" }} /></div>
                     <div className="jl-body">
                       <div className="jl-meta"><span className="jl-cat">{o.category}</span></div>
                       <h2>{o.title}</h2>

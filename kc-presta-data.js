@@ -47,14 +47,14 @@ window.KC_PRESTA = {
       "Appel préparatoire et conseils déroulé", "Repérage des lieux si besoin",
       "Galerie privée en ligne, téléchargement HD", "Toutes les photos livrées retouchées une à une",
       "Sélection réseaux sociaux livrée sous 3–5 jours", "Droits d'usage privé inclus",
-      "Double sauvegarde sécurisée pendant 1 an", "Frais de déplacement inclus jusqu'à 30 km autour de Mézières (VD)",
+      "Double sauvegarde sécurisée pendant 1 an", "Frais de déplacement inclus en Suisse romande",
     ],
     testimonials: [
       { quote: "Kevin a capturé notre mariage avec une justesse rare. Chaque image raconte précisément ce que nous avons ressenti ce jour-là.", who: "Camille & Thomas, Lavaux" },
       { quote: "Discret toute la journée, et pourtant rien ne lui a échappé. Nos photos sont d'une élégance folle.", who: "Sophie & Julien, Fribourg" },
     ],
     faq: [
-      { q: "Dans quelles régions vous déplacez-vous ?", a: "Je me déplace avec plaisir pour tout mariage en Suisse romande et au-delà. Le déplacement est offert dans un rayon de 30 km autour de Mézières (VD) — ce qui couvre la grande région lausannoise. Pour les principales villes romandes (Lausanne, Genève, Montreux, Fribourg…), un forfait déplacement est intégré directement dans la formule, sans surprise. Pour un mariage à l'étranger, transport et hébergement sont détaillés clairement dans le devis." },
+      { q: "Dans quelles régions vous déplacez-vous ?", a: "Je me déplace avec plaisir pour tout mariage en Suisse romande et au-delà. Le déplacement est inclus dans toute la Suisse romande (Vaud, Genève, Fribourg, Neuchâtel, Valais) — sans frais ni surprise. Pour un mariage ailleurs en Suisse ou à l'étranger, transport et hébergement éventuels sont détaillés clairement dans le devis." },
       { q: "Photographiez-vous plusieurs mariages le même jour ?", a: "Jamais. Je ne réserve qu'un seul mariage par date : vous avez ma disponibilité et mon énergie du matin jusqu'à la fin de soirée." },
       { q: "Qu'est-ce qu'une séance d'engagement ?", a: "C'est une séance de couple, incluse dans les formules Signature et Prestige, réalisée quelques semaines ou mois avant le mariage. On se retrouve une petite heure dans un lieu qui vous ressemble pour des photos détendues, rien que vous deux. L'intérêt est double : vous repartez avec de belles images à utiliser pour votre faire-part, votre site de mariage ou un tirage — et surtout, vous prenez vos marques avec ma façon de travailler. Le jour J, l'appareil est déjà familier et vous êtes naturels devant l'objectif." },
       { q: "Combien de photos recevons-nous, et quand ?", a: "Selon la formule, de 200 à 500+ photos — toutes retouchées, en pleine résolution. Ces nombres sont une estimation, pas un engagement contractuel : je tiens avant tout à ce que chaque image soit juste et aboutie. Je cherche la qualité, pas la quantité — selon le déroulé de la journée, certaines galeries dépassent largement ces repères, d'autres les approchent. Vous recevez une sélection de 10 images sous 3 à 5 jours (parfait pour vos réseaux), puis la galerie complète sous 4 semaines (10 jours en formule Prestige)." },
@@ -104,7 +104,7 @@ window.KC_PRESTA = {
     inclus: [
       "Échange préparatoire", "Conseils lieu, tenues & couleurs", "Direction de pose bienveillante",
       "Toutes les photos livrées retouchées", "Fichiers web et impression HD", "Galerie privée en ligne",
-      "Frais de déplacement inclus jusqu'à 30 km autour de Mézières (VD)",
+      "Frais de déplacement inclus en Suisse romande",
     ],
     testimonials: [
       { quote: "Je me trouve enfin à mon avantage sur une photo. Naturel, juste, sans surjeu.", who: "Sarah, Lausanne" },
@@ -163,7 +163,7 @@ window.KC_PRESTA = {
     inclus: [
       "Conseils tenues & préparation", "Studio chauffé et équipé", "Drapés et accessoires fournis",
       "Toutes les photos livrées retouchées", "Galerie privée en ligne", "Droits d'usage privé",
-      "Frais de déplacement inclus jusqu'à 30 km autour de Mézières (VD)",
+      "Frais de déplacement inclus en Suisse romande",
     ],
     testimonials: [
       { quote: "Une bulle de douceur. Je ne me trouvais jamais photogénique enceinte — Kevin m'a fait changer d'avis.", who: "Marie, Vevey" },
@@ -222,7 +222,7 @@ window.KC_PRESTA = {
     inclus: [
       "Studio professionnel équipé", "Direction de pose", "Choix des fonds et lumières",
       "Toutes les photos livrées retouchées", "Formats web et impression", "Galerie privée en ligne",
-      "Frais de déplacement inclus jusqu'à 30 km autour de Mézières (VD)",
+      "Frais de déplacement inclus en Suisse romande",
     ],
     testimonials: [
       { quote: "Mes nouveaux portraits corporate ont transformé l'image de mon entreprise. Net, élégant, professionnel.", who: "Antoine, CEO · Genève" },
@@ -281,7 +281,7 @@ window.KC_PRESTA = {
     inclus: [
       "Échange préparatoire", "Conseils lieu & tenues", "Direction décontractée",
       "Toutes les photos livrées retouchées", "Galerie privée en ligne", "Droits d'usage privé",
-      "Frais de déplacement inclus jusqu'à 30 km autour de Mézières (VD)",
+      "Frais de déplacement inclus en Suisse romande",
     ],
     testimonials: [
       { quote: "On riait tellement qu'on a oublié l'appareil. Les photos sont à notre image : vivantes et vraies.", who: "Inès & Karim, Montreux" },
@@ -340,7 +340,7 @@ window.KC_PRESTA = {
     inclus: [
       "Échange préparatoire", "Conseils tenues & couleurs accordées", "Séance en extérieur ou à domicile",
       "Direction bienveillante, au rythme des enfants", "Toutes les photos livrées retouchées", "Galerie privée en ligne",
-      "Frais de déplacement inclus jusqu'à 30 km autour de Mézières (VD)",
+      "Frais de déplacement inclus en Suisse romande",
     ],
     testimonials: [
       { quote: "Les premières photos de famille où nos enfants sont vraiment eux-mêmes. On rit à chaque fois qu'on les regarde.", who: "Famille Rochat, Lausanne" },
@@ -348,7 +348,7 @@ window.KC_PRESTA = {
     ],
     faq: [
       { q: "À partir de quel âge photographier les enfants ?", a: "À tout âge — du nouveau-né aux adolescents. Pour les bébés, on privilégie les dix premiers jours ou la période après 6 mois (quand ils tiennent assis). Pour les plus grands, la séance se transforme en jeu : c'est souvent là que naissent les plus belles images." },
-      { q: "Où se déroule la séance photo de famille ?", a: "Au lieu de votre choix — bord du Léman, forêt, vignes de Lavaux, parc — ou à votre domicile pour des images intimes du quotidien. Le déplacement est offert dans un rayon de 30 km autour de Mézières (VD). Au-delà, un supplément est prévu selon l'endroit." },
+      { q: "Où se déroule la séance photo de famille ?", a: "Au lieu de votre choix — bord du Léman, forêt, vignes de Lavaux, parc — ou à votre domicile pour des images intimes du quotidien. Le déplacement est inclus dans toute la Suisse romande, sans frais." },
       { q: "Comment ça se passe avec des enfants en bas âge ou agités ?", a: "C'est tout l'intérêt du reportage : je ne cherche pas à les figer. On joue, on bouge, on fait des pauses goûter si besoin. Je m'adapte à leur rythme et à leur humeur — les enfants qui « ne tiennent pas en place » donnent souvent les photos les plus vivantes." },
       { q: "Peut-on faire une séance avec les grands-parents ?", a: "Oui, et c'est très demandé. La formule Tribu élargie est pensée pour les séances multigénérationnelles, jusqu'à douze personnes — un magnifique cadeau pour réunir toute la famille autour d'images qui restent." },
       { q: "Que porter pour une séance photo de famille ?", a: "Des tenues coordonnées, sans être assorties à l'identique : une palette de 2 ou 3 couleurs douces et naturelles fonctionne très bien. Évitez les gros logos et les motifs chargés. Je vous envoie des conseils personnalisés avant la séance." },

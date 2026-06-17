@@ -209,19 +209,19 @@ const ABOUT_INTRO = "Depuis une dizaine d'années que je travaille à travers l'
 
 function About() {
   return (
-    <section id="about" className="sec about-band">
-      <div className="ab-bg">
-        <Slot id="about-photo" ph="Kevin Chinelli" loading="lazy" style={{ width: "100%", height: "100%" }} />
-        <Slot id="about-photo-mobile" ph="Kevin Chinelli — portrait" loading="lazy" style={{ width: "100%", height: "100%" }} />
-      </div>
-      <div className="ab-veil"></div>
-      <div className="wrap ab-inner">
-        <div className="ab-text">
+    <section id="about" className="sec s-light pad-y about-ed">
+      <div className="wrap about-ed-grid">
+        <div className="about-ed-text">
           <Overline className="reveal">À propos</Overline>
           <h2 className="display about-name reveal d1">Kevin Chinelli</h2>
-          <hr className="hair reveal d2" style={{ width: "44px", margin: "0" }} />
+          <hr className="hair about-ed-rule reveal d2" />
           <p className="reveal d2">{ABOUT_INTRO}</p>
           <a href="apropos.html" className="link-arrow reveal d3">En savoir plus <span className="ar">→</span></a>
+        </div>
+        <div className="about-ed-photo reveal d2">
+          <figure className="about-ed-frame">
+            <Slot id="about-photo" ph="Kevin Chinelli — photographe en Suisse romande" loading="lazy" style={{ width: "100%", height: "100%" }} />
+          </figure>
         </div>
       </div>
     </section>

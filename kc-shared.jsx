@@ -131,7 +131,7 @@ function RelatedPresta({ current }) {
         <div className="related-grid">
           {items.map((p, i) => (
             <a key={p.slug} href={p.href} className={"related-card reveal d" + (i + 1)}>
-              <div className="rc-img"><Slot id={"rel-" + current + "-" + p.slug} ph={p.title} alt={"Photographe " + p.title.toLowerCase() + " en Suisse romande — Kevin Chinelli"} style={{ width: "100%", height: "100%" }} /></div>
+              <div className="rc-img"><Slot id={"presta-" + p.slug} ph={p.title} alt={"Photographe " + p.title.toLowerCase() + " en Suisse romande — Kevin Chinelli"} style={{ width: "100%", height: "100%" }} /></div>
               <div className="rc-meta"><h3>{p.title}</h3><span className="ar">Découvrir →</span></div>
             </a>
           ))}

@@ -31,7 +31,7 @@ function JournalApp() {
             <div className="journal-list">
               {arts.map((a, i) => (
                 <a key={a.slug} href={a.file} className={"jl-card reveal d" + ((i % 3) + 1)}>
-                  <div className="jl-img"><Slot id={"j-" + a.slug} ph={a.hero} alt={a.heroAlt} style={{ width: "100%", height: "100%" }} /></div>
+                  <div className="jl-img"><Slot id={"art-hero-" + a.slug} ph={a.hero} alt={a.heroAlt} style={{ width: "100%", height: "100%" }} /></div>
                   <div className="jl-body">
                     <div className="jl-meta"><span className="jl-cat">{a.category}</span><span className="jl-dot">·</span><span>{a.read} de lecture</span></div>
                     <h2>{a.title}</h2>
