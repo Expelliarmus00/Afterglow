@@ -16,22 +16,32 @@ const AP_FACTS = [
 
 function ApHero() {
   return (
-    <section className="ap-hero s-light">
-      <div className="portrait reveal">
-        <Slot id="ap-portrait" ph="Portrait — Kevin Chinelli, vertical" style={{ width: "100%", height: "100%" }} />
+    <section className="phero bas">
+      <div className="bg">
+        <Slot id="about-photo" ph="Kevin Chinelli — photographe en Suisse romande" loading="eager" fetchpriority="high" style={{ width: "100%", height: "100%" }} />
+        <Slot id="about-photo-mobile" ph="Kevin Chinelli — portrait" loading="eager" fetchpriority="high" style={{ width: "100%", height: "100%" }} />
       </div>
-      <div className="intro">
-        <Overline className="reveal">Photographe · Suisse romande</Overline>
-        <h1 className="reveal d1">Kevin Chinelli</h1>
-        <p className="ap-manifesto reveal d2">
-          « Les moments qui comptent ne se mettent pas en scène. »
-        </p>
-        <p className="ap-body reveal d2">
+      <div className="scrim"></div>
+      <div className="phero-content">
+        <div className="crumb reveal in"><a href={KC.HOME}>Accueil</a><span>/</span><span>À propos</span></div>
+        <h1 className="reveal in d1">Kevin Chinelli</h1>
+        <p className="hint reveal in d2">« Les moments qui comptent ne se mettent pas en scène. »</p>
+      </div>
+    </section>
+  );
+}
+
+function ApIntro() {
+  return (
+    <section className="sec s-light pad-y">
+      <div className="wrap-narrow ap-intro">
+        <Overline className="reveal">Le photographe</Overline>
+        <p className="ap-lead reveal d1">
           Mon travail, c'est d'être là — attentif, discret, à l'écoute — au moment exact où
           quelque chose de vrai se passe. Partout où une histoire mérite d'être racontée, avec
           patience et le souci constant du détail.
         </p>
-        <div className="ap-facts reveal d3">
+        <div className="ap-facts reveal d2">
           {AP_FACTS.map((f, i) => (
             <div key={i} className="ap-fact">
               <div className="ap-fact-k">{f.k}</div>
@@ -109,13 +119,6 @@ function ApApp() {
   });
   useApplyTweaks(t);
   useReveal([]);
-  /* Force la nav en état "scrolled" dès le chargement :
-     fond droit clair + fond gauche sombre → impossible d'avoir une couleur unique lisible.
-     Le fond dépoli sombre résout les deux côtés. */
-  React.useEffect(() => {
-    document.body.classList.add("nav-force-scrolled");
-    return () => document.body.classList.remove("nav-force-scrolled");
-  }, []);
 
   return (
     <>
@@ -123,6 +126,7 @@ function ApApp() {
       <Nav active="apropos" />
       <main>
         <ApHero />
+        <ApIntro />
         <Values />
         <QuoteBand />
         <StudioStrip />
