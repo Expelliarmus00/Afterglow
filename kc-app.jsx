@@ -190,21 +190,7 @@ function HomeHero({ variant = "a" }) {
   );
 }
 
-/* ---------- INTRO ---------- */
-function Intro() {
-  return (
-    <section className="sec s-light pad-y intro-welcome">
-      <div className="wrap-narrow intro-inner">
-        <Overline className="reveal">Photographe · Suisse romande</Overline>
-        <h2 className="display intro-hdl reveal d1">Pour les moments qui méritent de rester.</h2>
-        <p className="intro-txt reveal d2">Des mariages aux portraits de famille, je travaille au plus près de ce qui se passe vraiment — avec discrétion, patience, et le regard de quelqu'un qui cherche l'émotion juste plutôt que la belle image convenue.</p>
-        <hr className="hair intro-rule reveal d3" />
-      </div>
-    </section>
-  );
-}
-
-/* ---------- ABOUT ---------- */
+/* ---------- ABOUT + INTRO (section unique) ---------- */
 const ABOUT_INTRO = "Depuis une dizaine d'années que je travaille à travers l'image, j'ai appris une chose : les moments qui comptent ne se mettent pas en scène. Mon travail, c'est d'être là — attentif, discret, à l'écoute — au moment exact où quelque chose de vrai se passe.";
 
 function About() {
@@ -212,9 +198,11 @@ function About() {
     <section id="about" className="sec s-light pad-y about-ed">
       <div className="wrap about-ed-grid">
         <div className="about-ed-text">
-          <Overline className="reveal">À propos</Overline>
-          <h2 className="display about-name reveal d1">Kevin Chinelli</h2>
+          <Overline className="reveal">Photographe · Suisse romande</Overline>
+          <h2 className="display about-ed-hdl reveal d1">Pour les moments qui méritent de rester.</h2>
+          <p className="about-ed-intro reveal d1">Des mariages aux portraits de famille, je travaille au plus près de ce qui se passe vraiment — avec discrétion, patience, et le regard de quelqu'un qui cherche l'émotion juste plutôt que la belle image convenue.</p>
           <hr className="hair about-ed-rule reveal d2" />
+          <p className="about-ed-name reveal d2">Kevin Chinelli</p>
           <p className="reveal d2">{ABOUT_INTRO}</p>
           <a href="apropos.html" className="link-arrow reveal d3">En savoir plus <span className="ar">→</span></a>
         </div>
@@ -539,7 +527,6 @@ function App() {
       <Nav />
       <main>
         <HomeHero variant={t.heroVariant} />
-        <Intro />
         <About />
         <Prestations layout={t.prestaLayout} />
         <Gallery />
