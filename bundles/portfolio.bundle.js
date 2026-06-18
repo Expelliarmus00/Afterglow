@@ -767,7 +767,7 @@ window.KC_PRESTA = {
   function initInertia() {
     if (reduce) return;
     var vy = 0, raf = 0;
-    var FRICTION = 0.76, STOP = 0.2, MULT = 0.48, CAP = 520;
+    var FRICTION = 0.91, STOP = 0.08, MULT = 0.42, CAP = 520;
     var html = document.documentElement;
     function step() {
       if (Math.abs(vy) < STOP) {
