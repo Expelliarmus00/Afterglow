@@ -222,5 +222,11 @@
   "maternite-g4": { "u": "images/maternite-g4.webp", "s": 1, "x": 0, "y": 0 },
   "maternite-g5": { "u": "images/maternite-g5.webp", "s": 1, "x": 0, "y": 0 },
   "maternite-g6": { "u": "images/maternite-g6.webp", "s": 1, "x": 0, "y": 0 },
-  "maternite-g8": { "u": "images/maternite-g8.webp", "s": 1, "x": 0, "y": 0 }
+  "maternite-g8": { "u": "images/maternite-g8.webp", "s": 1, "x": 0, "y": 0 },
+  "studio-g0": { "u": "images/studio-g0.webp", "s": 1, "x": 0, "y": 0 },
+  "studio-g1": { "u": "images/studio-g1.webp", "s": 1, "x": 0, "y": 0 },
+  "studio-g2": { "u": "images/studio-g2.webp", "s": 1, "x": 0, "y": 0 },
+  "studio-g3": { "u": "images/studio-g3.webp", "s": 1, "x": 0, "y": 0 },
+  "studio-g4": { "u": "images/studio-g4.webp", "s": 1, "x": 0, "y": 0 },
+  "studio-g5": { "u": "images/studio-g5.webp", "s": 1, "x": 0, "y": 0 }
 }

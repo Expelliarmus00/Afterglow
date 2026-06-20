@@ -36,6 +36,14 @@ const PF_ITEMS = [
   { id: "maternite-g6", cat: "maternite", ph: "Maternité — paysage", wide: true },
   { id: "pf-23",        cat: "mariage",   ph: "Mariage — lumière de fin de journée" },
   { id: "maternite-g8", cat: "maternite", ph: "Maternité — détail" },
+  // Studio : visible uniquement via le filtre « Studio » (exclu de la vue « Tout »
+  // pour préserver la cohérence visuelle du portfolio général).
+  { id: "studio-g0",    cat: "studio",    ph: "Studio — portrait éditorial" },
+  { id: "studio-g1",    cat: "studio",    ph: "Studio — portrait corporate" },
+  { id: "studio-g2",    cat: "studio",    ph: "Studio — clair-obscur" },
+  { id: "studio-g3",    cat: "studio",    ph: "Studio — attitude" },
+  { id: "studio-g4",    cat: "studio",    ph: "Studio — fond sobre" },
+  { id: "studio-g5",    cat: "studio",    ph: "Studio — portrait de profil" },
 ];
 
 function PortfolioApp() {
@@ -58,7 +66,7 @@ function PortfolioApp() {
             <Overline className="reveal">Portfolio</Overline>
             <h1 className="display reveal d1">Travaux choisis.</h1>
             <p className="reveal d2">
-              Une sélection d'images à travers les mariages, les couples, le studio et la maternité.
+              Une sélection d'images à travers les mariages, les portraits et la maternité.
               Cliquez sur une photo pour l'agrandir.
             </p>
             <div className="pf-filters reveal d2">
@@ -79,7 +87,7 @@ function PortfolioApp() {
           <div className="wrap">
             <div className="pf-grid" data-lb-group="portfolio">
               {PF_ITEMS.map((it) => (
-                <div key={it.id} className={"pf-cell" + (it.wide ? " pf-cell--wide" : "") + (cat === "all" || it.cat === cat ? "" : " hide")}>
+                <div key={it.id} className={"pf-cell" + (it.wide ? " pf-cell--wide" : "") + (((cat === "all" && it.cat !== "studio") || it.cat === cat) ? "" : " hide")}>
                   <Slot id={it.id} ph={it.ph} style={{ width: "100%", height: "100%" }} />
                 </div>
               ))}
