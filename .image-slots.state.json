@@ -121,8 +121,8 @@
   "phero-portrait-mobile": { "u": "images/phero-portrait-mobile.webp","s": 1, "x": 0, "y": 0 },
   "phero-studio": { "u": "images/phero-studio.webp",          "s": 1, "x": 0, "y": 0 },
   "phero-studio-mobile": { "u": "images/phero-studio-mobile.webp",  "s": 1, "x": 0, "y": 0 },
-  "phero-maternite": { "u": "images/presta-maternite.webp",     "s": 1, "x": 0, "y": 0 },
-  "phero-maternite-mobile": { "u": "images/presta-maternite.webp", "s": 1, "x": 0, "y": 0 },
+  "phero-maternite": { "u": "images/phero-maternite.webp",        "s": 1, "x": 0, "y": 0 },
+  "phero-maternite-mobile": { "u": "images/phero-maternite-mobile.webp", "s": 1, "x": 0, "y": 0 },
   "phero-couple-mobile": { "u": "images/presta-couple.webp", "s": 1, "x": 0, "y": 0 },
   "phero-famille-mobile": { "u": "images/hero-main.webp", "s": 1, "x": 0, "y": 0 },
   "phero-couple": {
