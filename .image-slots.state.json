@@ -214,5 +214,10 @@
   "portrait-g3": { "u": "images/pf-portrait-6.webp", "s": 1, "x": 0, "y": 0 },
   "portrait-g4": { "u": "images/pf-portrait-4.webp", "s": 1, "x": 0, "y": 0 },
   "portrait-g5": { "u": "images/pf-portrait-5.webp", "s": 1, "x": 0, "y": 0 },
-  "portrait-g6": { "u": "images/pf-portrait-7.webp", "s": 1, "x": 0, "y": 0 }
+  "portrait-g6": { "u": "images/pf-portrait-7.webp", "s": 1, "x": 0, "y": 0 },
+  "maternite-g0": { "u": "images/maternite-g0.webp", "s": 1, "x": 0, "y": 0 },
+  "maternite-g1": { "u": "images/maternite-g1.webp", "s": 1, "x": 0, "y": 0 },
+  "maternite-g2": { "u": "images/maternite-g2.webp", "s": 1, "x": 0, "y": 0 },
+  "maternite-g3": { "u": "images/maternite-g3.webp", "s": 1, "x": 0, "y": 0 },
+  "maternite-g8": { "u": "images/maternite-g8.webp", "s": 1, "x": 0, "y": 0 }
 }

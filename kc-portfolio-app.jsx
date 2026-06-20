@@ -25,10 +25,15 @@ const PF_ITEMS = [
   { id: "pf-16", cat: "mariage",  ph: "Mariage — sortie de cérémonie" },
   { id: "pf-17", cat: "mariage",  ph: "Mariage — moment clé" },
   { id: "pf-23", cat: "mariage",  ph: "Mariage — lumière de fin de journée" },
-  { id: "pf-19", cat: "portrait", ph: "Portrait — lumière naturelle" },
-  { id: "pf-22", cat: "portrait", ph: "Portrait — regard", wide: true },
-  { id: "pf-20", cat: "portrait", ph: "Portrait — extérieur" },
-  { id: "pf-21", cat: "portrait", ph: "Portrait — regard franc" },
+  { id: "pf-19", cat: "portrait",  ph: "Portrait — lumière naturelle" },
+  { id: "pf-22", cat: "portrait",  ph: "Portrait — regard", wide: true },
+  { id: "pf-20", cat: "portrait",  ph: "Portrait — extérieur" },
+  { id: "pf-21", cat: "portrait",  ph: "Portrait — regard franc" },
+  { id: "maternite-g0", cat: "maternite", ph: "Maternité — silhouette" },
+  { id: "maternite-g1", cat: "maternite", ph: "Maternité — douceur de l'attente", wide: true },
+  { id: "maternite-g2", cat: "maternite", ph: "Maternité — portrait serein" },
+  { id: "maternite-g3", cat: "maternite", ph: "Maternité — en couple" },
+  { id: "maternite-g8", cat: "maternite", ph: "Maternité — détail" },
 ];
 
 function PortfolioApp() {
