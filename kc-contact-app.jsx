@@ -12,8 +12,6 @@ const TYPES = [
   { key: "Portrait", href: "portraits.html" },
   { key: "Studio", href: "studio.html" },
   { key: "Maternité & Grossesse", href: "maternite-grossesse.html" },
-  { key: "Couple", href: "couple.html" },
-  { key: "Famille", href: "famille.html" },
   { key: "Bon cadeau", href: "" },
   { key: "Autre", href: "" },
 ];

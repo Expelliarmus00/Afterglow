@@ -37,8 +37,6 @@ const PRESTA_NAV = [
   { slug: "portrait",  title: "Portraits",             short: "Portraits", href: "portraits.html" },
   { slug: "studio",    title: "Studio",                short: "Studio",    href: "studio.html" },
   { slug: "maternite", title: "Maternité & Grossesse", short: "Maternité", href: "maternite-grossesse.html" },
-  { slug: "couple",    title: "Couple",                short: "Couple",    href: "couple.html" },
-  { slug: "famille",   title: "Famille",               short: "Famille",   href: "famille.html" },
 ];
 
 /* ---------- atoms ---------- */

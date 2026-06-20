@@ -13,7 +13,6 @@ const PF_CATS = [
   { key: "portrait",  label: "Portraits" },
   { key: "studio",    label: "Studio" },
   { key: "maternite", label: "Maternité" },
-  { key: "couple",    label: "Couple" },
 ];
 
 const PF_ITEMS = [

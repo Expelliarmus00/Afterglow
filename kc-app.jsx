@@ -37,12 +37,6 @@ const PRESTATIONS = [
   { n: "04", title: "Maternité & Grossesse", short: "Maternité", id: "presta-maternite", href: "maternite-grossesse.html",
     img: "Maternité — studio / lumière douce",
     text: "La douceur de l'attente, saisie en studio ou en lumière naturelle. Des images intemporelles, dans l'intimité et le calme du moment." },
-  { n: "05", title: "Couple", id: "presta-couple", href: "couple.html",
-    img: "Couple — séance extérieure",
-    text: "Une séance complice, en extérieur ou en atelier, pour célébrer ce qui vous lie. Des regards, des gestes, une histoire qui vous ressemble." },
-  { n: "06", title: "Famille", id: "presta-famille", href: "famille.html",
-    img: "Famille — séance complice en extérieur",
-    text: "Des images vraies de votre tribu, complices et vivantes — en extérieur ou à la maison, au rythme des enfants. Du fou rire au câlin, sans poses figées." },
 ];
 
 const TESTIMONIALS = [

@@ -4,7 +4,7 @@
    Loaded after kc-shared.jsx + kc-presta-data.js.
    ============================================================ */
 const PRESTA = window.KC_PRESTA;
-const ORDER = ["mariage", "portrait", "studio", "maternite", "couple", "famille"];
+const ORDER = ["mariage", "portrait", "studio", "maternite"];
 const HREF = {};
 (window.PRESTA_NAV || []).forEach((p) => { HREF[p.slug] = p.href; });
 
@@ -18,7 +18,7 @@ const TARIF_FAQ = [
   { q: "Comment réserver et régler ?",
     a: "La date est bloquée à la signature du contrat et au versement d'un acompte de 30 %. Le solde est réglé avant la prestation. Pour les mariages, je conseille de réserver 8 à 14 mois à l'avance pour les samedis de mai à septembre." },
   { q: "Proposez-vous des bons cadeaux ?",
-    a: "Oui, des bons cadeaux personnalisés valables un an — pour une séance portrait, couple ou maternité. Une belle idée de cadeau pour une demande, un anniversaire ou les fêtes." },
+    a: "Oui, des bons cadeaux personnalisés valables un an — pour une séance portrait, studio ou maternité. Une belle idée de cadeau pour un anniversaire, une naissance ou les fêtes." },
 ];
 
 function priceNum(s) {
@@ -69,7 +69,7 @@ function TarifsApp() {
             <h1 className="display reveal d1">Des tarifs clairs, annoncés.</h1>
             <p className="tarif-intro reveal d2">
               Pas de prix caché ni de devis opaque. Voici mes formules de référence pour la photographie de
-              mariage, portrait, studio, maternité et couple en Suisse romande. Chaque projet étant unique,
+              mariage, portrait, studio et maternité en Suisse romande. Chaque projet étant unique,
               le devis final est personnalisé — mais vous savez d'emblée à quoi vous attendre.
             </p>
           </div>
