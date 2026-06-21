@@ -492,7 +492,7 @@ body.is-leaving{ opacity:0; }
 
 /* ---------- HOME PORTFOLIO MOSAIC (6 photos, pavage sans trou) ---------- */
 .gal-mosaic{ display:grid; grid-template-columns:repeat(4,1fr); grid-template-rows:repeat(6,1fr);
-  height:clamp(460px,56vw,700px); gap:14px;
+  height:clamp(540px,64vw,820px); gap:14px;
   grid-template-areas:
     "p3 p3 m5 m6"
     "p3 p3 m5 m6"
