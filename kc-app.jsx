@@ -275,12 +275,13 @@ function Gallery() {
           </div>
           <a href="portfolio.html" className="link-arrow reveal d1">Voir le portfolio <span className="ar">→</span></a>
         </div>
-        <div className="gal reveal d1" data-lb-group="portfolio">
-          <div className="cell"><Slot id="gal-main" ph="Image large" style={{ width: "100%", height: "100%" }} /></div>
-          <div className="stack">
-            <div className="cell"><Slot id="gal-2" ph="Image" style={{ width: "100%", height: "100%" }} /></div>
-            <div className="cell"><Slot id="gal-3" ph="Image" style={{ width: "100%", height: "100%" }} /></div>
-          </div>
+        <div className="gal-mosaic reveal d1" data-lb-group="portfolio">
+          <div className="gm-cell gm-p3"><Slot id="home-p3" ph="Mariage — portrait des mariés" style={{ width: "100%", height: "100%" }} /></div>
+          <div className="gm-cell gm-m5"><Slot id="home-m5" ph="Mariage — instant d'émotion" style={{ width: "100%", height: "100%" }} /></div>
+          <div className="gm-cell gm-m6"><Slot id="home-m6" ph="Mariage — moment clé" style={{ width: "100%", height: "100%" }} /></div>
+          <div className="gm-cell gm-g5"><Slot id="home-g5" ph="Maternité — douceur de l'attente" style={{ width: "100%", height: "100%" }} /></div>
+          <div className="gm-cell gm-p5"><Slot id="home-p5" ph="Portrait — lumière naturelle" style={{ width: "100%", height: "100%" }} /></div>
+          <div className="gm-cell gm-m8"><Slot id="home-m8" ph="Mariage — scène large" style={{ width: "100%", height: "100%" }} /></div>
         </div>
       </div>
     </section>

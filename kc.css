@@ -490,6 +490,31 @@ body.is-leaving{ opacity:0; }
 .gal .cell{ overflow:hidden; }
 @media (max-width:780px){ .gal{ grid-template-columns:1fr; height:auto; } .gal .cell{ height:70vw; } .gal .stack{ grid-template-rows:none; } .gal .stack .cell{ height:54vw; } }
 
+/* ---------- HOME PORTFOLIO MOSAIC (6 photos, pavage sans trou) ---------- */
+.gal-mosaic{ display:grid; grid-template-columns:repeat(4,1fr); grid-template-rows:repeat(6,1fr);
+  height:clamp(460px,56vw,700px); gap:14px;
+  grid-template-areas:
+    "p3 p3 m5 m6"
+    "p3 p3 m5 m6"
+    "p3 p3 m5 m6"
+    "p3 p3 p5 g5"
+    "p3 p3 p5 g5"
+    "p3 p3 p5 m8"; }
+.gal-mosaic .gm-cell{ overflow:hidden; }
+.gal-mosaic image-slot{ width:100%; height:100%; }
+.gm-p3{ grid-area:p3; } .gm-m5{ grid-area:m5; } .gm-m6{ grid-area:m6; }
+.gm-g5{ grid-area:g5; } .gm-p5{ grid-area:p5; } .gm-m8{ grid-area:m8; }
+@media(max-width:780px){
+  /* placement auto + aspect-ratio par cellule : proportions garanties.
+     Ordre DOM : p3, m5, m6, g5, p5, m8 →
+     p3 (pleine largeur) · [m5|m6] · [g5|p5] · m8 (paysage pleine largeur) */
+  .gal-mosaic{ grid-template-columns:1fr 1fr; grid-template-rows:auto; height:auto; gap:10px;
+    grid-template-areas:none; }
+  .gal-mosaic .gm-cell{ grid-area:auto; aspect-ratio:4/5; }
+  .gal-mosaic .gm-p3{ grid-column:1 / -1; aspect-ratio:4/5; }
+  .gal-mosaic .gm-m8{ grid-column:1 / -1; aspect-ratio:2/1; }
+}
+
 /* ---------- PROCESSUS ---------- */
 .process-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(30px,4vw,60px); }
 .process-step{ display:flex; flex-direction:column; gap:14px; }
