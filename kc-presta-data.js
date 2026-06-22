@@ -91,9 +91,9 @@ window.KC_PRESTA = {
     ],
     formules: [
       { tag: "Découverte · 30 min", name: "Essentiel", price: "CHF 240",
-        items: ["1 lieu extérieur", "10 photos retouchées", "Galerie privée en ligne"] },
+        items: ["1 lieu extérieur", "10 photos retouchées", "Galerie privée en ligne", "Galerie complète en option"] },
       { tag: "Le plus choisi · 1 h", name: "Signature", price: "CHF 340", feature: true,
-        items: ["2 lieux (intérieur ou extérieur) ou 2 ambiances proches", "25 photos retouchées", "Galerie privée en ligne"] },
+        items: ["2 lieux (intérieur ou extérieur) ou 2 ambiances proches", "25 photos retouchées", "Galerie privée en ligne", "Galerie complète en option"] },
       { tag: "Pro & image de marque", name: "Corporate", price: "Sur devis",
         items: ["Portraits pro & personal branding", "Extérieur, intérieur ou studio", "Portraits d'équipe possibles", "Droits d'usage commercial inclus", "Volume & délai selon vos besoins"] },
     ],
@@ -104,7 +104,7 @@ window.KC_PRESTA = {
       { n: "04", title: "Livraison", text: "Votre galerie privée sous 2 semaines, fichiers prêts à l'emploi, web et impression." },
     ],
     inclus: [
-      "Échange préparatoire", "Conseils lieu, tenues & couleurs", "Direction de pose bienveillante",
+      "Conseils lieu, tenues & couleurs", "Direction de pose bienveillante",
       "Toutes les photos livrées retouchées", "Fichiers web et impression HD", "Galerie privée en ligne",
       "Frais de déplacement inclus en Suisse romande",
     ],
