@@ -16,7 +16,7 @@ const TARIF_FAQ = [
   { q: "Les tarifs sont-ils fixes ou sur devis ?",
     a: "Les prix affichés sont des repères transparents, alignés sur le marché romand. Le devis final est personnalisé : il s'ajuste à la durée, au lieu, aux livrables (album, tirages) et aux options choisies." },
   { q: "Comment réserver et régler ?",
-    a: "La date est bloquée à la signature du contrat et au versement d'un acompte de 30 %. Le solde est réglé avant la prestation. Pour les mariages, je conseille de réserver 8 à 14 mois à l'avance pour les samedis de mai à septembre." },
+    a: "La date est bloquée à la signature du contrat et au versement d'un acompte de 30 %. Le solde est réglé avant la prestation ; pour les mariages, il est versé 10 jours après la célébration, et je conseille de réserver 8 à 14 mois à l'avance pour les samedis de mai à septembre." },
   { q: "Proposez-vous des bons cadeaux ?",
     a: "Oui, des bons cadeaux personnalisés valables un an — pour une séance portrait, studio ou maternité. Une belle idée de cadeau pour un anniversaire, une naissance ou les fêtes." },
 ];
