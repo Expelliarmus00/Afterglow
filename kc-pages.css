@@ -317,6 +317,7 @@
 .avis-card .cat:hover{ text-decoration:underline; text-underline-offset:3px; }
 @media(max-width:900px){ .avis-grid{ columns:2; } }
 @media(max-width:600px){ .avis-grid{ columns:1; } }
+.avis-google{ display:flex; align-items:center; flex-wrap:wrap; gap:clamp(16px,2.2vw,28px); margin-top:clamp(28px,3.4vw,46px); }
 
 /* ---------- QUOTE FUNNEL (contact) ---------- */
 .funnel{ max-width:680px; margin:0 auto; }

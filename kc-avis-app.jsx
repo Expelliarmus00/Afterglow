@@ -3,7 +3,8 @@
    Aggregates testimonials from window.KC_PRESTA + Google CTA.
    ⚠️ Replace GOOGLE_REVIEWS_URL with the real Google Business link.
    ============================================================ */
-const GOOGLE_REVIEWS_URL = "https://search.google.com/local/writereview"; // ⚠️ placeholder
+const GOOGLE_REVIEWS_URL = "https://g.page/r/Ccd14Q8WzKZuEBM/review"; // ouvre la fenêtre d'avis Google
+const GOOGLE_PROFILE_URL = "https://g.page/r/Ccd14Q8WzKZuEBM";        // fiche Google Business publique
 
 const ALL_REVIEWS = (function () {
   const cats = { mariage: "Mariage", portrait: "Portrait", studio: "Studio", maternite: "Maternité", couple: "Couple", famille: "Famille" };
@@ -35,6 +36,10 @@ function AvisApp() {
             <Overline className="reveal">Avis clients</Overline>
             <h1 className="display reveal d1">Bientôt vos mots ici.</h1>
             <p className="reveal d1">Afterglow démarre — les premières séances arrivent. Les retours de mes clients prendront place ici au fur et à mesure, avec authenticité. En attendant, le meilleur moyen de vous faire une idée reste d'échanger directement avec moi.</p>
+            <div className="avis-google reveal d2">
+              <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener" className="hh-btn">★ Laisser un avis sur Google <span className="ar">→</span></a>
+              <a href={GOOGLE_PROFILE_URL} target="_blank" rel="noopener" className="link-arrow">Voir ma fiche Google <span className="ar">→</span></a>
+            </div>
           </div>
         </section>
 
