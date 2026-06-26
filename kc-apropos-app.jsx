@@ -8,11 +8,6 @@ const VALUES = [
   { n: "03", t: "Un accompagnement entier", p: "De la première rencontre à la livraison de vos tirages, je vous accompagne avec soin. Chaque projet est unique et mérite une attention sur mesure." },
 ];
 
-const AP_FACTS = [
-  { k: "Basé à", v: "Suisse romande" },
-  { k: "Lumière", v: "Naturelle avant tout" },
-  { k: "Spécialités", v: "Mariage · Portrait · Maternité" },
-];
 
 function ApHero() {
   return (
@@ -73,14 +68,6 @@ function ApIntro() {
             <figure className="ap-photo-frame">
               <Slot id="ap-portrait" ph="Kevin Chinelli — photographe en Suisse romande" alt="Kevin Chinelli, photographe d'humains en Suisse romande" style={{ width: "100%", height: "100%" }} />
             </figure>
-            <div className="ap-facts">
-              {AP_FACTS.map((f, i) => (
-                <div key={i} className="ap-fact">
-                  <div className="ap-fact-k">{f.k}</div>
-                  <div className="ap-fact-v">{f.v}</div>
-                </div>
-              ))}
-            </div>
           </aside>
         </div>
       </div>
