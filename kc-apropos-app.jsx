@@ -34,49 +34,52 @@ function ApHero() {
 function ApIntro() {
   return (
     <section className="sec s-light pad-y">
-      <div className="wrap ap-intro-grid">
-        <div className="ap-intro">
+      <div className="wrap ap-intro">
         <Overline className="reveal">Le photographe</Overline>
         <p className="ap-lead reveal d1">
           Mon travail, c'est d'être là — attentif, discret, à l'écoute — au moment exact où
           quelque chose de vrai se passe. Mais avant d'être un métier, la photographie a d'abord
           été une histoire de regard : le mien, posé sur les gens que j'aime.
         </p>
-        <p className="ap-body reveal d2">
-          Tout a commencé en voyage. Au fil de nos escapades à deux, j'ai pris l'habitude de
-          photographier ma femme — de chercher la lumière qui lui allait, l'instant où elle
-          s'oubliait, le geste juste. C'est là, sans vraiment m'en rendre compte, que s'est formé
-          mon œil pour l'émotion humaine : pas dans la pose, mais dans le vrai.
-        </p>
-        <p className="ap-body reveal d2">
-          Avant la photo, j'ai exploré plusieurs terrains créatifs — la musique, la vidéo, la
-          création de contenu. Le déclic est venu d'un projet de trois semaines en Tanzanie,
-          appareil en main, loin de tout confort : j'en suis rentré avec une certitude tranquille.
-          C'était ma voie.
-        </p>
-        <p className="ap-body reveal d2">
-          Depuis, je crois qu'une belle image se joue d'abord dans la relation. Avant l'esthétique,
-          il y a la rencontre : prendre le temps de vous comprendre, créer un cadre où vous vous
-          sentez à l'aise et compris, pour que vous oubliiez vite l'objectif. C'est cette confiance
-          qui rend les images justes — et qui les fait respirer des années plus tard.
-        </p>
-        <p className="ap-body reveal d2">
-          Aujourd'hui, je photographie les gens en Suisse romande : vos mariages, vos portraits,
-          l'attente d'un enfant. Toujours en lumière naturelle autant que possible, avec la même
-          exigence et la même écoute — et l'envie de vous offrir des images dans lesquelles vous
-          vous reconnaissez vraiment.
-        </p>
-        <div className="ap-facts reveal d2">
-          {AP_FACTS.map((f, i) => (
-            <div key={i} className="ap-fact">
-              <div className="ap-fact-k">{f.k}</div>
-              <div className="ap-fact-v">{f.v}</div>
+        <div className="ap-intro-grid">
+          <div className="ap-intro-col">
+            <p className="ap-body reveal d2">
+              Tout a commencé en voyage. Au fil de nos escapades à deux, j'ai pris l'habitude de
+              photographier ma femme — de chercher la lumière qui lui allait, l'instant où elle
+              s'oubliait, le geste juste. C'est là, sans vraiment m'en rendre compte, que s'est
+              formé mon œil pour l'émotion humaine : pas dans la pose, mais dans le vrai.
+            </p>
+            <p className="ap-body reveal d2">
+              Avant la photo, j'ai exploré plusieurs terrains créatifs — la musique, la vidéo, la
+              création de contenu. Le déclic est venu d'un projet de trois semaines en Tanzanie,
+              appareil en main, loin de tout confort : j'en suis rentré avec une certitude
+              tranquille. C'était ma voie.
+            </p>
+            <p className="ap-body reveal d2">
+              Depuis, je crois qu'une belle image se joue d'abord dans la relation. Avant
+              l'esthétique, il y a la rencontre : prendre le temps de vous comprendre, créer un
+              cadre où vous vous sentez à l'aise et compris, pour que vous oubliiez vite
+              l'objectif. C'est cette confiance qui rend les images justes — et qui les fait
+              respirer des années plus tard.
+            </p>
+            <p className="ap-body reveal d2">
+              Aujourd'hui, je photographie les gens en Suisse romande : vos mariages, vos
+              portraits, l'attente d'un enfant. Toujours en lumière naturelle autant que possible,
+              avec la même exigence et la même écoute — et l'envie de vous offrir des images dans
+              lesquelles vous vous reconnaissez vraiment.
+            </p>
+            <div className="ap-facts reveal d2">
+              {AP_FACTS.map((f, i) => (
+                <div key={i} className="ap-fact">
+                  <div className="ap-fact-k">{f.k}</div>
+                  <div className="ap-fact-v">{f.v}</div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        </div>
-        <div className="ap-intro-photo reveal d1">
-          <Slot id="ap-portrait" ph="Kevin Chinelli — photographe en Suisse romande" alt="Kevin Chinelli, photographe d'humains en Suisse romande" style={{ width: "100%", height: "100%" }} />
+          </div>
+          <div className="ap-intro-photo reveal d1">
+            <Slot id="ap-portrait" ph="Kevin Chinelli — photographe en Suisse romande" alt="Kevin Chinelli, photographe d'humains en Suisse romande" style={{ width: "100%", height: "100%" }} />
+          </div>
         </div>
       </div>
     </section>
