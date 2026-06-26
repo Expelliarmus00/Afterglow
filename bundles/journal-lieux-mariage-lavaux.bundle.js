@@ -320,7 +320,7 @@ window.KC_JOURNAL = {
       sections: [
         { h: "Pourquoi se marier en Lavaux", p: [
           "Classé au patrimoine mondial de l'UNESCO, le vignoble en terrasses de Lavaux s'étire sur une trentaine de kilomètres entre Lausanne et Montreux. C'est un décor naturel qui ne demande presque aucune décoration : les murs de pierre, les ceps alignés et le lac suffisent.",
-          "Pour les photos, le grand atout reste la lumière de l'heure dorée, qui glisse sur les vignes en fin d'après-midi. Prévoyez votre [séance de couple](couple.html) à ce moment-là : c'est là que Lavaux donne le meilleur.",
+          "Pour les photos, le grand atout reste la lumière de l'heure dorée, qui glisse sur les vignes en fin d'après-midi. Prévoyez votre [séance des mariés](mariages.html) à ce moment-là : c'est là que Lavaux donne le meilleur.",
         ] },
         { h: "Les domaines et lieux que je recommande", list: [
           "Le Deck à Chexbres — vue panoramique sur le lac, parfait pour un apéritif au coucher du soleil.",

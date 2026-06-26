@@ -7,8 +7,10 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const BASE = "https://afterglowbykevin.ch";
-// 404, wireframes (dev), avis (noindex tant qu'il n'y a pas de vrais avis)
-const EXCLUDE = /^(404\.html|Wireframe|avis\.html)/i;
+// 404, wireframes (dev), avis (noindex tant qu'il n'y a pas de vrais avis).
+// Couple & famille : services masqués pour l'instant → hors sitemap (pages
+// conservées mais non promues ; réactiver ici quand les services reviennent).
+const EXCLUDE = /^(404\.html|Wireframe|avis\.html|couple\.html|famille\.html|photographe-famille-|journal-spots-photo-couple-leman\.html)/i;
 
 // priorité / fréquence selon le type de page
 function rank(name) {
