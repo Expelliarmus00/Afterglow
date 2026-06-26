@@ -18,8 +18,8 @@ function ApHero() {
   return (
     <section className="phero bas">
       <div className="bg">
-        <Slot id="about-photo" ph="Kevin Chinelli — photographe en Suisse romande" loading="eager" fetchpriority="high" style={{ width: "100%", height: "100%" }} />
-        <Slot id="about-photo-mobile" ph="Kevin Chinelli — portrait" loading="eager" fetchpriority="high" style={{ width: "100%", height: "100%" }} />
+        <Slot id="apropos-hero" ph="Kevin Chinelli — photographe en Suisse romande, en montagne" loading="eager" fetchpriority="high" style={{ width: "100%", height: "100%" }} />
+        <Slot id="apropos-hero-mobile" ph="Kevin Chinelli — photographe en Suisse romande" loading="eager" fetchpriority="high" style={{ width: "100%", height: "100%" }} />
       </div>
       <div className="scrim"></div>
       <div className="phero-content">
@@ -78,7 +78,9 @@ function ApIntro() {
             </div>
           </div>
           <div className="ap-intro-photo reveal d1">
-            <Slot id="ap-portrait" ph="Kevin Chinelli — photographe en Suisse romande" alt="Kevin Chinelli, photographe d'humains en Suisse romande" style={{ width: "100%", height: "100%" }} />
+            <figure className="ap-photo-frame">
+              <Slot id="ap-portrait" ph="Kevin Chinelli — photographe en Suisse romande" alt="Kevin Chinelli, photographe d'humains en Suisse romande" style={{ width: "100%", height: "100%" }} />
+            </figure>
           </div>
         </div>
       </div>

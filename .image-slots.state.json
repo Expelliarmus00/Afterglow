@@ -634,5 +634,17 @@
     "s": 1,
     "x": 0,
     "y": 0
+  },
+  "apropos-hero": {
+    "u": "images/apropos-hero.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "apropos-hero-mobile": {
+    "u": "images/apropos-hero-mobile.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
   }
 }
