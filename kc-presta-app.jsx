@@ -277,6 +277,46 @@ function VillesBand() {
   );
 }
 
+/* ---------- JOURNAL (internal linking, prestation × articles) ---------- */
+const JOURNAL_CATS = {
+  mariage: ["Mariage"],
+  portrait: ["Portrait", "Studio"],
+  studio: ["Studio", "Portrait"],
+  maternite: ["Maternité"],
+};
+function JournalBand() {
+  const J = window.KC_JOURNAL;
+  const cats = JOURNAL_CATS[window.KC_SLUG];
+  if (!J || !cats) return null;
+  const arts = J.order.map((s) => J.articles[s]).filter((a) => cats.includes(a.category)).slice(0, 3);
+  if (arts.length === 0) return null;
+  return (
+    <section className="sec s-dark pad-y">
+      <div className="wrap">
+        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: "clamp(30px,4vw,52px)", flexWrap: "wrap", gap: "18px" }}>
+          <div>
+            <Overline className="reveal">Le journal</Overline>
+            <h2 className="display reveal d1" style={{ fontSize: "clamp(26px,3vw,44px)", marginTop: "16px" }}>À lire avant votre séance.</h2>
+          </div>
+          <a href="journal.html" className="link-arrow reveal d1">Tout le journal <span className="ar">→</span></a>
+        </div>
+        <div className="journal-list three reveal d1">
+          {arts.map((a, i) => (
+            <a key={a.slug} href={a.file} className={"jl-card reveal d" + (i + 1)}>
+              <div className="jl-img"><Slot id={"art-hero-" + a.slug} ph={a.hero} alt={a.heroAlt} style={{ width: "100%", height: "100%" }} /></div>
+              <div className="jl-body">
+                <div className="jl-meta"><span className="jl-cat">{a.category}</span><span className="jl-dot">·</span><span>{a.read} de lecture</span></div>
+                <h2>{a.title}</h2>
+                <span className="link-arrow">Lire l'article <span className="ar">→</span></span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- APP ---------- */
 function PrestaApp() {
   const [t, setTweak] = useTweaks({
@@ -304,6 +344,7 @@ function PrestaApp() {
         {window.KC_SLUG === "couple" && <GiftBand />}
         {/* <Testimonials /> — masqué tant qu'il n'y a pas de vrais avis clients (réactiver une fois disponibles) */}
         <Faq />
+        <JournalBand />
         {VILLE_LINKS[window.KC_SLUG] && <VillesBand />}
         <RelatedPresta current={window.KC_SLUG} />
         <CtaContact title="Réservez votre séance." />
