@@ -50,15 +50,6 @@ a{ color:inherit; text-decoration:none; }
 .s-darker{ background:#000;       color:var(--cream); --fg:var(--cream); --muted:var(--muted-d); --hair:var(--line-d); }
 .s-light{ background:var(--cream); color:var(--bg);   --fg:var(--bg);    --muted:var(--muted-l); --hair:var(--line-l); }
 
-/* Bandeau CTA (s-darker) — texture dorée discrète en fond */
-.cta-band{ position:relative; overflow:hidden; }
-.cta-band::before{
-  content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
-  background:url("images/cta-bg.webp") center/cover no-repeat;
-  opacity:.18;
-}
-.cta-band > .wrap{ position:relative; z-index:1; }
-
 /* ---------- TYPE PRIMITIVES ---------- */
 .overline{
   font-family:var(--font-body); font-weight:400;
