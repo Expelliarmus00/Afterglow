@@ -34,7 +34,8 @@ function ApHero() {
 function ApIntro() {
   return (
     <section className="sec s-light pad-y">
-      <div className="wrap-narrow ap-intro">
+      <div className="wrap ap-intro-grid">
+        <div className="ap-intro">
         <Overline className="reveal">Le photographe</Overline>
         <p className="ap-lead reveal d1">
           Mon travail, c'est d'être là — attentif, discret, à l'écoute — au moment exact où
@@ -72,6 +73,10 @@ function ApIntro() {
               <div className="ap-fact-v">{f.v}</div>
             </div>
           ))}
+        </div>
+        </div>
+        <div className="ap-intro-photo reveal d1">
+          <Slot id="ap-portrait" ph="Kevin Chinelli — photographe en Suisse romande" alt="Kevin Chinelli, photographe d'humains en Suisse romande" style={{ width: "100%", height: "100%" }} />
         </div>
       </div>
     </section>
