@@ -68,7 +68,12 @@ function ApIntro() {
               avec la même exigence et la même écoute — et l'envie de vous offrir des images dans
               lesquelles vous vous reconnaissez vraiment.
             </p>
-            <div className="ap-facts reveal d2">
+          </div>
+          <aside className="ap-intro-aside reveal d1">
+            <figure className="ap-photo-frame">
+              <Slot id="ap-portrait" ph="Kevin Chinelli — photographe en Suisse romande" alt="Kevin Chinelli, photographe d'humains en Suisse romande" style={{ width: "100%", height: "100%" }} />
+            </figure>
+            <div className="ap-facts">
               {AP_FACTS.map((f, i) => (
                 <div key={i} className="ap-fact">
                   <div className="ap-fact-k">{f.k}</div>
@@ -76,12 +81,7 @@ function ApIntro() {
                 </div>
               ))}
             </div>
-          </div>
-          <div className="ap-intro-photo reveal d1">
-            <figure className="ap-photo-frame">
-              <Slot id="ap-portrait" ph="Kevin Chinelli — photographe en Suisse romande" alt="Kevin Chinelli, photographe d'humains en Suisse romande" style={{ width: "100%", height: "100%" }} />
-            </figure>
-          </div>
+          </aside>
         </div>
       </div>
     </section>
