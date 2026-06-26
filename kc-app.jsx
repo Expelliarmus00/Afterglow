@@ -382,7 +382,7 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="sec s-darker contact">
+    <section id="contact" className="sec s-darker contact cta-band">
       <div className="wrap pad-y">
         <div className="grid" style={{ textAlign: "center" }}>
           <div>
