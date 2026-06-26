@@ -65,6 +65,9 @@
     "x": 0,
     "y": 0
   },
+  "ap-studio-1": { "u": "images/home-m6.webp",      "s": 1, "x": 0, "y": 0 },
+  "ap-studio-2": { "u": "images/pf-portrait-7.webp", "s": 1, "x": 0, "y": 0 },
+  "ap-studio-3": { "u": "images/maternite-g1.webp",  "s": 1, "x": 0, "y": 0 },
   "presta-couple": {
     "u": "images/presta-couple.webp",
     "s": 1,

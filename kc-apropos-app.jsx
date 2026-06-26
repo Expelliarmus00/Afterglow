@@ -100,10 +100,10 @@ function StudioStrip() {
           <a href="portfolio.html" className="link-arrow reveal d1">Voir le portfolio <span className="ar">→</span></a>
         </div>
         <div className="gal reveal d1" data-lb-group="atelier">
-          <div className="cell"><Slot id="ap-studio-1" ph="Studio — vue d'ensemble" style={{ width: "100%", height: "100%" }} /></div>
+          <div className="cell"><Slot id="ap-studio-1" ph="Mariage — instant d'émotion" style={{ width: "100%", height: "100%" }} /></div>
           <div className="stack">
-            <div className="cell"><Slot id="ap-studio-2" ph="Matériel / détail" style={{ width: "100%", height: "100%" }} /></div>
-            <div className="cell"><Slot id="ap-studio-3" ph="Tirages fine art" style={{ width: "100%", height: "100%" }} /></div>
+            <div className="cell"><Slot id="ap-studio-2" ph="Portrait — lumière naturelle" style={{ width: "100%", height: "100%" }} /></div>
+            <div className="cell"><Slot id="ap-studio-3" ph="Maternité — douceur de l'attente" style={{ width: "100%", height: "100%" }} /></div>
           </div>
         </div>
       </div>
