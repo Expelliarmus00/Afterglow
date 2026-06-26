@@ -362,11 +362,13 @@ window.KC_PRESTA = {
     gallery: [
       { ph: "Portrait extérieur — lumière douce", o: "v" },
       { ph: "Regard franc", o: "v" },
-      { ph: "Portrait en pied", o: "v" },
       { ph: "Lumière de fin de journée", o: "h" },
-      { ph: "Profil — contre-jour", o: "v" },
+      { ph: "Portrait en pied", o: "v" },
       { ph: "Attitude lifestyle", o: "v" },
       { ph: "En mouvement", o: "h" },
+      { ph: "Profil — contre-jour", o: "v" },
+      { ph: "Portrait naturel", o: "v" },
+      { ph: "Instant spontané", o: "h" },
     ],
     formules: [
       { tag: "Découverte · 30 min", name: "Essentiel", price: "CHF 240",

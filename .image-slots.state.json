@@ -65,9 +65,24 @@
     "x": 0,
     "y": 0
   },
-  "ap-studio-1": { "u": "images/home-m6.webp",      "s": 1, "x": 0, "y": 0 },
-  "ap-studio-2": { "u": "images/pf-portrait-7.webp", "s": 1, "x": 0, "y": 0 },
-  "ap-studio-3": { "u": "images/maternite-g1.webp",  "s": 1, "x": 0, "y": 0 },
+  "ap-studio-1": {
+    "u": "images/home-m6.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "ap-studio-2": {
+    "u": "images/pf-portrait-7.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "ap-studio-3": {
+    "u": "images/maternite-g1.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
   "presta-couple": {
     "u": "images/presta-couple.webp",
     "s": 1,
@@ -116,18 +131,78 @@
     "x": 0,
     "y": 0
   },
-  "about-photo": { "u": "images/about-photo.webp", "s": 1, "x": 0, "y": 0 },
-  "about-photo-mobile": { "u": "images/about-photo-mobile.webp", "s": 1, "x": 0, "y": 0 },
-  "phero-mariage": { "u": "images/phero-mariage.webp",         "s": 1, "x": 0, "y": 0 },
-  "phero-mariage-mobile": { "u": "images/phero-mariage-mobile.webp", "s": 1, "x": 0, "y": 0 },
-  "phero-portrait": { "u": "images/phero-portrait.webp",        "s": 1, "x": 0, "y": 0 },
-  "phero-portrait-mobile": { "u": "images/phero-portrait-mobile.webp","s": 1, "x": 0, "y": 0 },
-  "phero-studio": { "u": "images/phero-studio.webp",          "s": 1, "x": 0, "y": 0 },
-  "phero-studio-mobile": { "u": "images/phero-studio-mobile.webp",  "s": 1, "x": 0, "y": 0 },
-  "phero-maternite": { "u": "images/phero-maternite.webp",        "s": 1, "x": 0, "y": 0 },
-  "phero-maternite-mobile": { "u": "images/phero-maternite-mobile.webp", "s": 1, "x": 0, "y": 0 },
-  "phero-couple-mobile": { "u": "images/presta-couple.webp", "s": 1, "x": 0, "y": 0 },
-  "phero-famille-mobile": { "u": "images/hero-main.webp", "s": 1, "x": 0, "y": 0 },
+  "about-photo": {
+    "u": "images/about-photo.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "about-photo-mobile": {
+    "u": "images/about-photo-mobile.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "phero-mariage": {
+    "u": "images/phero-mariage.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "phero-mariage-mobile": {
+    "u": "images/phero-mariage-mobile.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "phero-portrait": {
+    "u": "images/phero-portrait.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "phero-portrait-mobile": {
+    "u": "images/phero-portrait-mobile.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "phero-studio": {
+    "u": "images/phero-studio.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "phero-studio-mobile": {
+    "u": "images/phero-studio-mobile.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "phero-maternite": {
+    "u": "images/phero-maternite.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "phero-maternite-mobile": {
+    "u": "images/phero-maternite-mobile.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "phero-couple-mobile": {
+    "u": "images/presta-couple.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "phero-famille-mobile": {
+    "u": "images/hero-main.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
   "phero-couple": {
     "u": "images/presta-couple.webp",
     "s": 1,
@@ -158,16 +233,66 @@
     "x": 0,
     "y": 0
   },
-  "art-hero-prix-photographe-mariage-suisse-romande": { "u": "images/phero-mariage.webp",   "s": 1, "x": 0, "y": 0 },
-  "art-hero-quand-reserver-photographe-mariage":      { "u": "images/pf-mariage-8.webp",     "s": 1, "x": 0, "y": 0 },
-  "art-hero-lieux-mariage-vaud-leman":                { "u": "images/home-hero-full.webp",   "s": 1, "x": 0, "y": 0 },
-  "art-hero-quand-faire-seance-photo-grossesse":      { "u": "images/phero-maternite.webp",  "s": 1, "x": 0, "y": 0 },
-  "art-hero-seance-grossesse-nouveau-ne":             { "u": "images/maternite-g1.webp",     "s": 1, "x": 0, "y": 0 },
-  "art-hero-photos-linkedin-personal-branding":       { "u": "images/phero-studio.webp",     "s": 1, "x": 0, "y": 0 },
-  "art-hero-quelle-tenue-seance-portrait":            { "u": "images/phero-portrait.webp",   "s": 1, "x": 0, "y": 0 },
-  "art-hero-comment-choisir-photographe-mariage":     { "u": "images/presta-mariage.webp",   "s": 1, "x": 0, "y": 0 },
-  "art-hero-portrait-studio-ou-exterieur":            { "u": "images/pf-portrait-8.webp",    "s": 1, "x": 0, "y": 0 },
-  "art-hero-deroule-journee-mariage":                 { "u": "images/home-m8.webp",          "s": 1, "x": 0, "y": 0 },
+  "art-hero-prix-photographe-mariage-suisse-romande": {
+    "u": "images/phero-mariage.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "art-hero-quand-reserver-photographe-mariage": {
+    "u": "images/pf-mariage-8.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "art-hero-lieux-mariage-vaud-leman": {
+    "u": "images/home-hero-full.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "art-hero-quand-faire-seance-photo-grossesse": {
+    "u": "images/phero-maternite.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "art-hero-seance-grossesse-nouveau-ne": {
+    "u": "images/maternite-g1.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "art-hero-photos-linkedin-personal-branding": {
+    "u": "images/phero-studio.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "art-hero-quelle-tenue-seance-portrait": {
+    "u": "images/phero-portrait.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "art-hero-comment-choisir-photographe-mariage": {
+    "u": "images/presta-mariage.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "art-hero-portrait-studio-ou-exterieur": {
+    "u": "images/pf-portrait-8.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "art-hero-deroule-journee-mariage": {
+    "u": "images/home-m8.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
   "ville-hero-lausanne": {
     "u": "images/hero-mariage.webp",
     "s": 1,
@@ -198,54 +323,316 @@
     "x": 0,
     "y": 0
   },
-  "gal-main": { "u": "images/gal-main.webp", "s": 1, "x": 0, "y": 0 },
-  "gal-2":    { "u": "images/gal-2.webp",    "s": 1, "x": 0, "y": 0 },
-  "gal-3":    { "u": "images/gal-3.webp",    "s": 1, "x": 0, "y": 0 },
-  "home-p3":  { "u": "images/home-p3.webp",  "s": 1, "x": 0, "y": 0 },
-  "home-m5":  { "u": "images/home-m5.webp",  "s": 1, "x": 0, "y": 0 },
-  "home-m6":  { "u": "images/home-m6.webp",  "s": 1, "x": 0, "y": 0 },
-  "home-g5":  { "u": "images/home-g5.webp",  "s": 1, "x": 0, "y": 0 },
-  "home-p5":  { "u": "images/home-p5.webp",  "s": 1, "x": 0, "y": 0 },
-  "home-m8":  { "u": "images/home-m8.webp",  "s": 1, "x": 0, "y": 0 },
-  "pf-1":  { "u": "images/pf-mariage-1.webp",  "s": 1, "x": 0, "y": 0 },
-  "pf-5":  { "u": "images/pf-mariage-2.webp",  "s": 1, "x": 0, "y": 0 },
-  "pf-8":  { "u": "images/pf-mariage-3.webp",  "s": 1, "x": 0, "y": 0 },
-  "pf-12": { "u": "images/pf-mariage-4b.webp", "s": 1, "x": 0, "y": 0 },
-  "pf-16": { "u": "images/pf-mariage-5.webp",  "s": 1, "x": 0, "y": 0 },
-  "pf-19": { "u": "images/pf-portrait-1.webp", "s": 1, "x": 0, "y": 0 },
-  "pf-20": { "u": "images/pf-portrait-2.webp", "s": 1, "x": 0, "y": 0 },
-  "pf-21": { "u": "images/pf-portrait-3.webp", "s": 1, "x": 0, "y": 0 },
-  "mariage-g0": { "u": "images/pf-mariage-1.webp", "s": 1, "x": 0, "y": 0 },
-  "mariage-g1": { "u": "images/pf-mariage-6.webp", "s": 1, "x": 0, "y": 0 },
-  "mariage-g2": { "u": "images/pf-mariage-2.webp", "s": 1, "x": 0, "y": 0 },
-  "mariage-g3": { "u": "images/pf-mariage-3.webp", "s": 1, "x": 0, "y": 0 },
-  "mariage-g4": { "u": "images/pf-mariage-4b.webp", "s": 1, "x": 0, "y": 0 },
-  "mariage-g5": { "u": "images/pf-mariage-5.webp", "s": 1, "x": 0, "y": 0 },
-  "mariage-g6": { "u": "images/pf-mariage-8.webp", "s": 1, "x": 0, "y": 0 },
-  "mariage-g7": { "u": "images/pf-mariage-7.webp", "s": 1, "x": 0, "y": 0 },
-  "pf-17": { "u": "images/pf-mariage-6.webp", "s": 1, "x": 0, "y": 0 },
-  "pf-22": { "u": "images/pf-portrait-8.webp", "s": 1, "x": 0, "y": 0 },
-  "pf-23": { "u": "images/pf-mariage-7.webp", "s": 1, "x": 0, "y": 0 },
-  "pf-24": { "u": "images/pf-mariage-8.webp", "s": 1, "x": 0, "y": 0 },
-  "portrait-g0": { "u": "images/pf-portrait-1.webp", "s": 1, "x": 0, "y": 0 },
-  "portrait-g1": { "u": "images/pf-portrait-2.webp", "s": 1, "x": 0, "y": 0 },
-  "portrait-g2": { "u": "images/pf-portrait-3.webp", "s": 1, "x": 0, "y": 0 },
-  "portrait-g3": { "u": "images/pf-portrait-6.webp", "s": 1, "x": 0, "y": 0 },
-  "portrait-g4": { "u": "images/pf-portrait-4.webp", "s": 1, "x": 0, "y": 0 },
-  "portrait-g5": { "u": "images/pf-portrait-5.webp", "s": 1, "x": 0, "y": 0 },
-  "portrait-g6": { "u": "images/pf-portrait-7.webp", "s": 1, "x": 0, "y": 0 },
-  "maternite-g0": { "u": "images/maternite-g0.webp", "s": 1, "x": 0, "y": 0 },
-  "maternite-g1": { "u": "images/maternite-g1.webp", "s": 1, "x": 0, "y": 0 },
-  "maternite-g2": { "u": "images/maternite-g2.webp", "s": 1, "x": 0, "y": 0 },
-  "maternite-g3": { "u": "images/maternite-g3.webp", "s": 1, "x": 0, "y": 0 },
-  "maternite-g4": { "u": "images/maternite-g4.webp", "s": 1, "x": 0, "y": 0 },
-  "maternite-g5": { "u": "images/maternite-g5.webp", "s": 1, "x": 0, "y": 0 },
-  "maternite-g6": { "u": "images/maternite-g6.webp", "s": 1, "x": 0, "y": 0 },
-  "maternite-g8": { "u": "images/maternite-g8.webp", "s": 1, "x": 0, "y": 0 },
-  "studio-g0": { "u": "images/studio-g0.webp", "s": 1, "x": 0, "y": 0 },
-  "studio-g1": { "u": "images/studio-g1.webp", "s": 1, "x": 0, "y": 0 },
-  "studio-g2": { "u": "images/studio-g2.webp", "s": 1, "x": 0, "y": 0 },
-  "studio-g3": { "u": "images/studio-g3.webp", "s": 1, "x": 0, "y": 0 },
-  "studio-g4": { "u": "images/studio-g4.webp", "s": 1, "x": 0, "y": 0 },
-  "studio-g5": { "u": "images/studio-g5.webp", "s": 1, "x": 0, "y": 0 }
+  "gal-main": {
+    "u": "images/gal-main.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "gal-2": {
+    "u": "images/gal-2.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "gal-3": {
+    "u": "images/gal-3.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "home-p3": {
+    "u": "images/home-p3.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "home-m5": {
+    "u": "images/home-m5.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "home-m6": {
+    "u": "images/home-m6.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "home-g5": {
+    "u": "images/home-g5.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "home-p5": {
+    "u": "images/home-p5.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "home-m8": {
+    "u": "images/home-m8.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "pf-1": {
+    "u": "images/pf-mariage-1.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "pf-5": {
+    "u": "images/pf-mariage-2.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "pf-8": {
+    "u": "images/pf-mariage-3.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "pf-12": {
+    "u": "images/pf-mariage-4b.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "pf-16": {
+    "u": "images/pf-mariage-5.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "pf-19": {
+    "u": "images/pf-portrait-1.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "pf-20": {
+    "u": "images/pf-portrait-2.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "pf-21": {
+    "u": "images/pf-portrait-3.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "mariage-g0": {
+    "u": "images/pf-mariage-1.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "mariage-g1": {
+    "u": "images/pf-mariage-6.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "mariage-g2": {
+    "u": "images/pf-mariage-2.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "mariage-g3": {
+    "u": "images/pf-mariage-3.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "mariage-g4": {
+    "u": "images/pf-mariage-4b.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "mariage-g5": {
+    "u": "images/pf-mariage-5.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "mariage-g6": {
+    "u": "images/pf-mariage-8.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "mariage-g7": {
+    "u": "images/pf-mariage-7.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "pf-17": {
+    "u": "images/pf-mariage-6.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "pf-22": {
+    "u": "images/pf-portrait-8.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "pf-23": {
+    "u": "images/pf-mariage-7.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "pf-24": {
+    "u": "images/pf-mariage-8.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "portrait-g0": {
+    "u": "images/portrait-g0.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "portrait-g1": {
+    "u": "images/portrait-g1.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "portrait-g2": {
+    "u": "images/portrait-g2.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "portrait-g3": {
+    "u": "images/portrait-g3.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "portrait-g4": {
+    "u": "images/portrait-g4.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "portrait-g5": {
+    "u": "images/portrait-g5.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "portrait-g6": {
+    "u": "images/portrait-g6.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "maternite-g0": {
+    "u": "images/maternite-g0.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "maternite-g1": {
+    "u": "images/maternite-g1.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "maternite-g2": {
+    "u": "images/maternite-g2.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "maternite-g3": {
+    "u": "images/maternite-g3.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "maternite-g4": {
+    "u": "images/maternite-g4.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "maternite-g5": {
+    "u": "images/maternite-g5.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "maternite-g6": {
+    "u": "images/maternite-g6.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "maternite-g8": {
+    "u": "images/maternite-g8.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "studio-g0": {
+    "u": "images/studio-g0.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "studio-g1": {
+    "u": "images/studio-g1.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "studio-g2": {
+    "u": "images/studio-g2.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "studio-g3": {
+    "u": "images/studio-g3.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "studio-g4": {
+    "u": "images/studio-g4.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "studio-g5": {
+    "u": "images/studio-g5.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "portrait-g7": {
+    "u": "images/portrait-g7.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "portrait-g8": {
+    "u": "images/portrait-g8.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  }
 }
