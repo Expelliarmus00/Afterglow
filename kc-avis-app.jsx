@@ -1,7 +1,7 @@
 /* ============================================================
    KEVIN CHINELLI — Avis clients (avis.html)
    Aggregates testimonials from window.KC_PRESTA + Google CTA.
-   ⚠️ Replace GOOGLE_REVIEWS_URL with the real Google Business link.
+   Google Business : fiche g.page/r/Ccd14Q8WzKZuEBM (avis + profil).
    ============================================================ */
 const GOOGLE_REVIEWS_URL = "https://g.page/r/Ccd14Q8WzKZuEBM/review"; // ouvre la fenêtre d'avis Google
 const GOOGLE_PROFILE_URL = "https://g.page/r/Ccd14Q8WzKZuEBM";        // fiche Google Business publique
