@@ -55,7 +55,7 @@ a{ color:inherit; text-decoration:none; }
 .cta-band::before{
   content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
   background:url("images/cta-bg.webp") center/cover no-repeat;
-  opacity:.12;
+  opacity:.18;
 }
 .cta-band > .wrap{ position:relative; z-index:1; }
 
