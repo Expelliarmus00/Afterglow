@@ -30,7 +30,7 @@ window.KC_JOURNAL = {
       file: "journal-lieux-mariage-lavaux.html",
       category: "Mariage",
       relatedSlug: "mariage", relatedHref: "mariages.html", relatedTitle: "Mariages",
-      date: "2026-04-18", dateLabel: "18 avril 2026", read: "7 min",
+      date: "2026-04-18", dateLabel: "18 avril 2026", read: "6 min",
       title: "Où se marier en Lavaux : 8 lieux de rêve face au Léman",
       hero: "Vignobles de Lavaux en terrasses au-dessus du Léman, lumière dorée",
       heroAlt: "Mariage dans les vignobles de Lavaux au-dessus du lac Léman — Kevin Chinelli, photographe",
@@ -58,6 +58,14 @@ window.KC_JOURNAL = {
           "Anticipez la météo du lac. Le Léman crée ses propres ambiances — brume matinale, ciels changeants. J'ai toujours un plan B couvert avec mes mariés, mais sachez qu'un ciel chargé donne souvent des images plus dramatiques qu'un grand bleu uniforme.",
           "Pensez aux déplacements. Les villages de Lavaux sont escarpés et les ruelles pavées : prévoyez des chaussures confortables pour la mariée entre deux décors, et un timing réaliste si la cérémonie et la réception sont sur deux sites.",
         ] },
+        { h: "Se déplacer le jour J en Lavaux", p: [
+          "Lavaux est splendide mais escarpé : ruelles pavées, dénivelé, accès parfois étroits entre les murs de vigne. Anticipez les trajets entre la cérémonie, la séance au milieu des ceps et la réception — quelques minutes de voiture suffisent souvent, mais le terrain ralentit et les distances trompent.",
+          "Pensez au confort de la mariée (une paire de chaussures plates pour marcher entre les vignes), et prévenez vos invités du stationnement, souvent limité dans les villages viticoles. Le Lavaux Express ou une navette privée peuvent dépanner pour les groupes.",
+        ] },
+        { h: "Cérémonie en extérieur : ce qu'il faut anticiper", p: [
+          "Une cérémonie laïque au milieu des vignes est magnifique, mais elle se prépare : l'orientation par rapport au soleil de fin d'après-midi, un coin d'ombre pour les invités en plein été, et un vrai plan B couvert en cas de pluie ou de bise — fréquente sur le lac.",
+          "Renseignez-vous aussi sur les autorisations : tous les domaines n'accueillent pas une cérémonie sur leurs terrasses, et certains lieux publics demandent une demande préalable. On valide tout cela ensemble au repérage.",
+        ] },
       ],
       closing: "Vous vous mariez en Lavaux ou ailleurs au bord du Léman ? Je connais bien la région et sa lumière. Parlons de votre projet — je ne réserve qu'un mariage par jour.",
     },
@@ -83,7 +91,7 @@ window.KC_JOURNAL = {
         { h: "Couleurs et matières qui rendent le mieux", list: [
           "Les tons neutres et naturels : crème, beige, terracotta, vert sauge, gris doux, bleu nuit.",
           "Les matières fluides : mousseline, soie, jersey fin, maille souple — elles bougent et accrochent joliment la lumière.",
-          "Le drapé et les voiles, parfaits pour des silhouettes en contre-jour (fournis au studio).",
+          "Le drapé et les voiles, parfaits pour des silhouettes épurées en contre-jour.",
           "Pour le ou la partenaire : des tons coordonnés, sans assortir à l'identique. Un jean brut et une chemise unie fonctionnent toujours.",
           "À éviter : motifs serrés, rayures fines, néons, logos visibles, et le total noir si la peau est très claire.",
         ] },
@@ -93,10 +101,18 @@ window.KC_JOURNAL = {
         ] },
         { h: "Le bon moment et les détails qui comptent", p: [
           "La période idéale se situe entre la 30e et la 36e semaine : le ventre est joliment arrondi et vous êtes encore à l'aise pour bouger.",
-          "Pensez aux détails : une manucure soignée (on photographie souvent les mains sur le ventre), des sous-vêtements sans coutures marquées, et des chaussures faciles à retirer pour les images pieds nus. Au studio, drapés, voiles et accessoires sont à disposition.",
+          "Pensez aux détails : une manucure soignée (on photographie souvent les mains sur le ventre), des sous-vêtements sans coutures marquées, et des chaussures faciles à retirer pour les images pieds nus. Évitez aussi chaussettes et élastiques serrés juste avant, qui laissent des marques.",
+        ] },
+        { h: "Pour le partenaire et les aînés", p: [
+          "Si la séance se fait à plusieurs, l'idée est de coordonner les tenues sans tomber dans l'assorti à l'identique. On reste dans la même famille de tons neutres et naturels : cela unifie l'image sans que tout le monde paraisse en uniforme.",
+          "Pour le ou la partenaire, un jean brut et une chemise unie fonctionnent toujours. Pour les aînés, des vêtements simples et confortables dans lesquels ils peuvent bouger et jouer — un enfant à l'aise donne toujours de plus belles images qu'un enfant endimanché.",
+        ] },
+        { h: "Les accessoires qui subliment (sans surcharger)", p: [
+          "Un ou deux accessoires bien choisis suffisent à personnaliser la séance : un voile fluide qui prend la lumière, quelques fleurs, un ruban, ou un objet qui a du sens — une première petite tenue, les chaussons du bébé, l'image de l'échographie.",
+          "Le piège est d'en faire trop : l'accessoire doit accompagner l'émotion, pas la voler. En cas de doute, on en parle avant la séance et on garde le geste juste.",
         ] },
       ],
-      closing: "Envie d'une séance douce pour garder une trace de cette parenthèse ? Je reçois en studio chauffé en Suisse romande, seule, en couple ou avec les aînés.",
+      closing: "Envie d'une séance douce pour garder une trace de cette parenthèse ? Je vous reçois en Suisse romande, en lumière naturelle, seule, en couple ou avec les aînés.",
     },
 
     /* ============ ARTICLE 3 — COUPLE / LÉMAN ============ */
@@ -105,7 +121,7 @@ window.KC_JOURNAL = {
       file: "journal-spots-photo-couple-leman.html",
       category: "Couple",
       relatedSlug: "couple", relatedHref: "couple.html", relatedTitle: "Couple",
-      date: "2026-02-10", dateLabel: "10 février 2026", read: "6 min",
+      date: "2026-02-10", dateLabel: "10 février 2026", read: "5 min",
       title: "Les plus beaux spots photo de couple autour du Léman",
       hero: "Couple enlacé sur un quai du Léman au coucher du soleil",
       heroAlt: "Séance photo de couple au bord du lac Léman au coucher du soleil — Kevin Chinelli, photographe",
@@ -133,6 +149,16 @@ window.KC_JOURNAL = {
         { h: "Et s'il fait gris ?", p: [
           "Un ciel couvert agit comme une immense boîte à lumière : les portraits y sont doux et homogènes. La météo romande étant ce qu'elle est, je garde toujours une alternative en tête — un passage en vieille ville, sous une arcade, ou une séance plus intimiste à l'intérieur.",
         ] },
+        { h: "Comment se passe une séance de couple", p: [
+          "Pas de panique si vous n'êtes pas à l'aise devant l'objectif : c'est le cas de la grande majorité des couples. On commence par marcher et discuter, le temps que l'appareil se fasse oublier. Je vous donne des indications simples — où poser le regard, comment vous tenir l'un à l'autre — plutôt que des poses figées.",
+          "Les plus belles images arrivent presque toujours entre deux consignes, quand vous redevenez simplement vous-mêmes : un rire, un front contre un front, une main qui cherche l'autre. Mon rôle est de créer ces occasions, pas de les forcer.",
+        ] },
+        { h: "Quelques idées pour la rendre unique", list: [
+          "Choisir un lieu qui compte pour vous deux : là où vous vous êtes rencontrés, votre quartier, un coin de balade favori.",
+          "Ajouter une activité simple : un café à emporter, un pique-nique, une promenade au bord de l'eau — le mouvement détend toujours.",
+          "Jouer la saison : brume d'automne sur le lac, vignes dorées, neige en hauteur, lumière d'été en fin de journée.",
+          "Penser à l'usage : faire-part, tirage pour la maison, ou simplement de belles images de vous deux à un instant donné.",
+        ] },
       ],
       closing: "Fiançailles, anniversaire de rencontre ou simple envie d'une belle trace : on choisit ensemble le lieu et l'heure qui vous ressemblent. Beaucoup de couples en profitent aussi pour leur faire-part de mariage.",
     },
@@ -143,7 +169,7 @@ window.KC_JOURNAL = {
       file: "journal-prix-photographe-mariage-suisse-romande.html",
       category: "Mariage",
       relatedSlug: "mariage", relatedHref: "mariages.html", relatedTitle: "Mariages",
-      date: "2026-06-24", dateLabel: "24 juin 2026", read: "8 min",
+      date: "2026-06-24", dateLabel: "24 juin 2026", read: "7 min",
       title: "Combien coûte un photographe de mariage en Suisse romande ?",
       hero: "Mariés enlacés à l'heure dorée au-dessus du Léman",
       heroAlt: "Prix d'un photographe de mariage en Suisse romande — couple à l'heure dorée | Kevin Chinelli",
@@ -171,6 +197,17 @@ window.KC_JOURNAL = {
         { h: "Comment investir intelligemment", p: [
           "Priorisez la couverture des moments qui comptent vraiment pour vous : les préparatifs, la cérémonie, la lumière de fin de journée. Le reste s'ajuste.",
           "Pensez physique : un album traverse mieux les décennies qu'un disque dur oublié dans un tiroir. Et demandez toujours un devis détaillé — vous devez savoir ce qui est inclus avant de signer. Mes [tarifs](tarifs.html) sont affichés sans détour, et chaque devis est personnalisé.",
+        ] },
+        { h: "Les coûts qu'on oublie souvent de budgéter", list: [
+          "La séance d'engagement : parfois offerte (comme dans mes formules Signature et Prestige), parfois facturée en supplément ailleurs.",
+          "Les heures supplémentaires le jour J : si la soirée s'étire au-delà du forfait, clarifiez le tarif horaire à l'avance pour éviter la surprise sur la facture.",
+          "L'album et les tirages : un bel album fine art relié main représente souvent 300 à 600 francs — un budget à anticiper sereinement, pas à découvrir après coup.",
+          "Le déplacement hors Suisse romande : transport et hébergement éventuels pour un mariage lointain, à chiffrer dès le départ.",
+          "La livraison express : utile si vous voulez vos images sous 10 jours plutôt que sous 4 semaines.",
+        ] },
+        { h: "Comment lire un devis (et le comparer honnêtement)", p: [
+          "Un devis clair répond sans détour à six questions : combien d'heures de présence, combien de photos livrées (et est-ce un minimum garanti ou une simple estimation), sous quel délai, avec quels droits d'usage, quelle sauvegarde des fichiers, et selon quel échéancier de paiement. Si l'une de ces réponses manque, demandez-la avant de signer.",
+          "Attention aux comparaisons trompeuses : deux devis au même prix peuvent cacher 4 h de couverture d'un côté et 10 h de l'autre. Ramenez toujours le tarif à ce qui est réellement inclus — c'est le seul comparatif qui veuille dire quelque chose.",
         ] },
       ],
       closing: "Le bon prix, c'est celui qui vous garantit des images justes, sauvegardées et livrées, sans mauvaise surprise. Dites-moi votre date et votre déroulé : je vous prépare un devis clair et adapté à votre journée.",
@@ -206,6 +243,14 @@ window.KC_JOURNAL = {
           "La date est bloquée à la signature du contrat et au versement d'un acompte de 30 %. Le solde est réglé 10 jours après le mariage — vous réglez l'essentiel une fois la journée passée et les images en route.",
           "Avant de signer, on prend le temps d'un appel ou d'un café pour faire connaissance et vérifier que le courant passe. Découvrez [mes formules mariage](mariages.html) pour préparer cet échange.",
         ] },
+        { h: "Le bon ordre des réservations", p: [
+          "Dans l'organisation d'un mariage, trois prestataires se réservent en tout premier car ils ne prennent qu'un seul événement par date : le lieu, le traiteur et le photographe. Une fois votre lieu et votre date confirmés, le photographe devrait figurer dans vos tout premiers contacts.",
+          "Attendre « d'avoir tout calé » est l'erreur la plus fréquente : le reste de l'organisation — faire-part, fleurs, décoration, animation — se décide très bien plus tard. Mais une date de photographe déjà prise par un autre couple ne reviendra pas.",
+        ] },
+        { h: "Et la séance d'engagement dans le calendrier ?", p: [
+          "Si votre formule inclut une séance d'engagement, le bon créneau pour la réaliser se situe 2 à 4 mois avant le mariage. Assez tôt pour utiliser les images sur votre faire-part, votre site de mariage ou un tirage ; assez proche pour que vous soyez déjà dans l'ambiance.",
+          "C'est aussi le meilleur moyen d'apprivoiser l'objectif : le jour J, vous serez bien plus naturels devant un appareil et une présence devenus familiers. Beaucoup de mes mariés me disent que c'est ce qui a tout changé pour eux.",
+        ] },
       ],
       closing: "Votre date approche ou se précise ? Vérifions ensemble ma disponibilité tant qu'elle est libre. Un message suffit pour démarrer.",
     },
@@ -216,7 +261,7 @@ window.KC_JOURNAL = {
       file: "journal-lieux-mariage-vaud-leman.html",
       category: "Mariage",
       relatedSlug: "mariage", relatedHref: "mariages.html", relatedTitle: "Mariages",
-      date: "2026-06-12", dateLabel: "12 juin 2026", read: "7 min",
+      date: "2026-06-12", dateLabel: "12 juin 2026", read: "5 min",
       title: "Se marier dans le canton de Vaud : 10 lieux autour du Léman",
       hero: "Domaine de mariage avec vue sur le lac Léman et les Alpes",
       heroAlt: "Lieux de mariage dans le canton de Vaud et autour du Léman | Kevin Chinelli",
@@ -244,6 +289,17 @@ window.KC_JOURNAL = {
         { h: "Mes conseils de photographe", p: [
           "Pensez à la lumière de fin de journée. Quel que soit le lieu, réservez 30 à 45 minutes pour le couple autour du coucher du soleil : c'est là que les images sont les plus belles. Je cale toujours le déroulé du [reportage](mariages.html) en fonction de cette heure dorée.",
           "Anticipez la météo du lac. Le Léman crée ses propres ambiances — brume, ciels changeants, lumières dramatiques. Un plan B couvert se prévoit au repérage, mais un ciel chargé donne souvent des images plus intenses qu'un grand bleu uniforme.",
+        ] },
+        { h: "L'erreur classique : choisir un lieu sans penser à la lumière", p: [
+          "Un lieu magnifique mais mal orienté peut compliquer les photos : une terrasse plein sud à midi écrase les visages d'ombres dures, une salle de réception sombre oblige à tout éclairer artificiellement. Avant de signer, repérez où tombe le soleil en fin de journée et demandez à voir les espaces à l'heure prévue de votre cérémonie.",
+          "L'idéal réunit deux choses : un extérieur exploitable à l'heure dorée et une salle avec de vraies fenêtres. C'est exactement ce que je vérifie au repérage avec mes mariés, lieu par lieu, pour qu'aucune belle lumière ne soit perdue.",
+        ] },
+        { h: "Les questions à poser à votre lieu avant de réserver", list: [
+          "Y a-t-il un plan B couvert et photogénique en cas de pluie ou de bise ?",
+          "La cérémonie laïque en extérieur est-elle autorisée, et à quel endroit précis ?",
+          "Jusqu'à quelle heure la musique et la fête sont-elles permises ?",
+          "L'accès et le parking sont-ils simples pour les invités comme pour les prestataires ?",
+          "Le lieu impose-t-il certains prestataires (traiteur, etc.) ou vous laisse-t-il le choix ?",
         ] },
       ],
       closing: "Vous avez un lieu en tête dans le canton de Vaud, ou vous hésitez encore ? Je connais bien la région et sa lumière — parlons de votre projet et de votre date.",
@@ -280,6 +336,17 @@ window.KC_JOURNAL = {
         { h: "Réserver au bon moment", p: [
           "Comme la fenêtre est courte, l'idéal est de me contacter autour de la 20e à la 24e semaine. On bloque alors une date dans votre période idéale, avec une marge si bébé décidait d'avancer un peu le programme.",
         ] },
+        { h: "Bien préparer la veille et le jour J", list: [
+          "Hydratez-vous et dormez : une peau reposée et bien hydratée se photographie toujours mieux.",
+          "Évitez chaussettes, élastiques et vêtements serrés dans les heures qui précèdent : ils marquent la peau pour un bon moment.",
+          "Une manucure soignée fait la différence : on photographie souvent les mains posées sur le ventre.",
+          "Mangez avant de venir et prévoyez une petite collation : une séance dure jusqu'à une heure, et le confort prime toujours.",
+          "Apportez vos tenues sur cintre et, si vous le souhaitez, un objet qui compte (une première petite tenue, une échographie).",
+        ] },
+        { h: "Penser déjà à l'après : la séance nouveau-né", p: [
+          "Beaucoup de futurs parents l'ignorent : le meilleur moment pour réserver une séance nouveau-né, c'est… pendant la grossesse. Les premiers jours après la naissance passent vite, et l'agenda se cale bien plus sereinement à l'avance.",
+          "Si l'idée vous séduit, ma formule [Continuité](maternite-grossesse.html) relie les deux séances dans une même galerie, pour raconter l'attente puis l'arrivée d'un seul tenant. On en parle au moment de votre séance grossesse.",
+        ] },
       ],
       closing: "Vous approchez du troisième trimestre ? C'est le bon moment pour réserver. On choisit ensemble la date, le lieu et l'ambiance qui vous ressemblent.",
     },
@@ -290,7 +357,7 @@ window.KC_JOURNAL = {
       file: "journal-seance-grossesse-nouveau-ne.html",
       category: "Maternité",
       relatedSlug: "maternite", relatedHref: "maternite-grossesse.html", relatedTitle: "Maternité & Grossesse",
-      date: "2026-05-29", dateLabel: "29 mai 2026", read: "6 min",
+      date: "2026-05-29", dateLabel: "29 mai 2026", read: "5 min",
       title: "Séance grossesse et nouveau-né : pourquoi les combiner",
       hero: "Nouveau-né endormi dans les bras de ses parents",
       heroAlt: "Séance photo grossesse et nouveau-né en Suisse romande | Kevin Chinelli",
@@ -314,6 +381,17 @@ window.KC_JOURNAL = {
         ] },
         { h: "Pour qui, et dans quel cadre", p: [
           "Seule, en couple ou avec les aînés : la séance s'adapte à votre famille et à votre énergie du moment. On privilégie la lumière naturelle, à votre rythme, sans rien forcer. Tout est pensé pour le confort de la future maman comme du bébé.",
+        ] },
+        { h: "Réussir la séance nouveau-né : ce qui aide vraiment", list: [
+          "Un bébé repu et détendu : on cale souvent la séance juste après une tétée ou un biberon, le matin de préférence.",
+          "Une pièce bien chauffée (autour de 25-26 °C) : la chaleur favorise le sommeil et les poses lovées.",
+          "Du temps et de la patience : une séance nouveau-né ne se précipite jamais, on suit le rythme du bébé.",
+          "Un léger bruit blanc et une lumière douce : de quoi rassurer et apaiser.",
+          "Aucune pose acrobatique : sécurité et confort d'abord, toujours.",
+        ] },
+        { h: "Et si bébé arrive plus tôt que prévu ?", p: [
+          "C'est tout l'intérêt d'avoir réservé pendant la grossesse : on s'adapte. La séance nouveau-né n'est pas figée à une date précise mais à une fenêtre — idéalement les dix à quinze premiers jours. Vous me prévenez à la naissance, et on fixe le créneau dans la foulée.",
+          "Cette souplesse vous enlève une charge mentale : tout est prévu à l'avance, il ne reste qu'à accueillir votre bébé et à profiter.",
         ] },
       ],
       closing: "Envie de relier l'attente et l'arrivée dans une même histoire ? Parlons-en pendant votre grossesse : on organise tout à l'avance, vous n'avez plus qu'à savourer.",
@@ -351,6 +429,17 @@ window.KC_JOURNAL = {
         { h: "Penser tous les usages", p: [
           "Une bonne séance ne sert pas qu'à LinkedIn : site internet, signature mail, dossier de presse, supports imprimés, intervention en conférence… On anticipe ces usages pour repartir avec des images aux bons formats et aux bons droits.",
         ] },
+        { h: "Les erreurs les plus fréquentes", list: [
+          "Le selfie ou la photo de vacances recadrée : ça se voit, et ça dessert un profil par ailleurs sérieux.",
+          "Un fond chargé ou un lieu qui détourne l'attention de votre visage.",
+          "Un sourire forcé ou une posture raide : mieux vaut un regard franc et posé qu'un rictus de circonstance.",
+          "Une photo trop ancienne qui ne vous ressemble plus : elle crée un décalage dès la première rencontre.",
+          "Des formats inadaptés : une image pensée pour l'avatar carré de LinkedIn ne conviendra pas telle quelle à une bannière ou à la presse.",
+        ] },
+        { h: "Photo d'équipe : viser la cohérence", p: [
+          "Pour une équipe, la règle d'or est l'homogénéité : même fond, même lumière, même cadrage et même style de retouche pour tout le monde. C'est ce qui distingue une page « Équipe » professionnelle d'une mosaïque de photos disparates prises au fil des années.",
+          "En pratique, je me déplace avec un studio mobile dans vos locaux à Lausanne, Genève ou ailleurs en Suisse romande. On photographie toute l'équipe sur place en une demi-journée, sans déplacement ni perte de temps, et les nouveaux arrivants peuvent être ajoutés plus tard dans le même style.",
+        ] },
       ],
       closing: "Besoin d'un portrait professionnel qui vous ressemble, ou de mettre à niveau les photos de votre équipe ? Parlons de votre image et de l'usage que vous en ferez.",
     },
@@ -387,6 +476,16 @@ window.KC_JOURNAL = {
           "Pensez à la cohérence : si vous êtes photographié·e en couple, en famille ou en équipe, coordonnez les tons sans tomber dans l'uniforme assorti. Repassez vos vêtements, vérifiez les ourlets, et prévoyez des chaussures confortables si l'on marche entre deux décors.",
           "Et surtout : venez reposé·e. La meilleure tenue, c'est encore un visage détendu.",
         ] },
+        { h: "Adapter la tenue à l'usage des images", p: [
+          "Une même personne ne s'habille pas pareil selon ce que les photos serviront. Pour un usage professionnel (LinkedIn, site, presse), on vise des coupes nettes fidèles à votre quotidien de travail. Pour un portrait personnel ou artistique, on s'autorise plus de matière, de couleur et de caractère.",
+          "Le bon réflexe : me dire en amont à quoi serviront vos images. C'est ce qui me permet de vous conseiller des tenues vraiment adaptées, et pas seulement « jolies ».",
+        ] },
+        { h: "La veille et le jour J", list: [
+          "Repassez vos tenues et vérifiez les ourlets, boutons et cols : à l'image, le moindre faux pli se voit.",
+          "Évitez d'étrenner un vêtement neuf et inconfortable : on est toujours plus beau dans ce qu'on porte avec aisance.",
+          "Dormez et hydratez-vous : un visage reposé vaut toutes les tenues du monde.",
+          "Prévoyez vos accessoires (montre, bijoux simples, foulard) et, si besoin, de quoi vous changer entre deux ambiances.",
+        ] },
       ],
       closing: "Une fois la tenue choisie, le plus dur est fait. Le reste, c'est mon métier : je vous guide pas à pas pour des images dans lesquelles vous vous reconnaissez vraiment.",
     },
@@ -397,7 +496,7 @@ window.KC_JOURNAL = {
       file: "journal-comment-choisir-photographe-mariage.html",
       category: "Mariage",
       relatedSlug: "mariage", relatedHref: "mariages.html", relatedTitle: "Mariages",
-      date: "2026-05-08", dateLabel: "8 mai 2026", read: "7 min",
+      date: "2026-05-08", dateLabel: "8 mai 2026", read: "5 min",
       title: "Comment choisir son photographe de mariage : 7 questions à poser",
       hero: "Photographe en reportage discret pendant une cérémonie",
       heroAlt: "Comment choisir son photographe de mariage en Suisse romande | Kevin Chinelli",
@@ -425,6 +524,17 @@ window.KC_JOURNAL = {
         ] },
         { h: "Le courant doit passer", p: [
           "Enfin, fiez-vous au feeling. Votre photographe vous suivra dans les moments les plus intimes de la journée : il faut vous sentir à l'aise avec lui. Un appel ou un café avant de signer en dit souvent plus long qu'un portfolio.",
+        ] },
+        { h: "Les signaux qui doivent vous alerter", list: [
+          "Pas de contrat écrit, ou un devis vague qui ne détaille pas ce qui est inclus.",
+          "Un portfolio qui ne montre que des « best of » — jamais un mariage entier, du matin au soir.",
+          "Un prix anormalement bas par rapport au marché romand : il cache souvent un manque d'expérience ou de garanties.",
+          "Aucune mention de sauvegarde des fichiers ni de matériel de secours en cas de panne.",
+          "Des réponses lentes ou évasives avant même la réservation — un avant-goût de ce qui vous attendrait ensuite.",
+        ] },
+        { h: "Vérifier au-delà du portfolio", p: [
+          "Un beau portfolio est un minimum, pas une garantie. Demandez à voir une galerie de mariage complète, lisez les avis (Google, réseaux sociaux), et assurez-vous qu'un contrat écrit précise noir sur blanc les prestations, les délais et les modalités d'annulation.",
+          "Vérifiez aussi deux choses qu'on oublie souvent : la disponibilité réelle sur votre date, et la présence d'une assurance responsabilité civile professionnelle. Ce sont des marques de sérieux discrètes, mais qui font toute la différence le jour J.",
         ] },
       ],
       closing: "Vous avez ces questions en tête ? Posez-les moi sans hésiter. J'aime que mes mariés réservent en confiance, en sachant exactement à quoi s'attendre.",
@@ -462,6 +572,14 @@ window.KC_JOURNAL = {
         { h: "Et pourquoi pas les deux", p: [
           "Rien n'oblige à choisir radicalement. Sur certaines séances, on combine un passage en lumière naturelle et quelques images plus maîtrisées, pour couvrir tous vos usages. On en parle avant la séance, selon ce que vous voulez en faire — c'est ce que je fais pour chaque [séance portrait](portraits.html).",
         ] },
+        { h: "La lumière : la vraie différence", p: [
+          "Tout se joue souvent là. En studio, la lumière est maîtrisée et identique du matin au soir, été comme hiver : un avantage décisif quand il faut un rendu constant et reproductible, ou quand on photographie plusieurs personnes dans le même style.",
+          "En extérieur, on dépend de la lumière du jour — et c'est aussi sa magie. L'heure dorée, juste avant le coucher du soleil, donne des images chaudes et enveloppantes qu'aucun studio ne reproduit tout à fait. La contrepartie : un peu de souplesse sur l'horaire et un plan B en cas de météo capricieuse.",
+        ] },
+        { h: "Le facteur confort, souvent décisif", p: [
+          "Au-delà du rendu, demandez-vous où vous vous sentirez le plus à l'aise. Certaines personnes se détendent en marchant et en discutant dehors, loin de toute mise en scène ; d'autres sont rassurées par le cadre clair et contenu d'un studio, sans regards extérieurs.",
+          "Il n'y a pas de mauvaise réponse : la meilleure option est celle où vous oublierez le plus vite l'appareil. C'est précisément ce qu'on définit ensemble avant la séance.",
+        ] },
       ],
       closing: "Toujours hésitant·e ? Dites-moi simplement à quoi serviront vos images : je vous oriente vers le cadre qui leur rendra le mieux justice.",
     },
@@ -472,7 +590,7 @@ window.KC_JOURNAL = {
       file: "journal-deroule-journee-mariage.html",
       category: "Mariage",
       relatedSlug: "mariage", relatedHref: "mariages.html", relatedTitle: "Mariages",
-      date: "2026-04-25", dateLabel: "25 avril 2026", read: "8 min",
+      date: "2026-04-25", dateLabel: "25 avril 2026", read: "6 min",
       title: "Le déroulé d'un mariage, heure par heure (côté photo)",
       hero: "Première danse des mariés en début de soirée",
       heroAlt: "Déroulé d'une journée de mariage heure par heure | Kevin Chinelli",
@@ -497,6 +615,23 @@ window.KC_JOURNAL = {
         { h: "Soirée — entrée, repas et danse", p: [
           "Entrée des mariés, discours, première danse puis ouverture de la piste : l'énergie monte d'un cran. Je reste jusqu'au lancement de la fête pour capter ces premiers instants de soirée, souvent les plus joyeux.",
           "Pensez à l'heure du coucher du soleil pour caler les temps forts extérieurs : je la vérifie systématiquement pour votre date et j'adapte le déroulé du [reportage](mariages.html) en conséquence.",
+        ] },
+        { h: "Un exemple de timing (cérémonie à 15 h, mariage d'été)", list: [
+          "13 h 00 — Préparatifs : détails, habillage, derniers instants avec les proches.",
+          "14 h 30 — Trajet et premières arrivées des invités sur le lieu.",
+          "15 h 00 — Cérémonie, puis sortie et félicitations.",
+          "16 h 00 — Vin d'honneur, photos de groupe (liste préparée) et instants d'ambiance.",
+          "18 h 00 — Photos de groupe terminées : on respire et on profite.",
+          "20 h 30 — Séance de couple à l'heure dorée, 30 à 45 minutes.",
+          "21 h 00 — Entrée des mariés, repas et discours.",
+          "23 h 00 — Première danse et ouverture de la piste.",
+        ] },
+        { h: "Les erreurs de timing qui coûtent de belles images", list: [
+          "Caler la cérémonie en plein midi l'été : lumière dure, yeux plissés, ombres marquées sur les visages.",
+          "Oublier l'heure dorée : sans créneau réservé pour le couple en fin de journée, on passe à côté des plus belles lumières.",
+          "Sous-estimer les photos de groupe : sans liste préparée à l'avance, elles s'éternisent et grignotent le reste.",
+          "Enchaîner sans aucune marge : le moindre retard se répercute en cascade sur toute la soirée.",
+          "Placer les discours trop tard : la lumière baisse, l'attention des invités aussi.",
         ] },
       ],
       closing: "Pas d'inquiétude si tout cela vous semble abstrait : on construit votre déroulé ensemble, lieu et horaires en main. Le jour J, vous n'aurez plus qu'à vivre votre mariage.",
