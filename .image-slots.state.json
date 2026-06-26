@@ -158,6 +158,16 @@
     "x": 0,
     "y": 0
   },
+  "art-hero-prix-photographe-mariage-suisse-romande": { "u": "images/phero-mariage.webp",   "s": 1, "x": 0, "y": 0 },
+  "art-hero-quand-reserver-photographe-mariage":      { "u": "images/pf-mariage-8.webp",     "s": 1, "x": 0, "y": 0 },
+  "art-hero-lieux-mariage-vaud-leman":                { "u": "images/home-hero-full.webp",   "s": 1, "x": 0, "y": 0 },
+  "art-hero-quand-faire-seance-photo-grossesse":      { "u": "images/phero-maternite.webp",  "s": 1, "x": 0, "y": 0 },
+  "art-hero-seance-grossesse-nouveau-ne":             { "u": "images/maternite-g1.webp",     "s": 1, "x": 0, "y": 0 },
+  "art-hero-photos-linkedin-personal-branding":       { "u": "images/phero-studio.webp",     "s": 1, "x": 0, "y": 0 },
+  "art-hero-quelle-tenue-seance-portrait":            { "u": "images/phero-portrait.webp",   "s": 1, "x": 0, "y": 0 },
+  "art-hero-comment-choisir-photographe-mariage":     { "u": "images/presta-mariage.webp",   "s": 1, "x": 0, "y": 0 },
+  "art-hero-portrait-studio-ou-exterieur":            { "u": "images/pf-portrait-8.webp",    "s": 1, "x": 0, "y": 0 },
+  "art-hero-deroule-journee-mariage":                 { "u": "images/home-m8.webp",          "s": 1, "x": 0, "y": 0 },
   "ville-hero-lausanne": {
     "u": "images/hero-mariage.webp",
     "s": 1,
