@@ -647,6 +647,9 @@ window.KC_JOURNAL = {
     intro: "Conseils, prix, repérages et coulisses de mes séances en Suisse romande — pour préparer sereinement votre mariage, votre portrait, votre séance grossesse ou vos photos professionnelles.",
   },
   order: [
+    "ou-se-marier-geneve",
+    "spots-seance-photo-lausanne",
+    "lieux-mariage-la-cote",
     "prix-photographe-mariage-suisse-romande",
     "quand-reserver-photographe-mariage",
     "lieux-mariage-vaud-leman",
@@ -1274,6 +1277,132 @@ window.KC_JOURNAL = {
         ] },
       ],
       closing: "Pas d'inquiétude si tout cela vous semble abstrait : on construit votre déroulé ensemble, lieu et horaires en main. Le jour J, vous n'aurez plus qu'à vivre votre mariage.",
+    },
+
+    /* ============ ARTICLE — OÙ SE MARIER À GENÈVE ============ */
+    "ou-se-marier-geneve": {
+      slug: "ou-se-marier-geneve",
+      file: "journal-ou-se-marier-geneve.html",
+      category: "Mariage",
+      relatedSlug: "mariage", relatedHref: "mariages.html", relatedTitle: "Mariages",
+      date: "2026-06-27", dateLabel: "27 juin 2026", read: "5 min",
+      title: "Où se marier à Genève : lieux et décors de rêve",
+      hero: "Quai de Genève au coucher du soleil, jet d'eau et lac",
+      heroAlt: "Où se marier à Genève — lieux de mariage et spots photo au bord du lac | Kevin Chinelli",
+      excerpt: "De la vieille ville aux domaines viticoles de la campagne genevoise, en passant par les quais et les parcs du bord du lac : un tour d'horizon des plus beaux lieux pour se marier à Genève, par un photographe.",
+      metaTitle: "Où se marier à Genève : lieux de rêve et spots photo | Kevin Chinelli",
+      metaDesc: "Les plus beaux lieux pour se marier à Genève : vieille ville, parcs du bord du lac, domaines viticoles de la campagne genevoise. Conseils d'un photographe de mariage en Suisse romande.",
+      intro: "Entre son lac, sa vieille ville médiévale et une campagne viticole méconnue, Genève offre une vraie diversité de décors pour un mariage. Que vous rêviez d'une cérémonie urbaine et chic ou d'une fête champêtre face aux vignes, voici les lieux que je recommande, avec un œil de photographe sur la lumière et les angles.",
+      sections: [
+        { h: "Au bord du lac et dans les parcs", list: [
+          "Le Parc des Eaux-Vives et La Perle du Lac — élégance classique, pelouses, vue sur la rade et le jet d'eau.",
+          "Le Parc La Grange et sa roseraie — sublime en début d'été, parfait pour la séance de couple.",
+          "Les Bains des Pâquis — plus décontracté et iconique, superbe à la lumière du matin.",
+          "Le Jardin Anglais et les quais — pour des images avec le jet d'eau et l'horloge fleurie en toile de fond.",
+        ] },
+        { h: "Dans la vieille ville", p: [
+          "Le cœur historique de Genève est un décor à lui tout seul : la cathédrale Saint-Pierre, la place du Bourg-de-Four, la promenade de la Treille et ses marronniers, les ruelles pavées et les façades anciennes. C'est l'idéal pour une cérémonie civile élégante suivie d'une courte séance à deux, sans avoir à se déplacer loin.",
+          "Avantage photo : on y trouve toujours un coin d'ombre douce en plein été et des arrière-plans intemporels qui ne datent pas une image.",
+        ] },
+        { h: "Les domaines et vignobles de la campagne genevoise", p: [
+          "On l'oublie souvent, mais Genève est le troisième canton viticole de Suisse. Sa campagne — Satigny, Dardagny, Russin, Choully, la Champagne genevoise — abrite domaines, mas et terrasses face aux vignes, à vingt minutes du centre. C'est le choix parfait pour un mariage champêtre, chaleureux et photogénique au coucher du soleil.",
+          "Ces lieux offrent souvent l'intérieur et l'extérieur sur place, un vrai atout pour un plan B en cas de pluie ou de bise.",
+        ] },
+        { h: "Mes conseils de photographe à Genève", p: [
+          "Anticipez la logistique urbaine. En ville, le stationnement et les déplacements entre la mairie, le lieu de cérémonie et la réception se préparent : prévoyez des marges réalistes dans le déroulé.",
+          "Renseignez-vous sur les autorisations. Certains parcs genevois demandent une autorisation pour une cérémonie ou une séance organisée — un point à valider tôt avec le lieu ou la Ville.",
+          "Réservez l'heure dorée. Quel que soit le décor, je garde 30 à 45 minutes pour le couple en fin de journée : c'est là que Genève, lac et lumière réunis, donne le meilleur. Je cale tout le [reportage](mariages.html) sur ce moment.",
+        ] },
+        { h: "Où faire les photos de couple à Genève", list: [
+          "Les quais et le Jardin Anglais — pour une image iconique avec le jet d'eau.",
+          "La promenade de la Treille et le Bourg-de-Four — pour le charme de la vieille ville.",
+          "Le Parc La Grange ou des Eaux-Vives — verdure et calme en pleine ville.",
+          "Les vignes de Satigny ou Dardagny — pour une parenthèse champêtre à l'heure dorée.",
+        ] },
+      ],
+      closing: "Vous vous mariez à Genève ou dans sa région ? Je m'y déplace sans frais depuis la Suisse romande et j'en connais bien la lumière. Parlons de votre lieu et de votre date.",
+    },
+
+    /* ============ ARTICLE — SPOTS SÉANCE PHOTO LAUSANNE ============ */
+    "spots-seance-photo-lausanne": {
+      slug: "spots-seance-photo-lausanne",
+      file: "journal-spots-seance-photo-lausanne.html",
+      category: "Portrait",
+      relatedSlug: "portrait", relatedHref: "portraits.html", relatedTitle: "Portraits",
+      date: "2026-06-26", dateLabel: "26 juin 2026", read: "5 min",
+      title: "Les plus beaux endroits pour une séance photo à Lausanne",
+      hero: "Quais d'Ouchy à Lausanne, lumière douce de fin de journée",
+      heroAlt: "Spots pour une séance photo à Lausanne — quais d'Ouchy et vieille ville | Kevin Chinelli",
+      excerpt: "Ouchy, la vieille ville, le Flon, Sauvabelin : mes lieux préférés pour une séance portrait, couple ou famille à Lausanne, du plus urbain au plus nature, avec l'heure qui leur va le mieux.",
+      metaTitle: "Où faire une séance photo à Lausanne : mes spots préférés | Kevin Chinelli",
+      metaDesc: "Les meilleurs endroits pour une séance photo portrait, couple ou famille à Lausanne : Ouchy, vieille ville, Flon, Sauvabelin. Conseils d'un photographe portrait en Suisse romande.",
+      intro: "Lausanne est une ville de contrastes : un bord de lac méridional à Ouchy, une vieille ville médiévale tout en escaliers, un quartier du Flon résolument urbain, et des forêts à dix minutes du centre. De quoi varier les ambiances d'une séance sans jamais s'éloigner. Voici mes lieux de prédilection.",
+      sections: [
+        { h: "Au bord du lac, à Ouchy", p: [
+          "Les quais d'Ouchy, le port et la promenade jusqu'à Vidy offrent une lumière douce et de grands espaces ouverts sur le lac et les Alpes. C'est l'endroit idéal pour une séance détendue, où l'on marche et où l'appareil se fait vite oublier — parfait pour les couples et les familles.",
+          "À privilégier tôt le matin pour le calme, ou à l'heure dorée pour les couleurs chaudes sur l'eau.",
+        ] },
+        { h: "Dans la vieille ville et au centre", list: [
+          "Les escaliers du Marché et la place de la Palud — ruelles pavées, façades anciennes, ambiance intime.",
+          "Les abords de la cathédrale et l'esplanade de Montbenon — belle vue sur le lac et les Alpes.",
+          "Le quartier du Flon — béton, passerelles et lumières urbaines pour un rendu plus moderne et éditorial.",
+        ] },
+        { h: "Côté nature, à deux pas du centre", p: [
+          "Pour une ambiance plus verte, le parc de Mon-Repos, les bords de la Sorge ou la forêt et le lac de Sauvabelin (avec sa tour en bois) offrent une parenthèse nature sans quitter la ville. Idéal pour des portraits doux en lumière filtrée, ou une séance famille où les enfants peuvent bouger librement.",
+          "Et si vous aimez les vignes, Lavaux est à quinze minutes : on peut prolonger la séance au milieu des terrasses, face au Léman.",
+        ] },
+        { h: "Bien choisir son moment", p: [
+          "L'heure dorée, juste avant le coucher du soleil, reste la valeur sûre : lumière chaude et ombres douces. La lumière du matin, plus fraîche, est parfaite pour éviter le monde sur les quais.",
+          "On évite le plein midi en été, dur et peu flatteur. Je conseille et prépare tout cela avant chaque [séance portrait](portraits.html), selon l'usage que vous ferez de vos images.",
+        ] },
+        { h: "Pour quel type de séance ?", p: [
+          "Ces décors conviennent à toutes les séances : un portrait personnel ou pour votre image professionnelle, une séance de couple ou de fiançailles, une séance en famille, ou encore des photos de grossesse en lumière douce. On choisit le lieu selon l'ambiance recherchée et l'usage final de vos images.",
+          "Pour une séance en famille, je privilégie les endroits où les enfants peuvent bouger librement — Ouchy, Sauvabelin ou un parc — pour des images vivantes plutôt que figées.",
+        ] },
+      ],
+      closing: "Envie d'une séance qui vous ressemble à Lausanne ? On choisit ensemble le lieu, l'ambiance et l'heure — et je vous guide pas à pas le jour J pour des images naturelles.",
+    },
+
+    /* ============ ARTICLE — LIEUX MARIAGE LA CÔTE ============ */
+    "lieux-mariage-la-cote": {
+      slug: "lieux-mariage-la-cote",
+      file: "journal-lieux-mariage-la-cote.html",
+      category: "Mariage",
+      relatedSlug: "mariage", relatedHref: "mariages.html", relatedTitle: "Mariages",
+      date: "2026-06-25", dateLabel: "25 juin 2026", read: "5 min",
+      title: "Se marier sur La Côte : châteaux, vignes et bord du lac",
+      hero: "Vignoble de La Côte vaudoise face au lac Léman et au Mont-Blanc",
+      heroAlt: "Lieux de mariage sur La Côte — Nyon, Morges, domaines viticoles | Kevin Chinelli",
+      excerpt: "Entre Lausanne et Genève, La Côte aligne châteaux, domaines viticoles et quais face au Mont-Blanc. Un tour d'horizon des plus beaux lieux pour s'y marier, vus par un photographe.",
+      metaTitle: "Se marier sur La Côte (Nyon, Morges) : les plus beaux lieux | Kevin Chinelli",
+      metaDesc: "Où se marier sur La Côte vaudoise : châteaux de Nyon et Morges, domaines viticoles de Féchy à Mont-sur-Rolle, quais face au Mont-Blanc. Conseils d'un photographe de mariage romand.",
+      intro: "Entre Lausanne et Genève, La Côte s'étire le long du Léman, face au Mont-Blanc. C'est le plus grand vignoble du canton de Vaud, parsemé de châteaux et de villages au bord de l'eau. Un décor à la fois noble et champêtre, encore un peu confidentiel pour les mariages. Voici mes lieux préférés, avec un œil de photographe.",
+      sections: [
+        { h: "Les châteaux de caractère", list: [
+          "Le château de Nyon — dominant le lac et les quais, médiéval et photogénique, avec une vue imprenable sur le Mont-Blanc.",
+          "Le château de Morges et le parc de l'Indépendance — élégance et grands espaces, sublimes au printemps avec la Fête de la Tulipe.",
+          "Les châteaux de Vufflens, d'Allaman et de Coppet — silhouettes de caractère pour un mariage hors du temps.",
+        ] },
+        { h: "Les domaines viticoles face au lac", p: [
+          "La Côte, c'est avant tout le vignoble : Féchy, Mont-sur-Rolle, Aubonne, Begnins, Vinzel, Luins… Des domaines avec caveaux, terrasses et rangs de vignes qui descendent vers le lac, avec le Mont-Blanc en toile de fond. C'est le choix idéal pour un mariage chaleureux, vigneron, magnifique à la lumière de fin de journée.",
+          "Atout pratique : beaucoup de ces domaines proposent l'intérieur et l'extérieur sur un même site — précieux pour un plan B météo.",
+        ] },
+        { h: "Au bord du lac", list: [
+          "Les quais de Nyon — vue dégagée sur le Mont-Blanc, parfaits pour la séance de couple au coucher du soleil.",
+          "Rolle et son île de la Harpe — petit port romantique au charme rare.",
+          "Saint-Prex et Morges — bourgs médiévaux et rives paisibles, belles lumières le matin comme le soir.",
+        ] },
+        { h: "Mes conseils de photographe sur La Côte", p: [
+          "Profitez de la vue sur le Mont-Blanc. Elle est l'atout signature de La Côte : je cale la séance de couple en fin de journée, quand la lumière dore les vignes et que le massif rougit à l'horizon.",
+          "Pensez aux distances. Les domaines sont parfois un peu à l'écart des villages : prévoyez les trajets et le stationnement des invités, surtout entre la cérémonie et la réception.",
+          "Gardez un plan B. La bise et les ciels changeants du lac font partie du décor — on prévoit toujours une alternative couverte au repérage, pour le [reportage](mariages.html) comme pour la séance.",
+        ] },
+        { h: "Quand s'y marier : saisons et lumière", p: [
+          "Le printemps habille Morges de tulipes et la campagne de vert tendre ; l'été baigne les vignes d'une lumière dorée jusque tard le soir ; l'automne, période des vendanges, pare les coteaux de cuivre et d'or — sans doute la plus belle saison photo de La Côte.",
+          "Quelle que soit la saison, la vue sur le Mont-Blanc et le lac reste l'atout maître : on cale les temps forts en extérieur sur la fin de journée pour en profiter pleinement.",
+        ] },
+      ],
+      closing: "Un mariage sur La Côte, entre vignes et Mont-Blanc ? Je connais bien la région et m'y déplace sans frais depuis la Suisse romande. Parlons de votre projet et de votre date.",
     },
   },
 };

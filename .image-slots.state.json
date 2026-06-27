@@ -646,5 +646,23 @@
     "s": 1,
     "x": 0,
     "y": 0
+  },
+  "art-hero-ou-se-marier-geneve": {
+    "u": "images/art-hero-ou-se-marier-geneve.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "art-hero-spots-seance-photo-lausanne": {
+    "u": "images/art-hero-spots-seance-photo-lausanne.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
+  },
+  "art-hero-lieux-mariage-la-cote": {
+    "u": "images/home-hero-full.webp",
+    "s": 1,
+    "x": 0,
+    "y": 0
   }
 }
